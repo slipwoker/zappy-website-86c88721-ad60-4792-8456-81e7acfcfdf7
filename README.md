@@ -33,10 +33,10 @@ This section lists all the customizable elements in your website that can be mod
 
 
 ### Text Content
-
+- **Main Heading**: Primary page title (Selector: `h1`)
 
 ### Contact Information
-
+- **Contact Form**: Main contact form (Selector: `form`)
 
 ### Business Information
 
@@ -45,7 +45,20 @@ This section lists all the customizable elements in your website that can be mod
 
 
 ### Colors & Styling
-
+- **Primary Color**: CSS custom property for primary-color (CSS Variable: `--primary-color`)
+- **Secondary Color**: CSS custom property for secondary-color (CSS Variable: `--secondary-color`)
+- **Accent Color**: CSS custom property for accent-color (CSS Variable: `--accent-color`)
+- **Text Color**: CSS custom property for text-color (CSS Variable: `--text-color`)
+- **Bg White**: CSS custom property for bg-white (CSS Variable: `--bg-white`)
+- **Bg Light**: CSS custom property for bg-light (CSS Variable: `--bg-light`)
+- **Shadow**: CSS custom property for shadow (CSS Variable: `--shadow`)
+- **Nav Color**: CSS custom property for nav-color (CSS Variable: `--nav-color`)
+- **Nav Hover Color**: CSS custom property for nav-hover-color (CSS Variable: `--nav-hover-color`)
+- **Cc Btn Primary Bg**: CSS custom property for cc-btn-primary-bg (CSS Variable: `--cc-btn-primary-bg`)
+- **Cc Btn Primary Border**: CSS custom property for cc-btn-primary-border (CSS Variable: `--cc-btn-primary-border`)
+- **Cc Btn Primary Hover Bg**: CSS custom property for cc-btn-primary-hover-bg (CSS Variable: `--cc-btn-primary-hover-bg`)
+- **Accessibility Focus**: CSS custom property for accessibility-focus (CSS Variable: `--accessibility-focus`)
+- **Btn Primary**: CSS custom property for btn-primary (CSS Variable: `--btn-primary`)
 
 ## Customization Notes
 
@@ -70,7 +83,7 @@ This site is automatically deployed to Render as a static site serving from the 
 
 ## Generated on
 
-2025-11-06T12:30:04.695Z
+2025-11-08T14:01:40.191Z
 
 ---
 
