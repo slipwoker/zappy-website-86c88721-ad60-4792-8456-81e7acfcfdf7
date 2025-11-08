@@ -70,12 +70,52 @@
     websiteId: '86c88721-ad60-4792-8456-81e7acfcfdf7',
     apiUrl: 'http://localhost:5001/api/analytics/track',
     sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
     trackPageViews: true,
     trackClicks: true,
     trackFormSubmissions: true
   };
   
-  // Generate or retrieve session ID
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
   function getSessionId() {
     var sessionKey = 'zappy_session_' + config.websiteId;
     var session = null;
@@ -113,6 +153,7 @@
     return newSessionId;
   }
   
+  var visitorId = getVisitorId();
   var sessionId = getSessionId();
   
   // Track an event
@@ -124,6 +165,7 @@
       event_type: eventType,
       page_path: window.location.pathname,
       referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
       session_id: sessionId,
       metadata: data
     };
@@ -160,7 +202,7 @@
     document.addEventListener('click', function(e) {
       var target = e.target;
       
-      // Track button clicks
+      // Track button clicks (counted as actions)
       if (target.tagName === 'BUTTON' || target.closest('button')) {
         var button = target.tagName === 'BUTTON' ? target : target.closest('button');
         trackEvent('click', {
@@ -171,10 +213,10 @@
         });
       }
       
-      // Track link clicks
+      // Track link clicks (navigation - not counted as actions)
       else if (target.tagName === 'A' || target.closest('a')) {
         var link = target.tagName === 'A' ? target : target.closest('a');
-        trackEvent('click', {
+        trackEvent('navigation', {
           element: 'link',
           text: link.textContent.trim().substring(0, 100),
           href: link.href,
@@ -213,6 +255,7 @@
   // Expose tracking function globally for custom events
   window.zappyAnalytics = {
     track: trackEvent,
+    getVisitorId: function() { return visitorId; },
     getSessionId: function() { return sessionId; }
   };
   
