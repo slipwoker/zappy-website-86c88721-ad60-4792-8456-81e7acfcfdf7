@@ -1,13 +1,13 @@
 # Clean URL redirects for Render static hosting
 # These rewrite rules show clean URLs to users while serving .html files
 
-/services  /services.html  200
 /about  /about.html  200
-/articles  /articles.html  200
-/articles/acupuncture-stress-relief  /articles/acupuncture-stress-relief.html  200
-/articles/medical-massage-benefits  /articles/medical-massage-benefits.html  200
-/articles/holistic-nutrition-guide  /articles/holistic-nutrition-guide.html  200
 /contact  /contact.html  200
+/services  /services.html  200
+/blog  /blog.html  200
+/blog/acupuncture-benefits  /blog/acupuncture-benefits.html  200
+/blog/medical-massage-therapy  /blog/medical-massage-therapy.html  200
+/blog/holistic-balance  /blog/holistic-balance.html  200
 /  /index.html  200
 
 # 404 fallback
