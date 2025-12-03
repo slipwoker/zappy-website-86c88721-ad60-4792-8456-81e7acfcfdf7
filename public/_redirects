@@ -4,6 +4,10 @@
 /about  /about.html  200
 /contact  /contact.html  200
 /services  /services.html  200
+/articles  /articles.html  200
+/articles/acupuncture-stress-relief  /articles/acupuncture-stress-relief.html  200
+/articles/medical-massage-benefits  /articles/medical-massage-benefits.html  200
+/articles/holistic-nutrition-guide  /articles/holistic-nutrition-guide.html  200
 /  /index.html  200
 
 # 404 fallback
