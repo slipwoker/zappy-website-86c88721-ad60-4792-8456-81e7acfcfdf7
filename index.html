@@ -57,6 +57,237 @@
         left: auto;
         right: 0;
       }
+    </style><style data-zappy-carousel-css="true">
+      /* Carousel Container */
+      .zappy-carousel-container {
+        position: relative !important;
+        overflow: visible !important;
+        padding: 0 !important;
+        padding-bottom: 3rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        display: block !important;
+        grid-template-columns: unset !important;
+        margin-top: 3rem !important;
+      }
+
+      /* Carousel Wrapper */
+      .zappy-carousel-wrapper {
+        position: relative !important;
+        overflow: hidden !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Carousel Track */
+      .zappy-carousel-track {
+        display: grid !important;
+        grid-auto-flow: column !important;
+        gap: 2rem !important;
+        transition: transform 0.4s ease !important;
+        will-change: transform !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Carousel Items */
+      .zappy-carousel-item {
+        scroll-snap-align: start !important;
+        flex-shrink: 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Navigation Buttons - Base Styles */
+      .zappy-carousel-container .zappy-carousel-btn {
+        /* Explicitly reset button defaults */
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        
+        /* Size */
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        max-width: 48px !important;
+        min-height: 48px !important;
+        max-height: 48px !important;
+        box-sizing: border-box !important;
+        
+        /* Shape */
+        border-radius: 50% !important;
+        
+        /* Colors and borders */
+        background: rgba(0, 0, 0, 0.7) !important;
+        background-color: rgba(0, 0, 0, 0.7) !important;
+        background-image: none !important;
+        border: none !important;
+        border-width: 0 !important;
+        border-style: none !important;
+        color: white !important;
+        
+        /* Text */
+        font-size: 32px !important;
+        font-weight: 300 !important;
+        font-family: inherit !important;
+        text-align: center !important;
+        text-decoration: none !important;
+        
+        /* Layout */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        vertical-align: middle !important;
+        
+        /* Spacing */
+        padding: 0 !important;
+        margin: 0 !important;
+        line-height: 1 !important;
+        
+        /* Flex */
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
+        
+        /* Interaction */
+        cursor: pointer !important;
+        user-select: none !important;
+        -webkit-user-select: none !important;
+        
+        /* Effects */
+        transition: all 0.2s ease !important;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3) !important;
+        
+        /* Layering */
+        z-index: 100 !important;
+        
+        /* Remove browser default button appearance */
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        appearance: none !important;
+        
+        /* Prevent any inherited weird styles */
+        outline: none !important;
+        text-shadow: none !important;
+        letter-spacing: normal !important;
+        word-spacing: normal !important;
+      }
+
+      .zappy-carousel-container .zappy-carousel-btn span {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        line-height: 1 !important;
+        height: 100% !important;
+        width: 100% !important;
+        margin-top: -2px !important;
+      }
+
+      /* Previous Button Position (LTR) - Position outside carousel to use parent padding space */
+      .zappy-carousel-prev {
+        left: -60px !important;
+        right: auto !important;
+      }
+
+      /* Next Button Position (LTR) - Position outside carousel to use parent padding space */
+      .zappy-carousel-next {
+        right: -60px !important;
+        left: auto !important;
+      }
+
+      /* RTL Button Positioning - Position outside carousel to use parent padding space */
+      [dir="rtl"] .zappy-carousel-prev {
+        left: auto !important;
+        right: -60px !important;
+      }
+
+      [dir="rtl"] .zappy-carousel-next {
+        right: auto !important;
+        left: -60px !important;
+      }
+
+      /* Button Hover Effect */
+      .zappy-carousel-container .zappy-carousel-btn:hover:not([data-disabled="true"]) {
+        background: rgba(0, 0, 0, 0.85) !important;
+        transform: translateY(-50%) scale(1.05) !important;
+      }
+
+      /* Disabled Button Styling - Using data-disabled instead of disabled attribute */
+      .zappy-carousel-container .zappy-carousel-btn[data-disabled="true"] {
+        cursor: default !important;
+        background: rgba(0, 0, 0, 0.3) !important;
+        opacity: 0.5 !important;
+        pointer-events: none !important;
+      }
+
+      /* Carousel Dots */
+      .zappy-carousel-dots {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 0.5rem !important;
+        margin-top: 1.5rem !important;
+        padding: 0 !important;
+        list-style: none !important;
+      }
+
+      .zappy-carousel-dot {
+        width: 12px !important;
+        height: 12px !important;
+        min-width: 12px !important;
+        min-height: 12px !important;
+        border-radius: 50% !important;
+        background: rgba(0, 0, 0, 0.3) !important;
+        border: none !important;
+        padding: 0 !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        appearance: none !important;
+      }
+
+      .zappy-carousel-dot:hover {
+        background: rgba(0, 0, 0, 0.5) !important;
+        transform: scale(1.2) !important;
+      }
+
+      .zappy-carousel-dot.active {
+        background: rgba(0, 0, 0, 0.8) !important;
+        transform: scale(1.3) !important;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .zappy-carousel-container .zappy-carousel-btn {
+          width: 40px !important;
+          height: 40px !important;
+          min-width: 40px !important;
+          max-width: 40px !important;
+          min-height: 40px !important;
+          max-height: 40px !important;
+          font-size: 24px !important;
+        }
+
+        /* On mobile, position buttons at edges since padding is usually smaller */
+        .zappy-carousel-prev {
+          left: 0 !important;
+        }
+
+        .zappy-carousel-next {
+          right: 0 !important;
+        }
+
+        [dir="rtl"] .zappy-carousel-prev {
+          right: 0 !important;
+        }
+
+        [dir="rtl"] .zappy-carousel-next {
+          left: 0 !important;
+        }
+
+        .zappy-carousel-track {
+          gap: 1rem !important;
+        }
+      }
     </style>
     <style id="zappy-mobile-submenu-styles">
       /* Mobile submenu accordion styles */
@@ -116,7 +347,249 @@
       }
       @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
     </style>
-</head><body><div class="zappy-header" id="zappy-attribution-header" style="display:none"><p>Happily created by&nbsp;<a href="https://zappy5.com" class="zappy-link" rel="noopener noreferrer" target="_blank">Zappy</a></p></div><nav class="navbar" id="navbar"><div class="container nav-container"><div class="nav-brand"><a href="/" class="logo-link"><img alt="שלווה רוחנית" class="logo" src="/assets/logo.webp"></a></div><button aria-label="תפריט" class="mobile-toggle" id="mobileToggle"><svg fill="none" height="24" viewBox="0 0 24 24" width="24" class="hamburger-icon"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg><svg fill="none" height="24" viewBox="0 0 24 24" width="24" class="close-icon" style="display:none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg></button><button aria-label="התקשרו אלינו" class="phone-header-btn"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></button><ul class="nav-menu" id="navMenu"><li><a href="/services">שירותים</a></li><li><a href="/about">אודות</a></li><li><a href="/contact">צור קשר</a></li><li><a href="/blog" class="nav-link">מגזין בריאות</a><ul class="sub-menu"><li><a href="/blog/acupuncture-benefits" class="nav-link">דיקור סיני</a></li><li><a href="/blog/medical-massage-therapy" class="nav-link">עיסוי רפואי</a></li><li><a href="/blog/holistic-balance" class="nav-link">איזון הוליסטי</a></li></ul></li></ul><div class="nav-cta-container"><li class="nav-cta-item"><a href="/contact" class="nav-cta-btn">צור קשר</a></li></div></div></nav><section class="hero"><img alt="מרחב טיפולי שליו של שלווה רוחנית" class="hero-img" src="/assets/hero-hero-1.webp" data-context="מרחב רפואה אלטרנטיבית שליו עם אווירה טבעית מרגיעה, עציצי צמחים ירוקים, אור טבעי רך, חלל טיפולי מזמין בגווני ירוק וטורקיז" data-placeholder="hero-1"><div class="hero-overlay"></div><div class="hero-content"><h1>שלווה רוחנית - דיקור ועיסוי רפואי</h1><h3>רפואה אלטרנטיבית לכאבים כרוניים ושיפור איכות החיים</h3><a href="/contact" class="btn-primary">קבעו פגישה</a></div></section><section class="intro-section"><div class="container"><div class="text-container"><h2>ברוכים הבאים לשלווה רוחנית</h2><p>אנחנו מאמינים שגוף ונפש מחוברים, ושבריאות אמיתית מתחילה מאיזון פנימי. במרכז שלווה רוחנית, אנו מציעים טיפולים מקצועיים ברפואה אלטרנטיבית המשלבים דיקור סיני, עיסוי רפואי ותזונה הוליסטית. כל טיפול מותאם אישית לצרכים שלכם, עם דגש על טיפול בכאבים כרוניים והקלה ממתח יומיומי.</p><p>המטרה שלנו היא לעזור לכם להרגיש טוב יותר, לשפר את תפקוד הגוף ולהחזיר את האיזון הטבעי. עם ניסיון רב שנים וגישה חמה ומקצועית, אנחנו כאן כדי ללוות אתכם במסע לבריאות ורווחה מלאה.</p></div></div></section><section class="services-preview"><div class="container"><h2>השירותים שלנו</h2><div class="services-grid"><div class="service-card" bis_size="{&quot;x&quot;:1192,&quot;y&quot;:1125,&quot;w&quot;:445,&quot;h&quot;:408,&quot;abs_x&quot;:1252,&quot;abs_y&quot;:1183}" data-item-index="0"><img alt="דיקור סיני מקצועי" class="service-img zappy-editable-image" src="http://localhost:5001/api/website/preview-fullscreen/86c88721-ad60-4792-8456-81e7acfcfdf7/assets/service-service-1.webp" data-context="מטפל מבצע דיקור סיני מקצועי, מחטים דקות מוכנסות בנקודות אקופונקטורה, אווירה רגועה ומרכזת" data-placeholder="service-1" bis_size="{&quot;x&quot;:1216,&quot;y&quot;:1149,&quot;w&quot;:397,&quot;h&quot;:200,&quot;abs_x&quot;:1276,&quot;abs_y&quot;:1207}" id="zappy-temp-img-1764852218699-hv86y532n" data-element-id="zappy-temp-img-1764852218699-hv86y532n" style=""><h3 bis_size="{&quot;x&quot;:1216,&quot;y&quot;:1365,&quot;w&quot;:397,&quot;h&quot;:30,&quot;abs_x&quot;:1276,&quot;abs_y&quot;:1423}" class="zappy-editable">דיקור סיני</h3><p bis_size="{&quot;x&quot;:1216,&quot;y&quot;:1411,&quot;w&quot;:397,&quot;h&quot;:81,&quot;abs_x&quot;:1276,&quot;abs_y&quot;:1469}" class="zappy-editable">דיקור סיני הוא שיטת טיפול עתיקה ומוכחת להקלה על כאבים כרוניים, מתח ומגוון בעיות בריאות. הטיפול מתבצע על ידי מטפל מוסמך ומנוסה, תוך התאמה אישית לצרכים שלכם.</p></div><div class="service-card" bis_size="{&quot;x&quot;:714,&quot;y&quot;:1125,&quot;w&quot;:445,&quot;h&quot;:408,&quot;abs_x&quot;:774,&quot;abs_y&quot;:1183}" data-item-index="1"><img alt="עיסוי רפואי טיפולי" class="service-img zappy-editable-image" src="/assets/service-service-2.webp" data-context="מטפל מבצע עיסוי רפואי טיפולי, ידיים מקצועיות על שרירי הגב, אווירה מרגיעה עם אור רך" data-placeholder="service-2" bis_size="{&quot;x&quot;:738,&quot;y&quot;:1149,&quot;w&quot;:397,&quot;h&quot;:200,&quot;abs_x&quot;:798,&quot;abs_y&quot;:1207}" id="zappy-temp-img-1764841392833-yuntievon" data-element-id="zappy-temp-img-1764841392833-yuntievon"><h3 bis_size="{&quot;x&quot;:738,&quot;y&quot;:1365,&quot;w&quot;:397,&quot;h&quot;:30,&quot;abs_x&quot;:798,&quot;abs_y&quot;:1423}" class="zappy-editable">עיסוי רפואי</h3><p bis_size="{&quot;x&quot;:738,&quot;y&quot;:1411,&quot;w&quot;:397,&quot;h&quot;:81,&quot;abs_x&quot;:798,&quot;abs_y&quot;:1469}" class="zappy-editable">עיסוי רפואי ותזונה הוליסטית מותאמים לשיפור תפקוד השרירים, הקלה על כאבים והפחתת מתח. הטיפול משלב טכניקות מתקדמות לשחרור מתח עמוק ושיפור הזרימה.</p></div><div class="service-card" bis_size="{&quot;x&quot;:237,&quot;y&quot;:1123,&quot;w&quot;:445,&quot;h&quot;:408,&quot;abs_x&quot;:297,&quot;abs_y&quot;:1181}" data-item-index="2"><img alt="תזונה הוליסטית" class="service-img zappy-editable-image" src="/assets/service-service-3.webp" data-context="ייעוץ תזונה הוליסטית, שולחן עם פירות וירקות טריים צבעוניים, מחברת ייעוץ, אווירה טבעית ובריאה" data-placeholder="service-3" bis_size="{&quot;x&quot;:261,&quot;y&quot;:1147,&quot;w&quot;:397,&quot;h&quot;:200,&quot;abs_x&quot;:321,&quot;abs_y&quot;:1205}"><h3 bis_size="{&quot;x&quot;:261,&quot;y&quot;:1363,&quot;w&quot;:397,&quot;h&quot;:30,&quot;abs_x&quot;:321,&quot;abs_y&quot;:1421}" class="zappy-editable">תזונה הוליסטית</h3><p bis_size="{&quot;x&quot;:261,&quot;y&quot;:1410,&quot;w&quot;:397,&quot;h&quot;:81,&quot;abs_x&quot;:321,&quot;abs_y&quot;:1468}" class="zappy-editable">ייעוץ תזונתי הוליסטי המתחשב בגוף, הנפש והסביבה. אנו בוחנים את התזונה שלכם ומציעים תפריט מותאם אישית לשיפור הבריאות, האנרגיה והרווחה הכללית.</p></div></div><div class="cta-center"><a href="/services" class="btn-secondary">גלו את כל השירותים</a></div></div></section><section class="benefits-section"><div class="container"><h2>למה לבחור ברפואה אלטרנטיבית לכאבים כרוניים?</h2><div class="benefits-grid"><div class="benefit-item" bis_size="{&quot;x&quot;:1311,&quot;y&quot;:1768,&quot;w&quot;:326,&quot;h&quot;:268,&quot;abs_x&quot;:1371,&quot;abs_y&quot;:1826}" data-item-index="0"><div class="benefit-icon" bis_size="{&quot;x&quot;:1553,&quot;y&quot;:1792,&quot;w&quot;:60,&quot;h&quot;:60,&quot;abs_x&quot;:1613,&quot;abs_y&quot;:1850}"><div class="zappy-inserted-element" style="margin: 20px 0; text-align: center; display: flex; justify-content: center;" data-element-id="element-saved-1764852826371-njywtojhm" bis_size="{&quot;x&quot;:1571,&quot;y&quot;:1810,&quot;w&quot;:24,&quot;h&quot;:24,&quot;abs_x&quot;:1631,&quot;abs_y&quot;:1868}"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" id="element-saved-1764852206434-0w7bo7dxb58" data-icon="mdi:heart-outline" data-iconify="mdi:heart-outline" data-size-adjusted="true" style="color: rgb(74, 157, 127); width: 24px; height: 24px; display: inline-block; vertical-align: -0.125em; pointer-events: auto; cursor: pointer;" data-element-type="icon" data-icon-type="iconify" class="iconify iconify--mdi" data-element-id="icon-1764852826862-g7w1hzpuf" bis_size="{&quot;x&quot;:1571,&quot;y&quot;:1810,&quot;w&quot;:24,&quot;h&quot;:24,&quot;abs_x&quot;:1631,&quot;abs_y&quot;:1868}"><path fill="currentColor" d="m12.1 18.55l-.1.1l-.11-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04 1 3.57 2.36h1.86C13.46 6 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05M16.5 3c-1.74 0-3.41.81-4.5 2.08C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.41 2 8.5c0 3.77 3.4 6.86 8.55 11.53L12 21.35l1.45-1.32C18.6 15.36 22 12.27 22 8.5C22 5.41 19.58 3 16.5 3" bis_size="{&quot;x&quot;:1573,&quot;y&quot;:1813,&quot;w&quot;:20,&quot;h&quot;:18,&quot;abs_x&quot;:1633,&quot;abs_y&quot;:1871}"></path></svg></div></div><h3 class="zappy-editable" bis_size="{&quot;x&quot;:1335,&quot;y&quot;:1868,&quot;w&quot;:278,&quot;h&quot;:30,&quot;abs_x&quot;:1395,&quot;abs_y&quot;:1926}">טיפול טבעי ובטוח</h3><p class="zappy-editable" bis_size="{&quot;x&quot;:1335,&quot;y&quot;:1915,&quot;w&quot;:278,&quot;h&quot;:81,&quot;abs_x&quot;:1395,&quot;abs_y&quot;:1973}">רפואה אלטרנטיבית מציעה גישה טבעית ללא תופעות לוואי, המתמקדת בטיפול בשורש הבעיה ולא רק בסימפטומים.</p></div><div class="benefit-item" bis_size="{&quot;x&quot;:953,&quot;y&quot;:1768,&quot;w&quot;:326,&quot;h&quot;:268,&quot;abs_x&quot;:1013,&quot;abs_y&quot;:1826}" data-item-index="1"><div class="benefit-icon" bis_size="{&quot;x&quot;:1195,&quot;y&quot;:1792,&quot;w&quot;:60,&quot;h&quot;:60,&quot;abs_x&quot;:1255,&quot;abs_y&quot;:1850}"><i class="fas fa-user-check" data-element-type="icon" data-element-id="icon-1764845799850-b37uatbpe" data-icon-type="fontawesome" bis_size="{&quot;x&quot;:1210,&quot;y&quot;:1810,&quot;w&quot;:30,&quot;h&quot;:24,&quot;abs_x&quot;:1270,&quot;abs_y&quot;:1868}" style="pointer-events: auto; cursor: pointer;"></i></div><h3 class="zappy-editable" bis_size="{&quot;x&quot;:977,&quot;y&quot;:1868,&quot;w&quot;:278,&quot;h&quot;:30,&quot;abs_x&quot;:1037,&quot;abs_y&quot;:1926}">התאמה אישית</h3><p class="zappy-editable" bis_size="{&quot;x&quot;:977,&quot;y&quot;:1915,&quot;w&quot;:278,&quot;h&quot;:81,&quot;abs_x&quot;:1037,&quot;abs_y&quot;:1973}">כל טיפול מותאם במיוחד עבורכם, תוך התחשבות במצב הבריאותי, הצרכים והמטרות האישיות שלכם.</p></div><div class="benefit-item" bis_size="{&quot;x&quot;:595,&quot;y&quot;:1768,&quot;w&quot;:326,&quot;h&quot;:268,&quot;abs_x&quot;:655,&quot;abs_y&quot;:1826}" data-item-index="2"><div class="benefit-icon" bis_size="{&quot;x&quot;:837,&quot;y&quot;:1792,&quot;w&quot;:60,&quot;h&quot;:60,&quot;abs_x&quot;:897,&quot;abs_y&quot;:1850}"><i class="fas fa-spa" data-element-type="icon" data-element-id="icon-1764845799850-23hcv9zdk" data-icon-type="fontawesome" bis_size="{&quot;x&quot;:854,&quot;y&quot;:1810,&quot;w&quot;:27,&quot;h&quot;:24,&quot;abs_x&quot;:914,&quot;abs_y&quot;:1868}" style="pointer-events: auto; cursor: pointer;"></i></div><h3 class="zappy-editable" bis_size="{&quot;x&quot;:619,&quot;y&quot;:1868,&quot;w&quot;:278,&quot;h&quot;:30,&quot;abs_x&quot;:679,&quot;abs_y&quot;:1926}">איזון גוף ונפש</h3><p class="zappy-editable" bis_size="{&quot;x&quot;:619,&quot;y&quot;:1915,&quot;w&quot;:278,&quot;h&quot;:81,&quot;abs_x&quot;:679,&quot;abs_y&quot;:1973}">הגישה ההוליסטית שלנו משלבת טיפול בגוף ובנפש, מה שמוביל לתוצאות ארוכות טווח ושיפור באיכות החיים.</p></div><div class="benefit-item" bis_size="{&quot;x&quot;:237,&quot;y&quot;:1768,&quot;w&quot;:326,&quot;h&quot;:268,&quot;abs_x&quot;:297,&quot;abs_y&quot;:1826}" data-item-index="3" style="transition: background 0.3s;"><div class="benefit-icon" bis_size="{&quot;x&quot;:479,&quot;y&quot;:1792,&quot;w&quot;:60,&quot;h&quot;:60,&quot;abs_x&quot;:539,&quot;abs_y&quot;:1850}"><i class="fas fa-leaf" data-element-type="icon" data-element-id="icon-1764845799850-2fkzvx0nm" data-icon-type="fontawesome" bis_size="{&quot;x&quot;:497,&quot;y&quot;:1810,&quot;w&quot;:24,&quot;h&quot;:24,&quot;abs_x&quot;:557,&quot;abs_y&quot;:1868}" style="pointer-events: auto; cursor: pointer;"></i></div><h3 class="zappy-editable" bis_size="{&quot;x&quot;:261,&quot;y&quot;:1868,&quot;w&quot;:278,&quot;h&quot;:30,&quot;abs_x&quot;:321,&quot;abs_y&quot;:1926}">New Item</h3><p class="zappy-editable" bis_size="{&quot;x&quot;:261,&quot;y&quot;:1915,&quot;w&quot;:278,&quot;h&quot;:27,&quot;abs_x&quot;:321,&quot;abs_y&quot;:1973}">Click to edit this text</p></div></div></div></section><section class="testimonials-section"><div class="container"><h2>מה הלקוחות שלנו אומרים</h2><div class="testimonials-grid"><div class="testimonial-card"><div class="testimonial-text"><p>"הגעתי לשלווה רוחנית עם כאבי גב כרוניים שליוו אותי שנים. אחרי מספר טיפולי דיקור ועיסוי רפואי, הכאבים פחתו משמעותית והתפקוד שלי השתפר. ממליצה בחום!"</p></div><div class="testimonial-author"><strong>שרה כהן</strong><span>לקוחה מרוצה</span></div></div><div class="testimonial-card"><div class="testimonial-text"><p>"הייעוץ התזונתי ההוליסטי שקיבלתי פה שינה לי את החיים. למדתי להקשיב לגוף שלי ולתת לו את מה שהוא צריך. תודה על הליווי המקצועי והחם."</p></div><div class="testimonial-author"><strong>דוד לוי</strong><span>לקוח מרוצה</span></div></div></div></div></section><section class="cta-section"><div class="container"><div class="cta-content"><h2>מוכנים להתחיל את המסע לבריאות ורווחה?</h2><p>צרו איתנו קשר עוד היום וקבעו פגישת ייעוץ ראשונית. נשמח ללוות אתכם בדרך לשלווה ואיזון.</p><a href="/contact" class="btn-primary">צור קשר עכשיו</a></div></div></section><a href="https://wa.me/[whatsapp_handle]" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a><footer class="legal-footer"><div class="container"><div class="footer-main"><div class="all-rights-reserved"><p>© 2025 שלווה רוחנית. כל הזכויות שמורות.</p></div><div class="footer-social"><a href="https://facebook.com/[facebook_handle]" aria-label="Facebook" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://instagram.com/[instagram_handle]" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://wa.me/[whatsapp_handle]" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fab fa-whatsapp"></i></a></div><div class="footer-legal"><a href="privacy.html" aria-label="מדיניות פרטיות">מדיניות פרטיות</a><span class="separator">|</span><a href="accessibility.html" aria-label="נגישות">נגישות</a><span class="separator">|</span><a href="terms.html" aria-label="תנאי שימוש">תנאי שימוש</a></div></div><div class="zappy-attribution"><p>נוצר באמצעות<a href="https://zappy5.com" style="color:inherit;text-decoration:underline" rel="noopener noreferrer" target="_blank">Zappy</a></p></div></div></footer><script>!function(){var e=window.location.href;e.includes("/preview/")||e.includes("/preview-fullscreen/")||e.includes("localhost:5001")||e.includes("localhost:3000")||fetch("http://localhost:5001/api/website/86c88721-ad60-4792-8456-81e7acfcfdf7/tier").then(function(e){return e.json()}).then(function(e){if(e.showAttribution){var t=document.getElementById("zappy-attribution-header");t&&(t.style.display="block")}}).catch(function(e){console.error("Failed to check tier:",e)})}()</script><div data-integration="accessibility:toolbar"></div><script src="/script.js"></script>
+</head><body><div class="zappy-header" id="zappy-attribution-header" style="display:none"><p>Happily created by&nbsp;<a href="https://zappy5.com" class="zappy-link" rel="noopener noreferrer" target="_blank">Zappy</a></p></div><nav class="navbar" id="navbar"><div class="container nav-container"><div class="nav-brand"><a href="/" class="logo-link"><img alt="שלווה רוחנית" class="logo" src="/assets/logo.webp"></a></div><button aria-label="תפריט" class="mobile-toggle" id="mobileToggle"><svg fill="none" height="24" viewBox="0 0 24 24" width="24" class="hamburger-icon"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg><svg fill="none" height="24" viewBox="0 0 24 24" width="24" class="close-icon" style="display:none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg></button><button aria-label="התקשרו אלינו" class="phone-header-btn"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></button><ul class="nav-menu" id="navMenu"><li><a href="/services">שירותים</a></li><li><a href="/about">אודות</a></li><li><a href="/contact">צור קשר</a></li><li><a href="/blog" class="nav-link">מגזין בריאות</a><ul class="sub-menu"><li><a href="/blog/acupuncture-benefits" class="nav-link">דיקור סיני</a></li><li><a href="/blog/medical-massage-therapy" class="nav-link">עיסוי רפואי</a></li><li><a href="/blog/holistic-balance" class="nav-link">איזון הוליסטי</a></li></ul></li></ul><div class="nav-cta-container"><li class="nav-cta-item"><a href="/contact" class="nav-cta-btn">צור קשר</a></li></div></div></nav><section class="hero"><img alt="מרחב טיפולי שליו של שלווה רוחנית" class="hero-img" src="/assets/hero-hero-1.webp" data-context="מרחב רפואה אלטרנטיבית שליו עם אווירה טבעית מרגיעה, עציצי צמחים ירוקים, אור טבעי רך, חלל טיפולי מזמין בגווני ירוק וטורקיז" data-placeholder="hero-1"><div class="hero-overlay"></div><div class="hero-content"><h1>שלווה רוחנית - דיקור ועיסוי רפואי</h1><h3>רפואה אלטרנטיבית לכאבים כרוניים ושיפור איכות החיים</h3><a href="/contact" class="btn-primary">קבעו פגישה</a></div></section><section class="intro-section"><div class="container"><div class="text-container"><h2>ברוכים הבאים לשלווה רוחנית</h2><p>אנחנו מאמינים שגוף ונפש מחוברים, ושבריאות אמיתית מתחילה מאיזון פנימי. במרכז שלווה רוחנית, אנו מציעים טיפולים מקצועיים ברפואה אלטרנטיבית המשלבים דיקור סיני, עיסוי רפואי ותזונה הוליסטית. כל טיפול מותאם אישית לצרכים שלכם, עם דגש על טיפול בכאבים כרוניים והקלה ממתח יומיומי.</p><p>המטרה שלנו היא לעזור לכם להרגיש טוב יותר, לשפר את תפקוד הגוף ולהחזיר את האיזון הטבעי. עם ניסיון רב שנים וגישה חמה ומקצועית, אנחנו כאן כדי ללוות אתכם במסע לבריאות ורווחה מלאה.</p></div></div></section><section class="services-preview"><div class="container"><h2>השירותים שלנו</h2>
+    <div class="services-grid zappy-carousel-container" data-original-classes="services-grid" data-converted-from="normal">
+      <div class="zappy-carousel-wrapper" dir="rtl">
+        <div class="zappy-carousel-track" style="transition: none; transform: translateX(0px);">
+          <div class="service-card zappy-carousel-item" bis_size="{&quot;x&quot;:1192,&quot;y&quot;:1126,&quot;w&quot;:445,&quot;h&quot;:408,&quot;abs_x&quot;:1252,&quot;abs_y&quot;:1184}" data-item-index="0" data-index="0"><img alt="דיקור סיני מקצועי" class="service-img zappy-editable-image" src="http://localhost:5001/api/website/preview-fullscreen/86c88721-ad60-4792-8456-81e7acfcfdf7/assets/service-service-1.webp" data-context="מטפל מבצע דיקור סיני מקצועי, מחטים דקות מוכנסות בנקודות אקופונקטורה, אווירה רגועה ומרכזת" data-placeholder="service-1" bis_size="{&quot;x&quot;:1216,&quot;y&quot;:1150,&quot;w&quot;:397,&quot;h&quot;:200,&quot;abs_x&quot;:1276,&quot;abs_y&quot;:1208}" id="zappy-temp-img-1764852218699-hv86y532n" data-element-id="zappy-temp-img-1764852218699-hv86y532n" style=""><h3 bis_size="{&quot;x&quot;:1216,&quot;y&quot;:1366,&quot;w&quot;:397,&quot;h&quot;:30,&quot;abs_x&quot;:1276,&quot;abs_y&quot;:1424}" class="zappy-editable">דיקור סיני</h3><p bis_size="{&quot;x&quot;:1216,&quot;y&quot;:1412,&quot;w&quot;:397,&quot;h&quot;:81,&quot;abs_x&quot;:1276,&quot;abs_y&quot;:1470}" class="zappy-editable">דיקור סיני הוא שיטת טיפול עתיקה ומוכחת להקלה על כאבים כרוניים, מתח ומגוון בעיות בריאות. הטיפול מתבצע על ידי מטפל מוסמך ומנוסה, תוך התאמה אישית לצרכים שלכם.</p></div>
+<div class="service-card zappy-carousel-item" bis_size="{&quot;x&quot;:714,&quot;y&quot;:1126,&quot;w&quot;:445,&quot;h&quot;:408,&quot;abs_x&quot;:774,&quot;abs_y&quot;:1184}" data-item-index="1" data-index="1"><img alt="עיסוי רפואי טיפולי" class="service-img zappy-editable-image" src="/assets/service-service-2.webp" data-context="מטפל מבצע עיסוי רפואי טיפולי, ידיים מקצועיות על שרירי הגב, אווירה מרגיעה עם אור רך" data-placeholder="service-2" bis_size="{&quot;x&quot;:738,&quot;y&quot;:1150,&quot;w&quot;:397,&quot;h&quot;:200,&quot;abs_x&quot;:798,&quot;abs_y&quot;:1208}" id="zappy-temp-img-1764841392833-yuntievon" data-element-id="zappy-temp-img-1764841392833-yuntievon"><h3 bis_size="{&quot;x&quot;:738,&quot;y&quot;:1366,&quot;w&quot;:397,&quot;h&quot;:30,&quot;abs_x&quot;:798,&quot;abs_y&quot;:1424}" class="zappy-editable">עיסוי רפואי</h3><p bis_size="{&quot;x&quot;:738,&quot;y&quot;:1412,&quot;w&quot;:397,&quot;h&quot;:81,&quot;abs_x&quot;:798,&quot;abs_y&quot;:1470}" class="zappy-editable">עיסוי רפואי ותזונה הוליסטית מותאמים לשיפור תפקוד השרירים, הקלה על כאבים והפחתת מתח. הטיפול משלב טכניקות מתקדמות לשחרור מתח עמוק ושיפור הזרימה.</p></div>
+<div class="service-card zappy-carousel-item" bis_size="{&quot;x&quot;:237,&quot;y&quot;:1126,&quot;w&quot;:445,&quot;h&quot;:408,&quot;abs_x&quot;:297,&quot;abs_y&quot;:1184}" data-item-index="2" data-index="2"><img alt="תזונה הוליסטית" class="service-img zappy-editable-image" src="/assets/service-service-3.webp" data-context="ייעוץ תזונה הוליסטית, שולחן עם פירות וירקות טריים צבעוניים, מחברת ייעוץ, אווירה טבעית ובריאה" data-placeholder="service-3" bis_size="{&quot;x&quot;:261,&quot;y&quot;:1150,&quot;w&quot;:397,&quot;h&quot;:200,&quot;abs_x&quot;:321,&quot;abs_y&quot;:1208}"><h3 bis_size="{&quot;x&quot;:261,&quot;y&quot;:1366,&quot;w&quot;:397,&quot;h&quot;:30,&quot;abs_x&quot;:321,&quot;abs_y&quot;:1424}" class="zappy-editable">תזונה הוליסטית</h3><p bis_size="{&quot;x&quot;:261,&quot;y&quot;:1412,&quot;w&quot;:397,&quot;h&quot;:81,&quot;abs_x&quot;:321,&quot;abs_y&quot;:1470}" class="zappy-editable">ייעוץ תזונתי הוליסטי המתחשב בגוף, הנפש והסביבה. אנו בוחנים את התזונה שלכם ומציעים תפריט מותאם אישית לשיפור הבריאות, האנרגיה והרווחה הכללית.</p></div>
+        </div>
+      </div>
+      <button class="zappy-carousel-btn zappy-carousel-prev" aria-label="Previous" type="button" data-disabled="true">
+        <span>‹</span>
+      </button>
+      <button class="zappy-carousel-btn zappy-carousel-next" aria-label="Next" type="button" data-disabled="false">
+        <span>›</span>
+      </button>
+      <div class="zappy-carousel-dots" role="tablist" aria-label="Carousel navigation"></div>
+    </div>
+    <div class="cta-center"><a href="/services" class="btn-secondary">גלו את כל השירותים</a></div></div></section><section class="benefits-section"><div class="container"><h2>למה לבחור ברפואה אלטרנטיבית לכאבים כרוניים?</h2><div class="benefits-grid"><div class="benefit-item" bis_size="{&quot;x&quot;:1311,&quot;y&quot;:1768,&quot;w&quot;:326,&quot;h&quot;:268,&quot;abs_x&quot;:1371,&quot;abs_y&quot;:1826}" data-item-index="0"><div class="benefit-icon" bis_size="{&quot;x&quot;:1553,&quot;y&quot;:1792,&quot;w&quot;:60,&quot;h&quot;:60,&quot;abs_x&quot;:1613,&quot;abs_y&quot;:1850}"><div class="zappy-inserted-element" style="margin: 20px 0; text-align: center; display: flex; justify-content: center;" data-element-id="element-saved-1764852826371-njywtojhm" bis_size="{&quot;x&quot;:1571,&quot;y&quot;:1810,&quot;w&quot;:24,&quot;h&quot;:24,&quot;abs_x&quot;:1631,&quot;abs_y&quot;:1868}"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" id="element-saved-1764852206434-0w7bo7dxb58" data-icon="mdi:heart-outline" data-iconify="mdi:heart-outline" data-size-adjusted="true" style="color: rgb(74, 157, 127); width: 24px; height: 24px; display: inline-block; vertical-align: -0.125em; pointer-events: auto; cursor: pointer;" data-element-type="icon" data-icon-type="iconify" class="iconify iconify--mdi" data-element-id="icon-1764852826862-g7w1hzpuf" bis_size="{&quot;x&quot;:1571,&quot;y&quot;:1810,&quot;w&quot;:24,&quot;h&quot;:24,&quot;abs_x&quot;:1631,&quot;abs_y&quot;:1868}"><path fill="currentColor" d="m12.1 18.55l-.1.1l-.11-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04 1 3.57 2.36h1.86C13.46 6 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05M16.5 3c-1.74 0-3.41.81-4.5 2.08C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.41 2 8.5c0 3.77 3.4 6.86 8.55 11.53L12 21.35l1.45-1.32C18.6 15.36 22 12.27 22 8.5C22 5.41 19.58 3 16.5 3" bis_size="{&quot;x&quot;:1573,&quot;y&quot;:1813,&quot;w&quot;:20,&quot;h&quot;:18,&quot;abs_x&quot;:1633,&quot;abs_y&quot;:1871}"></path></svg></div></div><h3 class="zappy-editable" bis_size="{&quot;x&quot;:1335,&quot;y&quot;:1868,&quot;w&quot;:278,&quot;h&quot;:30,&quot;abs_x&quot;:1395,&quot;abs_y&quot;:1926}">טיפול טבעי ובטוח</h3><p class="zappy-editable" bis_size="{&quot;x&quot;:1335,&quot;y&quot;:1915,&quot;w&quot;:278,&quot;h&quot;:81,&quot;abs_x&quot;:1395,&quot;abs_y&quot;:1973}">רפואה אלטרנטיבית מציעה גישה טבעית ללא תופעות לוואי, המתמקדת בטיפול בשורש הבעיה ולא רק בסימפטומים.</p></div><div class="benefit-item" bis_size="{&quot;x&quot;:953,&quot;y&quot;:1768,&quot;w&quot;:326,&quot;h&quot;:268,&quot;abs_x&quot;:1013,&quot;abs_y&quot;:1826}" data-item-index="1"><div class="benefit-icon" bis_size="{&quot;x&quot;:1195,&quot;y&quot;:1792,&quot;w&quot;:60,&quot;h&quot;:60,&quot;abs_x&quot;:1255,&quot;abs_y&quot;:1850}"><i class="fas fa-user-check" data-element-type="icon" data-element-id="icon-1764845799850-b37uatbpe" data-icon-type="fontawesome" bis_size="{&quot;x&quot;:1210,&quot;y&quot;:1810,&quot;w&quot;:30,&quot;h&quot;:24,&quot;abs_x&quot;:1270,&quot;abs_y&quot;:1868}" style="pointer-events: auto; cursor: pointer;"></i></div><h3 class="zappy-editable" bis_size="{&quot;x&quot;:977,&quot;y&quot;:1868,&quot;w&quot;:278,&quot;h&quot;:30,&quot;abs_x&quot;:1037,&quot;abs_y&quot;:1926}">התאמה אישית</h3><p class="zappy-editable" bis_size="{&quot;x&quot;:977,&quot;y&quot;:1915,&quot;w&quot;:278,&quot;h&quot;:81,&quot;abs_x&quot;:1037,&quot;abs_y&quot;:1973}">כל טיפול מותאם במיוחד עבורכם, תוך התחשבות במצב הבריאותי, הצרכים והמטרות האישיות שלכם.</p></div><div class="benefit-item" bis_size="{&quot;x&quot;:595,&quot;y&quot;:1768,&quot;w&quot;:326,&quot;h&quot;:268,&quot;abs_x&quot;:655,&quot;abs_y&quot;:1826}" data-item-index="2"><div class="benefit-icon" bis_size="{&quot;x&quot;:837,&quot;y&quot;:1792,&quot;w&quot;:60,&quot;h&quot;:60,&quot;abs_x&quot;:897,&quot;abs_y&quot;:1850}"><i class="fas fa-spa" data-element-type="icon" data-element-id="icon-1764845799850-23hcv9zdk" data-icon-type="fontawesome" bis_size="{&quot;x&quot;:854,&quot;y&quot;:1810,&quot;w&quot;:27,&quot;h&quot;:24,&quot;abs_x&quot;:914,&quot;abs_y&quot;:1868}" style="pointer-events: auto; cursor: pointer;"></i></div><h3 class="zappy-editable" bis_size="{&quot;x&quot;:619,&quot;y&quot;:1868,&quot;w&quot;:278,&quot;h&quot;:30,&quot;abs_x&quot;:679,&quot;abs_y&quot;:1926}">איזון גוף ונפש</h3><p class="zappy-editable" bis_size="{&quot;x&quot;:619,&quot;y&quot;:1915,&quot;w&quot;:278,&quot;h&quot;:81,&quot;abs_x&quot;:679,&quot;abs_y&quot;:1973}">הגישה ההוליסטית שלנו משלבת טיפול בגוף ובנפש, מה שמוביל לתוצאות ארוכות טווח ושיפור באיכות החיים.</p></div><div class="benefit-item" bis_size="{&quot;x&quot;:237,&quot;y&quot;:1768,&quot;w&quot;:326,&quot;h&quot;:268,&quot;abs_x&quot;:297,&quot;abs_y&quot;:1826}" data-item-index="3" style="transition: background 0.3s;"><div class="benefit-icon" bis_size="{&quot;x&quot;:479,&quot;y&quot;:1792,&quot;w&quot;:60,&quot;h&quot;:60,&quot;abs_x&quot;:539,&quot;abs_y&quot;:1850}"><i class="fas fa-leaf" data-element-type="icon" data-element-id="icon-1764845799850-2fkzvx0nm" data-icon-type="fontawesome" bis_size="{&quot;x&quot;:497,&quot;y&quot;:1810,&quot;w&quot;:24,&quot;h&quot;:24,&quot;abs_x&quot;:557,&quot;abs_y&quot;:1868}" style="pointer-events: auto; cursor: pointer;"></i></div><h3 class="zappy-editable" bis_size="{&quot;x&quot;:261,&quot;y&quot;:1868,&quot;w&quot;:278,&quot;h&quot;:30,&quot;abs_x&quot;:321,&quot;abs_y&quot;:1926}">New Item</h3><p class="zappy-editable" bis_size="{&quot;x&quot;:261,&quot;y&quot;:1915,&quot;w&quot;:278,&quot;h&quot;:27,&quot;abs_x&quot;:321,&quot;abs_y&quot;:1973}">Click to edit this text</p></div></div></div></section><section class="testimonials-section"><div class="container"><h2>מה הלקוחות שלנו אומרים</h2><div class="testimonials-grid"><div class="testimonial-card"><div class="testimonial-text"><p>"הגעתי לשלווה רוחנית עם כאבי גב כרוניים שליוו אותי שנים. אחרי מספר טיפולי דיקור ועיסוי רפואי, הכאבים פחתו משמעותית והתפקוד שלי השתפר. ממליצה בחום!"</p></div><div class="testimonial-author"><strong>שרה כהן</strong><span>לקוחה מרוצה</span></div></div><div class="testimonial-card"><div class="testimonial-text"><p>"הייעוץ התזונתי ההוליסטי שקיבלתי פה שינה לי את החיים. למדתי להקשיב לגוף שלי ולתת לו את מה שהוא צריך. תודה על הליווי המקצועי והחם."</p></div><div class="testimonial-author"><strong>דוד לוי</strong><span>לקוח מרוצה</span></div></div></div></div></section><section class="cta-section"><div class="container"><div class="cta-content"><h2>מוכנים להתחיל את המסע לבריאות ורווחה?</h2><p>צרו איתנו קשר עוד היום וקבעו פגישת ייעוץ ראשונית. נשמח ללוות אתכם בדרך לשלווה ואיזון.</p><a href="/contact" class="btn-primary">צור קשר עכשיו</a></div></div></section><a href="https://wa.me/[whatsapp_handle]" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a><footer class="legal-footer"><div class="container"><div class="footer-main"><div class="all-rights-reserved"><p>© 2025 שלווה רוחנית. כל הזכויות שמורות.</p></div><div class="footer-social"><a href="https://facebook.com/[facebook_handle]" aria-label="Facebook" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://instagram.com/[instagram_handle]" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://wa.me/[whatsapp_handle]" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fab fa-whatsapp"></i></a></div><div class="footer-legal"><a href="privacy.html" aria-label="מדיניות פרטיות">מדיניות פרטיות</a><span class="separator">|</span><a href="accessibility.html" aria-label="נגישות">נגישות</a><span class="separator">|</span><a href="terms.html" aria-label="תנאי שימוש">תנאי שימוש</a></div></div><div class="zappy-attribution"><p>נוצר באמצעות<a href="https://zappy5.com" style="color:inherit;text-decoration:underline" rel="noopener noreferrer" target="_blank">Zappy</a></p></div></div></footer><script>!function(){var e=window.location.href;e.includes("/preview/")||e.includes("/preview-fullscreen/")||e.includes("localhost:5001")||e.includes("localhost:3000")||fetch("http://localhost:5001/api/website/86c88721-ad60-4792-8456-81e7acfcfdf7/tier").then(function(e){return e.json()}).then(function(e){if(e.showAttribution){var t=document.getElementById("zappy-attribution-header");t&&(t.style.display="block")}}).catch(function(e){console.error("Failed to check tier:",e)})}()</script><div data-integration="accessibility:toolbar"></div><script src="/script.js"></script><script data-zappy-carousel-js="true">
+      (function() {
+        // Prevent duplicate initialization
+        if (typeof window.ZappyCarousel !== 'undefined') {
+          return;
+        }
+
+        window.ZappyCarousel = {
+          init: function(container) {
+            if (!container) return;
+            
+            // Prevent double initialization
+            if (container.dataset.carouselInitialized === 'true') {
+              return;
+            }
+            container.dataset.carouselInitialized = 'true';
+
+            const track = container.querySelector('.zappy-carousel-track');
+            const prevBtn = container.querySelector('.zappy-carousel-prev');
+            const nextBtn = container.querySelector('.zappy-carousel-next');
+            const dotsContainer = container.querySelector('.zappy-carousel-dots');
+
+            if (!track || !prevBtn || !nextBtn || !dotsContainer) {
+              console.error('Carousel: Missing required elements');
+              return;
+            }
+
+            let currentIndex = 0;
+            let isRTL = false;
+
+            // Detect RTL from multiple sources
+            function detectRTL() {
+              const wrapper = container.querySelector('.zappy-carousel-wrapper');
+              if (wrapper && wrapper.getAttribute('dir') === 'rtl') return true;
+              if (container.getAttribute('dir') === 'rtl') return true;
+              if (document.documentElement.getAttribute('dir') === 'rtl') return true;
+              if (document.dir === 'rtl') return true;
+              return false;
+            }
+
+            isRTL = detectRTL();
+
+            function getItemsPerView() {
+              const containerWidth = container.offsetWidth;
+              if (containerWidth < 768) return 1;
+              if (containerWidth < 1024) return 2;
+              return 3;
+            }
+
+            function getTotalSlides() {
+              const items = track.querySelectorAll('.zappy-carousel-item');
+              const perView = getItemsPerView();
+              // For one-item-at-a-time scrolling
+              return Math.max(1, items.length - perView + 1);
+            }
+
+            function updateCarousel() {
+              const items = track.querySelectorAll('.zappy-carousel-item');
+              const perView = getItemsPerView();
+              
+              if (items.length === 0) return;
+
+              // Set grid-template-columns to show only perView items
+              track.style.gridTemplateColumns = `repeat(${items.length}, calc((100% - ${(perView - 1) * 2}rem) / ${perView}))`;
+
+              const firstItem = items[0];
+              const itemWidth = firstItem.offsetWidth;
+              const gap = parseFloat(getComputedStyle(track).gap) || 0;
+
+              // Calculate the move amount based on current index (one item at a time)
+              const moveAmount = currentIndex * (itemWidth + gap);
+              const direction = isRTL ? 1 : -1;
+              track.style.transform = `translateX(${direction * moveAmount}px)`;
+
+              updateButtons();
+              updateDots();
+            }
+
+            function updateButtons() {
+              const total = getTotalSlides();
+              
+              // Use data-disabled instead of disabled attribute
+              if (currentIndex === 0) {
+                prevBtn.setAttribute('data-disabled', 'true');
+              } else {
+                prevBtn.setAttribute('data-disabled', 'false');
+              }
+
+              if (currentIndex >= total - 1) {
+                nextBtn.setAttribute('data-disabled', 'true');
+              } else {
+                nextBtn.setAttribute('data-disabled', 'false');
+              }
+            }
+
+            function updateDots() {
+              const total = getTotalSlides();
+              const items = track.querySelectorAll('.zappy-carousel-item');
+              const perView = getItemsPerView();
+              
+              dotsContainer.innerHTML = '';
+              
+              for (let i = 0; i < total; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'zappy-carousel-dot';
+                dot.setAttribute('type', 'button');
+                dot.setAttribute('role', 'tab');
+                
+                // Calculate which items will be shown for this slide
+                const startItem = i + 1;
+                const endItem = Math.min(i + perView, items.length);
+                dot.setAttribute('aria-label', `Show items ${startItem}-${endItem}`);
+                
+                if (i === currentIndex) {
+                  dot.classList.add('active');
+                  dot.setAttribute('aria-selected', 'true');
+                } else {
+                  dot.setAttribute('aria-selected', 'false');
+                }
+                
+                dot.addEventListener('click', () => {
+                  currentIndex = i;
+                  updateCarousel();
+                });
+                
+                dotsContainer.appendChild(dot);
+              }
+            }
+
+            // Navigation handlers - Check data-disabled instead of disabled
+            prevBtn.addEventListener('click', () => {
+              if (prevBtn.getAttribute('data-disabled') === 'true') return;
+              currentIndex = Math.max(0, currentIndex - 1);
+              updateCarousel();
+            });
+
+            nextBtn.addEventListener('click', () => {
+              if (nextBtn.getAttribute('data-disabled') === 'true') return;
+              const total = getTotalSlides();
+              currentIndex = Math.min(total - 1, currentIndex + 1);
+              updateCarousel();
+            });
+
+            // Keyboard navigation
+            container.addEventListener('keydown', (e) => {
+              if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                const btn = isRTL ? nextBtn : prevBtn;
+                if (btn.getAttribute('data-disabled') !== 'true') {
+                  btn.click();
+                }
+              } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                const btn = isRTL ? prevBtn : nextBtn;
+                if (btn.getAttribute('data-disabled') !== 'true') {
+                  btn.click();
+                }
+              }
+            });
+
+            // Touch/swipe support
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            track.addEventListener('touchstart', (e) => {
+              touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            track.addEventListener('touchend', (e) => {
+              touchEndX = e.changedTouches[0].screenX;
+              handleSwipe();
+            }, { passive: true });
+
+            function handleSwipe() {
+              const swipeThreshold = 50;
+              const diff = touchStartX - touchEndX;
+
+              if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                  // Swipe left
+                  const btn = isRTL ? prevBtn : nextBtn;
+                  if (btn.getAttribute('data-disabled') !== 'true') {
+                    btn.click();
+                  }
+                } else {
+                  // Swipe right
+                  const btn = isRTL ? nextBtn : prevBtn;
+                  if (btn.getAttribute('data-disabled') !== 'true') {
+                    btn.click();
+                  }
+                }
+              }
+            }
+
+            // Resize handler with debounce
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+              clearTimeout(resizeTimer);
+              resizeTimer = setTimeout(() => {
+                const total = getTotalSlides();
+                if (currentIndex >= total) {
+                  currentIndex = Math.max(0, total - 1);
+                }
+                updateCarousel();
+              }, 250);
+            });
+
+            // Initial setup
+            updateCarousel();
+          }
+        };
+
+        // Auto-initialize all carousels on page load
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.zappy-carousel-container').forEach(function(container) {
+              window.ZappyCarousel.init(container);
+            });
+          });
+        } else {
+          document.querySelectorAll('.zappy-carousel-container').forEach(function(container) {
+            window.ZappyCarousel.init(container);
+          });
+        }
+      })();
+    </script>
     <script id="zappy-mobile-submenu-script">
     (function() {
       function initMobileSubmenuToggles() {
