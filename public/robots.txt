@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shalvah-ruchanit.zappy5.app/sitemap.xml
+Sitemap: https://zappy-site-86c88721-ad60-4792-8456.onrender.com/sitemap.xml
