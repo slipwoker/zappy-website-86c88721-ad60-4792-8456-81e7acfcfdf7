@@ -1,53 +1,43 @@
-# שלווה רוחנית — Generative Engine Optimization Map
-
-> A בריאות ורווחה business.
+# Business — Generative Engine Optimization Map
 
 ---
 
 ## Pages
 
 ### About
-https://zappy-site-86c88721-ad60-4792-8456.onrender.com/about
+https://shalvah-ruchanit.zappy5.app/about
 
 ### Contact
-https://zappy-site-86c88721-ad60-4792-8456.onrender.com/contact
+https://shalvah-ruchanit.zappy5.app/contact
 
 ### Home
-https://zappy-site-86c88721-ad60-4792-8456.onrender.com
+https://shalvah-ruchanit.zappy5.app
 
 ### Services
-https://zappy-site-86c88721-ad60-4792-8456.onrender.com/services
+https://shalvah-ruchanit.zappy5.app/services
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://zappy-site-86c88721-ad60-4792-8456.onrender.com/privacy
+https://shalvah-ruchanit.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://zappy-site-86c88721-ad60-4792-8456.onrender.com/terms
+https://shalvah-ruchanit.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://zappy-site-86c88721-ad60-4792-8456.onrender.com/accessibility
+https://shalvah-ruchanit.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About שלווה רוחנית
-שלווה רוחנית is a business in the בריאות ורווחה industry.
-
-## Target Audience
-כל הקהלים שמרגישים כאב וצריכים טיפול
-
-## Industry
-בריאות ורווחה
-
+## About Business
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://zappy-site-86c88721-ad60-4792-8456.onrender.com/sitemap.xml
-- **Robots.txt**: https://zappy-site-86c88721-ad60-4792-8456.onrender.com/robots.txt
+- **Sitemap**: https://shalvah-ruchanit.zappy5.app/sitemap.xml
+- **Robots.txt**: https://shalvah-ruchanit.zappy5.app/robots.txt
