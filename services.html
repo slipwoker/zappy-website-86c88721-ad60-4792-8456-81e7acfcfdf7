@@ -2,61 +2,43 @@
     <meta name="robots" content="index, follow"><meta content="width=device-width,initial-scale=1" name="viewport"><title data-i18n="services_page_title">שירותים - דיקור, עיסוי ותזונה הוליסטית | שלווה רוחנית</title><meta content="גלו את מגוון השירותים שלנו: דיקור סיני מקצועי, עיסוי רפואי ותזונה הוליסטית. כל הטיפולים מותאמים אישית לצרכים שלכם." name="description" data-i18n-content="services_meta_description"><meta content="דיקור סיני, עיסוי רפואי, תזונה הוליסטית, רפואה אלטרנטיבית, טיפול בכאבים כרוניים, עיסוי טיפולי" name="keywords"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"><link href="/assets/favicon.ico" rel="icon" type="image/x-icon"><link href="/assets/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16"><link href="/assets/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32"><link href="/assets/favicon-48x48.png" rel="icon" type="image/png" sizes="48x48"><link href="/assets/favicon-192x192.png" rel="icon" type="image/png" sizes="192x192"><link href="/assets/favicon-512x512.png" rel="icon" type="image/png" sizes="512x512"><link href="/assets/apple-touch-icon.png" rel="apple-touch-icon"><style>.zappy-header{position:static;width:100%;background:#fff;box-shadow:0 4px 19px 0 rgba(0,0,0,.04);padding:16px 10px;text-align:center;font-family:Nunito,sans-serif;font-size:16px;color:#4a4a4a;line-height:21px;display:flex;align-items:center;justify-content:center;min-height:21px}.zappy-header p{margin:0;padding:0;font-weight:400;font-size:16px;line-height:21px;white-space:nowrap;display:inline-block;vertical-align:baseline;margin-bottom:0!important}.zappy-header .zappy-link{font-weight:700;color:#4a4a4a;text-decoration:none;transition:opacity .2s}.zappy-header .zappy-link:hover{opacity:.7}</style><link href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script><script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script><script>!function(){"use strict";var t="86c88721-ad60-4792-8456-81e7acfcfdf7",e="http://localhost:5001/api/analytics/track",n=18e5,a=!0,o=!0,i=!0;var s=function(){var e="zappy_session_"+t,a=null;try{if(a=sessionStorage.getItem(e)){var o=JSON.parse(a),i=Date.now();if(i-o.timestamp<n)return o.timestamp=i,sessionStorage.setItem(e,JSON.stringify(o)),o.id}}catch(t){console.warn("Zappy Analytics: SessionStorage not available")}var s="zs_"+Date.now()+"_"+Math.random().toString(36).substr(2,9);try{sessionStorage.setItem(e,JSON.stringify({id:s,timestamp:Date.now()}))}catch(t){}return s}();function r(n,a){a=a||{};var o={website_id:t,event_type:n,page_path:window.location.pathname,referrer:document.referrer||"direct",session_id:s,metadata:a};if(navigator.sendBeacon){var i=new Blob([JSON.stringify(o)],{type:"application/json"});navigator.sendBeacon(e,i)}else fetch(e,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(o),keepalive:!0}).catch(function(t){console.warn("Zappy Analytics: Failed to track event",t)})}a&&r("pageview",{title:document.title,url:window.location.href}),o&&document.addEventListener("click",function(t){var e=t.target;if("BUTTON"===e.tagName||e.closest("button")){var n="BUTTON"===e.tagName?e:e.closest("button");r("click",{element:"button",text:n.textContent.trim().substring(0,100),id:n.id||null,class:n.className||null})}else if("A"===e.tagName||e.closest("a")){var a="A"===e.tagName?e:e.closest("a");r("click",{element:"link",text:a.textContent.trim().substring(0,100),href:a.href,external:a.hostname!==window.location.hostname})}},!0),i&&document.addEventListener("submit",function(t){var e=t.target;r("form_submit",{form_id:e.id||null,form_name:e.name||null,form_action:e.action||null,form_method:e.method||"GET"})},!0);var c=Date.now();window.addEventListener("beforeunload",function(){r("page_unload",{time_on_page:Math.floor((Date.now()-c)/1e3),page_path:window.location.pathname})}),window.zappyAnalytics={track:r,getSessionId:function(){return s}}}()</script><link href="/styles.css" rel="stylesheet">
     <!-- Iconify for cross-platform flag icons -->
     <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
-    <style id="zappy-mobile-submenu-styles">
-      /* Mobile submenu accordion styles */
+    <style id="zappy-dropdown-submenu-styles">
+      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
+      /* Base styles for dropdown submenus - parent must be positioned */
+      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
+      /* Submenu base - hidden by default */
+      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
+      /* CRITICAL: Desktop hover styles to show dropdown */
+      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Submenu item styling */
+      .sub-menu li { list-style: none; margin: 0; padding: 0; }
+      .sub-menu a { display: block !important; padding: 10px 16px !important; color: #333 !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
+      .sub-menu a:hover { background-color: #f5f5f5; }
+      /* RTL (Hebrew/Arabic) dropdown positioning */
+      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
+      /* Hide empty dropdown menus */
+      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))), .sub-menu:not(:has(li)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+      /* Desktop: show submenu on Menu Group hover */
+      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Menu Group title styling */
+      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
+      
+      /* ========== MOBILE SUBMENU STYLES ========== */
       @media (max-width: 768px) {
-        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu {
-          position: static !important;
-          transform: none !important;
-          box-shadow: none !important;
-          background: transparent !important;
-          margin-top: 0 !important;
-          max-height: 0;
-          overflow: hidden;
-          opacity: 0;
-          visibility: hidden;
-          transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
-          padding: 0 !important;
-          border-radius: 0 !important;
-        }
-        .sub-menu.mobile-expanded {
-          max-height: 500px !important;
-          opacity: 1 !important;
-          visibility: visible !important;
-          padding: 8px 0 8px 16px !important;
-        }
-        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded, html[lang="ar"] .sub-menu.mobile-expanded {
-          padding: 8px 16px 8px 0 !important;
-        }
-        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu {
-          opacity: 0; visibility: hidden; pointer-events: none;
-        }
-        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded {
-          opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;
-        }
-        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) {
-          display: flex !important; flex-wrap: wrap !important; align-items: center !important;
-        }
-        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a {
-          flex: 1 !important;
-        }
-        .mobile-submenu-toggle {
-          display: flex !important; align-items: center !important; justify-content: center !important;
-          width: 44px !important; height: 44px !important; background: transparent !important;
-          border: none !important; cursor: pointer !important; padding: 0 !important; margin: 0 !important;
-          flex-shrink: 0 !important; -webkit-tap-highlight-color: transparent;
-        }
-        .mobile-submenu-toggle::after {
-          content: '' !important; display: block !important; width: 0 !important; height: 0 !important;
-          border-left: 6px solid transparent !important; border-right: 6px solid transparent !important;
-          border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important;
-        }
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
+        .sub-menu.mobile-expanded { max-height: 500px !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
+        /* Disable hover behavior on mobile */
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; }
+        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: 44px !important; background: transparent !important; border: none !important; cursor: pointer !important; }
+        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
         .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
-        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu {
-          flex-basis: 100% !important; width: 100% !important;
-        }
-        .sub-menu a { padding: 10px 0 !important; display: block !important; font-size: 14px !important; }
-        .sub-menu a:hover { background-color: transparent !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; }
+        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; }
       }
       @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
     </style>
@@ -866,6 +848,22 @@
       if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
       else { initMobileSubmenuToggles(); }
       var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+      // Re-initialize when mobile menu becomes visible (MutationObserver)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes') {
+            var target = mutation.target;
+            if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) {
+              setTimeout(initMobileSubmenuToggles, 100);
+            }
+          }
+        });
+      });
+      setTimeout(function() {
+        document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) {
+          observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+        });
+      }, 500);
     })();
     </script>
 </body></html>

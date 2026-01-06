@@ -5,6 +5,13 @@
 /contact  /contact.html  200
 /services  /services.html  200
 
+# Language slug rewrites for SEO
+/en/about  /en/about.html  200
+/en/contact  /en/contact.html  200
+/en  /en/index.html  200
+/en/services  /en/services.html  200
+/en  /en/index.html  200
+
 # Legal pages - redirect old .html URLs to friendly URLs
 /privacy.html  /privacy  301
 /accessibility.html  /accessibility  301
