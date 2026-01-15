@@ -1,821 +1,426 @@
-<!DOCTYPE html><html dir="rtl" lang="he"><head><meta charset="UTF-8">
-    <meta name="robots" content="index, follow"><meta content="width=device-width,initial-scale=1" name="viewport"><title data-i18n="services_page_title">שירותים - דיקור, עיסוי ותזונה הוליסטית | שלווה רוחנית</title><meta content="גלו את מגוון השירותים שלנו: דיקור סיני מקצועי, עיסוי רפואי ותזונה הוליסטית. כל הטיפולים מותאמים אישית לצרכים שלכם." name="description" data-i18n-content="services_meta_description"><meta content="דיקור סיני, עיסוי רפואי, תזונה הוליסטית, רפואה אלטרנטיבית, טיפול בכאבים כרוניים, עיסוי טיפולי" name="keywords"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"><link href="/assets/favicon.ico" rel="icon" type="image/x-icon"><link href="/assets/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16"><link href="/assets/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32"><link href="/assets/favicon-48x48.png" rel="icon" type="image/png" sizes="48x48"><link href="/assets/favicon-192x192.png" rel="icon" type="image/png" sizes="192x192"><link href="/assets/favicon-512x512.png" rel="icon" type="image/png" sizes="512x512"><link href="/assets/apple-touch-icon.png" rel="apple-touch-icon"><style>.zappy-header{position:static;width:100%;background:#fff;box-shadow:0 4px 19px 0 rgba(0,0,0,.04);padding:16px 10px;text-align:center;font-family:Nunito,sans-serif;font-size:16px;color:#4a4a4a;line-height:21px;display:flex;align-items:center;justify-content:center;min-height:21px}.zappy-header p{margin:0;padding:0;font-weight:400;font-size:16px;line-height:21px;white-space:nowrap;display:inline-block;vertical-align:baseline;margin-bottom:0!important}.zappy-header .zappy-link{font-weight:700;color:#4a4a4a;text-decoration:none;transition:opacity .2s}.zappy-header .zappy-link:hover{opacity:.7}</style><link href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script><script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script><script>!function(){"use strict";var t="86c88721-ad60-4792-8456-81e7acfcfdf7",e="http://localhost:5001/api/analytics/track",n=18e5,a=!0,o=!0,i=!0;var s=function(){var e="zappy_session_"+t,a=null;try{if(a=sessionStorage.getItem(e)){var o=JSON.parse(a),i=Date.now();if(i-o.timestamp<n)return o.timestamp=i,sessionStorage.setItem(e,JSON.stringify(o)),o.id}}catch(t){console.warn("Zappy Analytics: SessionStorage not available")}var s="zs_"+Date.now()+"_"+Math.random().toString(36).substr(2,9);try{sessionStorage.setItem(e,JSON.stringify({id:s,timestamp:Date.now()}))}catch(t){}return s}();function r(n,a){a=a||{};var o={website_id:t,event_type:n,page_path:window.location.pathname,referrer:document.referrer||"direct",session_id:s,metadata:a};if(navigator.sendBeacon){var i=new Blob([JSON.stringify(o)],{type:"application/json"});navigator.sendBeacon(e,i)}else fetch(e,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(o),keepalive:!0}).catch(function(t){console.warn("Zappy Analytics: Failed to track event",t)})}a&&r("pageview",{title:document.title,url:window.location.href}),o&&document.addEventListener("click",function(t){var e=t.target;if("BUTTON"===e.tagName||e.closest("button")){var n="BUTTON"===e.tagName?e:e.closest("button");r("click",{element:"button",text:n.textContent.trim().substring(0,100),id:n.id||null,class:n.className||null})}else if("A"===e.tagName||e.closest("a")){var a="A"===e.tagName?e:e.closest("a");r("click",{element:"link",text:a.textContent.trim().substring(0,100),href:a.href,external:a.hostname!==window.location.hostname})}},!0),i&&document.addEventListener("submit",function(t){var e=t.target;r("form_submit",{form_id:e.id||null,form_name:e.name||null,form_action:e.action||null,form_method:e.method||"GET"})},!0);var c=Date.now();window.addEventListener("beforeunload",function(){r("page_unload",{time_on_page:Math.floor((Date.now()-c)/1e3),page_path:window.location.pathname})}),window.zappyAnalytics={track:r,getSessionId:function(){return s}}}()</script><link href="/styles.css" rel="stylesheet">
-    <!-- Iconify for cross-platform flag icons -->
-    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
-    <style id="zappy-dropdown-submenu-styles">
-      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
-      /* Base styles for dropdown submenus - parent must be positioned */
-      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
-      /* Submenu base - hidden by default */
-      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
-      /* CRITICAL: Desktop hover styles to show dropdown */
-      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
-      /* Submenu item styling */
-      .sub-menu li { list-style: none; margin: 0; padding: 0; }
-      .sub-menu a { display: block !important; padding: 10px 16px !important; color: #333 !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
-      .sub-menu a:hover { background-color: #f5f5f5; }
-      /* RTL (Hebrew/Arabic) dropdown positioning */
-      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
-      /* Hide empty dropdown menus */
-      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))), .sub-menu:not(:has(li)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
-      /* Desktop: show submenu on Menu Group hover */
-      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
-      /* Menu Group title styling */
-      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
-      
-      /* ========== MOBILE SUBMENU STYLES ========== */
-      @media (max-width: 768px) {
-        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
-        .sub-menu.mobile-expanded { max-height: 500px !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
-        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
-        /* Disable hover behavior on mobile */
-        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
-        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
-        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; }
-        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; }
-        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: 44px !important; background: transparent !important; border: none !important; cursor: pointer !important; }
-        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
-        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
-        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
-        .sub-menu a { padding: 10px 0 !important; display: block !important; }
-        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; }
-      }
-      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
-    </style>
-</head><body><div class="zappy-header" id="zappy-attribution-header" style="display:none"><p data-i18n="services_p_17">Happily created by&nbsp;<a href="https://zappy5.com" rel="noopener noreferrer" target="_blank" class="zappy-link" data-i18n="services_link_35">Zappy</a></p></div><nav class="navbar" id="navbar"><div class="container nav-container"><div class="nav-brand"><a href="/" class="logo-link"><img alt="שלווה רוחנית" class="logo" src="/assets/logo.webp" data-i18n-alt="services_alt_60"></a></div><button aria-label="תפריט" class="mobile-toggle" id="mobileToggle"><svg fill="none" height="24" viewbox="0 0 24 24" width="24" class="hamburger-icon"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg><svg fill="none" height="24" viewbox="0 0 24 24" width="24" class="close-icon" style="display:none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg></button><button aria-label="התקשרו אלינו" class="phone-header-btn"><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></button><ul class="nav-menu" id="navMenu"><li><a href="/services" data-i18n="services_nav_56">שירותים</a></li><li><a href="/about" data-i18n="services_nav_57">אודות</a></li><li><a href="/contact" data-i18n="services_nav_58">צור קשר</a></li></ul>
-<div class="lang-switcher" data-no-icon-edit="true" style="position:relative;display:inline-flex;align-items:center;z-index:1000;margin:0 4px;">
-  <button class="lang-switcher-current" aria-haspopup="true" aria-expanded="false" data-no-icon-edit="true" style="display:flex;align-items:center;padding:8px;background:transparent;border:none;border-radius:6px;cursor:pointer;color:inherit;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="currentColor" style="flex-shrink:0;" data-no-icon-edit="true"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421-6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"></path></svg>
-  </button>
-  <div class="lang-switcher-dropdown" role="menu" style="position:absolute;top:100%;right:0;margin-top:4px;min-width:140px;background:white;border:1px solid rgba(128,128,128,0.2);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all 0.2s ease;z-index:1001;">
-    <button class="lang-option" data-lang="en" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 14px;background:none;border:none;text-align:left;cursor:pointer;font-size:14px;color:#333;"><img src="https://api.iconify.design/circle-flags/us.svg" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border-radius:50%;"> English</button>
-  </div>
-</div><div class="nav-cta-container"><li class="nav-cta-item"><a href="/contact" class="nav-cta-btn" data-i18n="services_nav_59">צור קשר</a></li></div></div></nav><section class="page-header"><div class="container"><h1 data-i18n="services_h1_1">השירותים שלנו</h1><h3 data-i18n="services_h3_8">טיפולים מקצועיים ברפואה אלטרנטיבית המותאמים במיוחד עבורכם</h3></div></section><section class="services-detailed"><div class="container"><div class="service-detail"><div class="service-detail-content"><h2 data-i18n="services_h2_2">דיקור סיני מקצועי</h2><p data-i18n="services_p_18">דיקור סיני הוא אחת מהשיטות העתיקות והמוכחות ביותר ברפואה האלטרנטיבית. הטיפול מבוסס על הכנסת מחטים דקות מאוד לנקודות ספציפיות בגוף, במטרה לאזן את זרימת האנרגיה (צ'י) ולעורר את כוחות הריפוי הטבעיים של הגוף.</p><p data-i18n="services_p_19">דיקור יעיל במיוחד לטיפול בכאבים כרוניים כגון כאבי גב, צוואר וכתפיים, כאבי ראש וכאבי מפרקים. הוא גם מסייע בהפחתת מתח ולחץ, שיפור השינה וחיזוק המערכת החיסונית.</p><ul class="service-benefits"><li data-i18n="services_li_41"><i class="fa-check fas"></i>הקלה על כאבים כרוניים</li><li data-i18n="services_li_42"><i class="fa-check fas"></i>הפחתת מתח ולחץ</li><li data-i18n="services_li_43"><i class="fa-check fas"></i>שיפור תפקוד השרירים והמפרקים</li><li data-i18n="services_li_44"><i class="fa-check fas"></i>חיזוק המערכת החיסונית</li><li data-i18n="services_li_45"><i class="fa-check fas"></i>שיפור איכות השינה</li></ul></div><div class="service-detail-image"><img alt="דיקור סיני מקצועי" class="service-img" src="/assets/service-service-4.webp" data-context="טיפול דיקור סיני מקצועי בפעולה, מטפל מוסמך מכניס מחטות דקות בנקודות אקופונקטורה, אווירה רגועה ומרכזת" data-placeholder="service-4" data-i18n-alt="services_alt_61"></div></div><div class="service-detail reverse"><div class="service-detail-content"><h2 data-i18n="services_h2_3">עיסוי רפואי טיפולי</h2><p data-i18n="services_p_20">עיסוי רפואי ותזונה הוליסטית הם שילוב מושלם לשיפור הבריאות הגופנית והנפשית. העיסוי הרפואי שלנו מתמקד בטיפול בבעיות שרירים ומפרקים, שחרור מתח עמוק ושיפור זרימת הדם והלימפה.</p><p data-i18n="services_p_21">המטפלים שלנו משתמשים בטכניקות מתקדמות כמו עיסוי רקמות עמוק, טריגר פוינט ומניפולציות רקמות רכות. כל טיפול מותאם אישית למצב הגופני והצרכים הספציפיים של המטופל.</p><ul class="service-benefits"><li data-i18n="services_li_46"><i class="fa-check fas"></i>שחרור מתח שרירי עמוק</li><li data-i18n="services_li_47"><i class="fa-check fas"></i>הקלה על כאבי גב וצוואר</li><li data-i18n="services_li_48"><i class="fa-check fas"></i>שיפור גמישות ותנועתיות</li><li data-i18n="services_li_49"><i class="fa-check fas"></i>הפחתת דלקות ונפיחות</li><li data-i18n="services_li_50"><i class="fa-check fas"></i>שיפור זרימת הדם והאנרגיה</li></ul></div><div class="service-detail-image"><img alt="עיסוי רפואי טיפולי" class="service-img" src="/assets/service-service-5.webp" data-context="עיסוי רפואי טיפולי מקצועי, מטפל מבצע עיסוי רקמות עמוק על שרירי הגב, אווירה מרגיעה עם אור טבעי" data-placeholder="service-5" data-i18n-alt="services_alt_62"></div></div><div class="service-detail"><div class="service-detail-content"><h2 data-i18n="services_h2_4">תזונה הוליסטית ואורח חיים בריא</h2><p data-i18n="services_p_22">הגישה ההוליסטית לתזונה רואה בגוף, הנפש והסביבה מערכת אחת משולבת. אנו מאמינים שתזונה נכונה היא אחד המפתחות החשובים לבריאות ולרווחה. הייעוץ התזונתי שלנו כולל בדיקה מקיפה של הרגלי האכילה, מצב הבריאות והצרכים האישיים.</p><p data-i18n="services_p_23">אנו בונים תפריט מותאם אישית המתחשב בסוג הגוף, הצרכים האנרגטיים, אלרגיות ורגישויות, ומטרות בריאותיות. הליווי שלנו כולל גם המלצות לתוספי תזונה טבעיים, צמחי מרפא ושינויים באורח החיים.</p><ul class="service-benefits"><li data-i18n="services_li_51"><i class="fa-check fas"></i>תפריט תזונה מותאם אישית</li><li data-i18n="services_li_52"><i class="fa-check fas"></i>ליווי צמוד ותמיכה מתמשכת</li><li data-i18n="services_li_53"><i class="fa-check fas"></i>המלצות לתוספי תזונה טבעיים</li><li data-i18n="services_li_54"><i class="fa-check fas"></i>שיפור רמות האנרגיה</li><li data-i18n="services_li_55"><i class="fa-check fas"></i>חיזוק המערכת החיסונית</li></ul></div><div class="service-detail-image"><img alt="תזונה הוליסטית" class="service-img" src="/assets/service-service-6.webp" data-context="ייעוץ תזונה הוליסטית, שולחן עם מגוון פירות וירקות טריים צבעוניים, מחברת תכנון תפריט, אווירה טבעית ומזמינה" data-placeholder="service-6" data-i18n-alt="services_alt_63"></div></div></div></section><section class="additional-services"><div class="container"><h2 data-i18n="services_h2_5">שירותים נוספים</h2><div class="services-grid"><div class="service-card"><img alt="רפלקסולוגיה" class="service-img" src="/assets/service-service-7.webp" data-context="טיפול רפלקסולוגיה לכפות הרגליים, ידיים מקצועיות לוחצות על נקודות רפלקס, אווירה רגועה ומרגיעה" data-placeholder="service-7" data-i18n-alt="services_alt_64"><h3 data-i18n="services_h3_9">רפלקסולוגיה</h3><p data-i18n="services_p_24">טיפול בנקודות רפלקס בכפות הרגליים והידיים לאיזון האנרגיה בגוף ושיפור התפקוד של איברים פנימיים.</p></div><div class="service-card"><img alt="צמחי מרפא" class="service-img" src="/assets/service-service-8.webp" data-context="טיפול צמחי מרפא, כלים מסורתיים עם צמחים טבעיים, בקבוקי תמציות צמחים, אווירה טבעית ומקצועית" data-placeholder="service-8" data-i18n-alt="services_alt_65"><h3 data-i18n="services_h3_10">צמחי מרפא</h3><p data-i18n="services_p_25">ייעוץ והמלצות לשימוש בצמחי מרפא טבעיים לחיזוק הבריאות, הפחתת תסמינים ושיפור הרווחה הכללית.</p></div><div class="service-card"><img alt="רייקי" class="service-img" src="/assets/service-service-9.webp" data-context="טיפול רייקי, ידי מטפל מרחפות מעל גוף המטופל, אור רך ואווירה רוחנית שלווה" data-placeholder="service-9" data-i18n-alt="services_alt_66"><h3 data-i18n="services_h3_11">רייקי</h3><p data-i18n="services_p_26">טיפול אנרגטי יפני המסייע באיזון האנרגיה, הפחתת מתח ועידוד תהליכי הריפוי הטבעיים של הגוף.</p></div><div class="service-card"><img alt="מדיטציה" class="service-img" src="/assets/service-service-10.webp" data-context="סדנת מדיטציה קבוצתית, אנשים יושבים בעמדת מדיטציה במעגל, אווירה שלווה עם אור טבעי רך" data-placeholder="service-10" data-i18n-alt="services_alt_67"><h3 data-i18n="services_h3_12">מדיטציה מודרכת</h3><p data-i18n="services_p_27">סדנאות וטיפולים אישיים במדיטציה מודרכת להפחתת מתח, שיפור המיקוד וחיבור לשלווה פנימית.</p></div></div></div></section><section class="process-section"><div class="container"><h2 data-i18n="services_h2_6">תהליך הטיפול</h2><div class="process-steps"><div class="process-step"><div class="step-number">1</div><h3 data-i18n="services_h3_13">פגישת ייעוץ ראשונית</h3><p data-i18n="services_p_28">בפגישה הראשונה נכיר אתכם, נבין את הצרכים והמטרות שלכם, ונבנה תוכנית טיפול מותאמת אישית.</p></div><div class="process-step"><div class="step-number">2</div><h3 data-i18n="services_h3_14">אבחון מקיף</h3><p data-i18n="services_p_29">נבצע אבחון מקיף של מצבכם הגופני והנפשי, תוך התחשבות בהיסטוריה הרפואית והרגלי החיים.</p></div><div class="process-step"><div class="step-number">3</div><h3 data-i18n="services_h3_15">תוכנית טיפול מותאמת</h3><p data-i18n="services_p_30">נבנה עבורכם תוכנית טיפול מקיפה המשלבת את השירותים הרלוונטיים ביותר לצרכים שלכם.</p></div><div class="process-step"><div class="step-number">4</div><h3 data-i18n="services_h3_16">ליווי מתמשך</h3><p data-i18n="services_p_31">נלווה אתכם לאורך כל הדרך, נעקוב אחר ההתקדמות ונתאים את הטיפולים לפי הצורך.</p></div></div></div></section><section class="cta-section"><div class="container"><div class="cta-content"><h2 data-i18n="services_h2_7">מוכנים להתחיל את המסע שלכם?</h2><p data-i18n="services_p_32">צרו איתנו קשר עוד היום לקביעת פגישת ייעוץ ראשונית. נשמח ללוות אתכם בדרך לבריאות ורווחה.</p><a href="/contact" class="btn-primary" data-i18n="services_link_36">קבעו פגישה</a></div></div></section><a href="https://wa.me/[whatsapp_handle]" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a><footer class="legal-footer"><div class="container"><div class="footer-main"><div class="all-rights-reserved"><p data-i18n="services_p_33">© 2025 שלווה רוחנית. כל הזכויות שמורות.</p></div><div class="footer-social"><a href="https://facebook.com/[facebook_handle]" aria-label="Facebook" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://instagram.com/[instagram_handle]" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://wa.me/[whatsapp_handle]" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fab fa-whatsapp"></i></a></div><div class="footer-legal"><a href="privacy.html" aria-label="מדיניות פרטיות" data-i18n="services_link_37">מדיניות פרטיות</a><span class="separator">|</span><a href="accessibility.html" aria-label="נגישות" data-i18n="services_link_38">נגישות</a><span class="separator">|</span><a href="terms.html" aria-label="תנאי שימוש" data-i18n="services_link_39">תנאי שימוש</a></div></div><div class="zappy-attribution"><p data-i18n="services_p_34">נוצר באמצעות<a href="https://zappy5.com" rel="noopener noreferrer" target="_blank" style="color:inherit;text-decoration:underline" data-i18n="services_link_40">Zappy</a></p></div></div></footer><script>!function(){var e=window.location.href;e.includes("/preview/")||e.includes("/preview-fullscreen/")||e.includes("localhost:5001")||e.includes("localhost:3000")||fetch("http://localhost:5001/api/website/86c88721-ad60-4792-8456-81e7acfcfdf7/tier").then(function(e){return e.json()}).then(function(e){if(e.showAttribution){var t=document.getElementById("zappy-attribution-header");t&&(t.style.display="block")}}).catch(function(e){console.error("Failed to check tier:",e)})}()</script><div data-integration="accessibility:toolbar"></div><script src="/script.js"></script>
-<!-- i18next Multi-Language Support -->
-<script>
-(function() {
-  // Language resources (inline to avoid CDN dependency)
-  const resources = {
-  "he": {
-    "translation": {
-      "about_h1_1": "אודות שלווה רוחנית",
-      "about_h2_2": "הסיפור שלנו",
-      "about_h2_3": "הפילוסופיה שלנו",
-      "about_h2_4": "הערכים שלנו",
-      "about_h2_5": "הגישה הטיפולית שלנו",
-      "about_h2_6": "ההכשרה והניסיון שלנו",
-      "about_h2_7": "בואו להכיר אותנו",
-      "about_h3_8": "הסיפור שלנו, הגישה שלנו והמחויבות שלנו לבריאות שלכם",
-      "about_h3_9": "איזון הוליסטי",
-      "about_h3_10": "טיפול טבעי",
-      "about_h3_11": "מקצועיות ואמפתיה",
-      "about_h3_12": "מחויבות לתוצאות",
-      "about_h3_13": "הקשבה ואבחון",
-      "about_h3_14": "תוכנית טיפול מותאמת",
-      "about_h3_15": "טיפול הוליסטי",
-      "about_h3_16": "מעקב והתאמה",
-      "about_p_17": "Happily created by Zappy",
-      "about_p_18": "שלווה רוחנית נוסדה מתוך אמונה עמוקה בכוח הריפוי הטבעי של הגוף ובחשיבות של איזון בין גוף, נפש ורוח. במשך שנים רבות, ראינו כיצד רפואה אלטרנטיבית לכאבים כרוניים יכולה לשנות חיים ולהחזיר תקווה לאנשים שסבלו מכאבים ומצוקה.",
-      "about_p_19": "המסע שלנו התחיל מהרצון לספק טיפולים מקצועיים ומותאמים אישית, המשלבים את החוכמה העתיקה של הרפואה המזרחית עם הבינה המודרנית של הרפואה המערבית. אנו מאמינים שכל אדם הוא ייחודי, ולכן כל טיפול צריך להיות מותאם במיוחד לצרכים האישיים של המטופל.",
-      "about_p_20": "היום, שלווה רוחנית היא מרכז מוביל לרפואה אלטרנטיבית, המציע מגוון רחב של טיפולים כולל דיקור סיני, עיסוי רפואי ותזונה הוליסטית. אנו גאים בכך שאנו יכולים לעזור למאות אנשים מדי שנה למצוא הקלה מכאב, לשפר את איכות החיים ולהחזיר את האיזון לגופם ולנפשם.",
-      "about_p_21": "אנו רואים את האדם כמערכת שלמה ומשולבת. בריאות אמיתית מתחילה מאיזון בין הגוף, הנפש והסביבה. הטיפולים שלנו מתמקדים בטיפול בשורש הבעיה, לא רק בסימפטומים.",
-      "about_p_22": "אנו מעדיפים שיטות טבעיות וללא תופעות לוואי, המעוררות את כוחות הריפוי הטבעיים של הגוף. הגישה שלנו היא עדינה אך יעילה, ומכבדת את החוכמה הטבעית של הגוף.",
-      "about_p_23": "אנו משלבים ידע מקצועי מעמיק עם גישה חמה ואמפתית. כל מטופל מקבל את מלוא תשומת הלב והזמן שהוא צריך, תוך הקשבה אמיתית לצרכים ולרגשות.",
-      "about_p_24": "אנו מחויבים לספק תוצאות אמיתיות וארוכות טווח. אנו עוקבים אחר ההתקדמות של כל מטופל, מתאימים את הטיפולים לפי הצורך, ומלווים אתכם לאורך כל הדרך.",
-      "about_p_25": "בשלווה רוחנית, אנו מונחים על ידי ערכים ברורים המנחים את עבודתנו היומיומית:",
-      "about_p_26": "אנו מתחילים בהקשבה אמיתית למטופל. אנו מבינים את הסיפור האישי, את הכאב והצרכים, ומבצעים אבחון מקיף המתחשב בכל ההיבטים של החיים.",
-      "about_p_27": "לאחר האבחון, אנו בונים תוכנית טיפול אישית המשלבת את השירותים המתאימים ביותר. התוכנית לוקחת בחשבון את המצב הבריאותי, הצרכים האישיים ומטרות הטיפול.",
-      "about_p_28": "הטיפולים שלנו משלבים מספר שיטות המשלימות זו את זו: דיקור סיני, עיסוי רפואי, תזונה הוליסטית ועוד. הגישה המשולבת מספקת תוצאות טובות יותר וארוכות טווח.",
-      "about_p_29": "אנו עוקבים אחר ההתקדמות של כל מטופל, מתאימים את הטיפולים לפי הצורך, ומספקים תמיכה מתמשכת לאורך כל הדרך.",
-      "about_p_30": "המטפלים שלנו הם אנשי מקצוע מוסמכים ומנוסים, בעלי הכשרה מקיפה ברפואה אלטרנטיבית. אנו מחזיקים בהסמכות מקצועיות מהמכונים המובילים בארץ ובעולם, ומשתתפים בקורסי השתלמות שוטפים כדי להישאר מעודכנים בשיטות הטיפול החדישות ביותר.",
-      "about_p_31": "הניסיון שלנו משתרע על פני שנים רבות של עבודה עם מאות מטופלים, טיפול במגוון רחב של בעיות בריאותיות, והצלחה מוכחת בשיפור איכות החיים של המטופלים שלנו.",
-      "about_p_32": "נשמח לפגוש אתכם, לשמוע את הסיפור שלכם ולעזור לכם למצוא את הדרך לבריאות ורווחה. צרו איתנו קשר עוד היום.",
-      "about_p_33": "© 2025 שלווה רוחנית. כל הזכויות שמורות.",
-      "about_p_34": "נוצר באמצעותZappy",
-      "about_link_35": "Zappy",
-      "about_link_36": "צור קשר",
-      "about_link_37": "מדיניות פרטיות",
-      "about_link_38": "נגישות",
-      "about_link_39": "תנאי שימוש",
-      "about_link_40": "Zappy",
-      "about_li_41": "כבוד:אנו מכבדים כל מטופל כאדם ייחודי עם צרכים, רגשות וחוויות משלו.",
-      "about_li_42": "אמינות:אנו מחויבים לספק טיפולים מקצועיים ומבוססי מחקר, תוך שקיפות מלאה.",
-      "about_li_43": "חמלה:אנו מתייחסים לכל מטופל בחמלה ובאמפטיה, ומבינים את הקושי והכאב שהוא עובר.",
-      "about_li_44": "מצוינות:אנו שואפים למצוינות בכל מה שאנו עושים, ומשקיעים בלמידה והתפתחות מתמשכת.",
-      "about_li_45": "חדשנות:אנו משלבים שיטות מסורתיות עם טכניקות מודרניות, תוך חיפוש מתמיד אחר דרכים חדשות ויעילות יותר לעזור למטופלים.",
-      "about_nav_46": "שירותים",
-      "about_nav_47": "אודות",
-      "about_nav_48": "צור קשר",
-      "about_nav_49": "צור קשר",
-      "about_alt_50": "שלווה רוחנית",
-      "about_meta_description": "למדו עלינו ועל הגישה ההוליסטית שלנו לרפואה אלטרנטיבית. שלווה רוחנית מציעה טיפולים מקצועיים ומותאמים אישית לכל מטופל.",
-      "about_page_title": "אודות - הסיפור שלנו והגישה שלנו | שלווה רוחנית",
-      "contact_h1_1": "צור קשר",
-      "contact_h2_2": "פרטי התקשרות",
-      "contact_h2_3": "שלחו לנו הודעה",
-      "contact_h2_4": "שאלות נפוצות",
-      "contact_h3_5": "נשמח לשמוע מכם ולעזור לכם להתחיל את המסע לבריאות ורווחה",
-      "contact_h3_6": "טלפון",
-      "contact_h3_7": "דוא״ל",
-      "contact_h3_8": "כתובת",
-      "contact_h3_9": "שעות פעילות",
-      "contact_h3_10": "האם הטיפולים מכאיבים?",
-      "contact_h3_11": "כמה טיפולים נדרשים?",
-      "contact_h3_12": "האם יש תופעות לוואי?",
-      "contact_h3_13": "האם הטיפולים מוכרים על ידי קופות החולים?",
-      "contact_p_14": "Happily created by Zappy",
-      "contact_p_15": "[business_phone]",
-      "contact_p_16": "[business_email]",
-      "contact_p_17": "[business_address]",
-      "contact_p_18": "ראשון - חמישי: 09:00 - 19:00",
-      "contact_p_19": "שישי: 09:00 - 14:00",
-      "contact_p_20": "שבת: סגור",
-      "contact_p_21": "רוב הטיפולים שלנו אינם כואבים. בדיקור סיני, למשל, המחטים דקות מאוד והתחושה היא קלה ביותר. בעיסוי רפואי, אנו מתאימים את עוצמת הלחץ לנוחות שלכם.",
-      "contact_p_22": "מספר הטיפולים משתנה בהתאם למצב האישי ולמטרות הטיפול. בפגישה הראשונה נבנה תוכנית טיפול מותאמת אישית ונעריך את מספר הטיפולים המומלץ.",
-      "contact_p_23": "הטיפולים שלנו טבעיים ובטוחים, ובדרך כלל אין תופעות לוואי. במקרים נדירים, ייתכנו תחושות קלות של עייפות או רגישות לאחר הטיפול, שחולפות במהירות.",
-      "contact_p_24": "חלק מהטיפולים שלנו מוכרים על ידי קופות החולים במסגרת הרפואה המשלימה. מומלץ לבדוק עם קופת החולים שלכם את תנאי הכיסוי.",
-      "contact_p_25": "© 2025 שלווה רוחנית. כל הזכויות שמורות.",
-      "contact_p_26": "נוצר באמצעותZappy",
-      "contact_link_27": "Zappy",
-      "contact_link_28": "[business_phone]",
-      "contact_link_29": "[business_email]",
-      "contact_link_30": "מדיניות פרטיות",
-      "contact_link_31": "נגישות",
-      "contact_link_32": "תנאי שימוש",
-      "contact_link_33": "Zappy",
-      "contact_btn_34": "שלח הודעה",
-      "contact_label_35": "שם מלא*",
-      "contact_label_36": "דוא״ל*",
-      "contact_label_37": "טלפון*",
-      "contact_label_38": "סוג הטיפול המבוקש",
-      "contact_label_39": "הודעה",
-      "contact_nav_40": "שירותים",
-      "contact_nav_41": "אודות",
-      "contact_nav_42": "צור קשר",
-      "contact_nav_43": "צור קשר",
-      "contact_alt_44": "שלווה רוחנית",
-      "contact_meta_description": "צרו איתנו קשר לקביעת פגישת ייעוץ ראשונית. נשמח לענות על שאלותיכם ולעזור לכם להתחיל את המסע לבריאות ורווחה.",
-      "contact_page_title": "צור קשר - קבעו פגישה | שלווה רוחנית",
-      "home_h1_1": "שלווה רוחנית - דיקור ועיסוי רפואי",
-      "home_h2_2": "ברוכים הבאים לשלווה רוחנית",
-      "home_h2_3": "השירותים שלנו",
-      "home_h2_4": "למה לבחור ברפואה אלטרנטיבית לכאבים כרוניים?",
-      "home_h2_5": "מה הלקוחות שלנו אומרים",
-      "home_h2_6": "מוכנים להתחיל את המסע לבריאות ורווחה?",
-      "home_h3_7": "רפואה אלטרנטיבית לכאבים כרוניים ושיפור איכות החיים",
-      "home_h3_8": "דיקור סיני",
-      "home_h3_9": "עיסוי רפואי",
-      "home_h3_10": "תזונה הוליסטית",
-      "home_h3_11": "טיפול טבעי ובטוח",
-      "home_h3_12": "התאמה אישית",
-      "home_h3_13": "איזון גוף ונפש",
-      "home_h3_14": "חיבור לטבע",
-      "home_p_15": "Happily created by&nbsp;Zappy",
-      "home_p_16": "אנחנו מאמינים שגוף ונפש מחוברים, ושבריאות אמיתית מתחילה מאיזון פנימי. במרכז שלווה רוחנית, אנו מציעים טיפולים מקצועיים ברפואה אלטרנטיבית המשלבים דיקור סיני, עיסוי רפואי ותזונה הוליסטית. כל טיפול מותאם אישית לצרכים שלכם, עם דגש על טיפול בכאבים כרוניים והקלה ממתח יומיומי.",
-      "home_p_17": "המטרה שלנו היא לעזור לכם להרגיש טוב יותר, לשפר את תפקוד הגוף ולהחזיר את האיזון הטבעי. עם ניסיון רב שנים וגישה חמה ומקצועית, אנחנו כאן כדי ללוות אתכם במסע לבריאות ורווחה מלאה.",
-      "home_p_18": "דיקור סיני הוא שיטת טיפול עתיקה ומוכחת להקלה על כאבים כרוניים, מתח ומגוון בעיות בריאות. הטיפול מתבצע על ידי מטפל מוסמך ומנוסה, תוך התאמה אישית לצרכים שלכם.",
-      "home_p_19": "עיסוי רפואי ותזונה הוליסטית מותאמים לשיפור תפקוד השרירים, הקלה על כאבים והפחתת מתח. הטיפול משלב טכניקות מתקדמות לשחרור מתח עמוק ושיפור הזרימה.",
-      "home_p_20": "ייעוץ תזונתי הוליסטי המתחשב בגוף, הנפש והסביבה. אנו בוחנים את התזונה שלכם ומציעים תפריט מותאם אישית לשיפור הבריאות, האנרגיה והרווחה הכללית.",
-      "home_p_21": "רפואה אלטרנטיבית מציעה גישה טבעית ללא תופעות לוואי, המתמקדת בטיפול בשורש הבעיה ולא רק בסימפטומים.",
-      "home_p_22": "כל טיפול מותאם במיוחד עבורכם, תוך התחשבות במצב הבריאותי, הצרכים והמטרות האישיות שלכם.",
-      "home_p_23": "הגישה ההוליסטית שלנו משלבת טיפול בגוף ובנפש, מה שמוביל לתוצאות ארוכות טווח ושיפור באיכות החיים.",
-      "home_p_24": "הטיפולים שלנו מבוססים על עקרונות טבעיים ועל חיבור לכוחות הריפוי הטבעיים של הגוף.",
-      "home_p_25": "\"הגעתי לשלווה רוחנית עם כאבי גב כרוניים שליוו אותי שנים. אחרי מספר טיפולי דיקור ועיסוי רפואי, הכאבים פחתו משמעותית והתפקוד שלי השתפר. ממליצה בחום!\"",
-      "home_p_26": "\"הייעוץ התזונתי ההוליסטי שקיבלתי פה שינה לי את החיים. למדתי להקשיב לגוף שלי ולתת לו את מה שהוא צריך. תודה על הליווי המקצועי והחם.\"",
-      "home_p_27": "צרו איתנו קשר עוד היום וקבעו פגישת ייעוץ ראשונית. נשמח ללוות אתכם בדרך לשלווה ואיזון.",
-      "home_p_28": "© 2025 שלווה רוחנית. כל הזכויות שמורות.",
-      "home_p_29": "נוצר באמצעותZappy",
-      "home_span_30": "לקוחה מרוצה",
-      "home_span_31": "לקוח מרוצה",
-      "home_link_32": "Zappy",
-      "home_link_33": "קבעו פגישה",
-      "home_link_34": "גלו את כל השירותים",
-      "home_link_35": "צור קשר עכשיו",
-      "home_link_36": "מדיניות פרטיות",
-      "home_link_37": "נגישות",
-      "home_link_38": "תנאי שימוש",
-      "home_link_39": "Zappy",
-      "home_nav_40": "שירותים",
-      "home_nav_41": "אודות",
-      "home_nav_42": "צור קשר",
-      "home_nav_43": "צור קשר",
-      "home_alt_44": "שלווה רוחנית",
-      "home_alt_45": "מרחב טיפולי שליו של שלווה רוחנית",
-      "home_alt_46": "דיקור סיני מקצועי",
-      "home_alt_47": "עיסוי רפואי טיפולי",
-      "home_alt_48": "תזונה הוליסטית",
-      "home_meta_description": "שלווה רוחנית מציעה דיקור סיני, עיסוי רפואי ותזונה הוליסטית לטיפול בכאבים כרוניים. רפואה אלטרנטיבית מקצועית לשיפור איכות החיים והבריאות הכללית.",
-      "home_page_title": "שלווה רוחנית - דיקור ועיסוי רפואי | רפואה אלטרנטיבית לכאבים כרוניים",
-      "services_h1_1": "השירותים שלנו",
-      "services_h2_2": "דיקור סיני מקצועי",
-      "services_h2_3": "עיסוי רפואי טיפולי",
-      "services_h2_4": "תזונה הוליסטית ואורח חיים בריא",
-      "services_h2_5": "שירותים נוספים",
-      "services_h2_6": "תהליך הטיפול",
-      "services_h2_7": "מוכנים להתחיל את המסע שלכם?",
-      "services_h3_8": "טיפולים מקצועיים ברפואה אלטרנטיבית המותאמים במיוחד עבורכם",
-      "services_h3_9": "רפלקסולוגיה",
-      "services_h3_10": "צמחי מרפא",
-      "services_h3_11": "רייקי",
-      "services_h3_12": "מדיטציה מודרכת",
-      "services_h3_13": "פגישת ייעוץ ראשונית",
-      "services_h3_14": "אבחון מקיף",
-      "services_h3_15": "תוכנית טיפול מותאמת",
-      "services_h3_16": "ליווי מתמשך",
-      "services_p_17": "Happily created by Zappy",
-      "services_p_18": "דיקור סיני הוא אחת מהשיטות העתיקות והמוכחות ביותר ברפואה האלטרנטיבית. הטיפול מבוסס על הכנסת מחטים דקות מאוד לנקודות ספציפיות בגוף, במטרה לאזן את זרימת האנרגיה (צ'י) ולעורר את כוחות הריפוי הטבעיים של הגוף.",
-      "services_p_19": "דיקור יעיל במיוחד לטיפול בכאבים כרוניים כגון כאבי גב, צוואר וכתפיים, כאבי ראש וכאבי מפרקים. הוא גם מסייע בהפחתת מתח ולחץ, שיפור השינה וחיזוק המערכת החיסונית.",
-      "services_p_20": "עיסוי רפואי ותזונה הוליסטית הם שילוב מושלם לשיפור הבריאות הגופנית והנפשית. העיסוי הרפואי שלנו מתמקד בטיפול בבעיות שרירים ומפרקים, שחרור מתח עמוק ושיפור זרימת הדם והלימפה.",
-      "services_p_21": "המטפלים שלנו משתמשים בטכניקות מתקדמות כמו עיסוי רקמות עמוק, טריגר פוינט ומניפולציות רקמות רכות. כל טיפול מותאם אישית למצב הגופני והצרכים הספציפיים של המטופל.",
-      "services_p_22": "הגישה ההוליסטית לתזונה רואה בגוף, הנפש והסביבה מערכת אחת משולבת. אנו מאמינים שתזונה נכונה היא אחד המפתחות החשובים לבריאות ולרווחה. הייעוץ התזונתי שלנו כולל בדיקה מקיפה של הרגלי האכילה, מצב הבריאות והצרכים האישיים.",
-      "services_p_23": "אנו בונים תפריט מותאם אישית המתחשב בסוג הגוף, הצרכים האנרגטיים, אלרגיות ורגישויות, ומטרות בריאותיות. הליווי שלנו כולל גם המלצות לתוספי תזונה טבעיים, צמחי מרפא ושינויים באורח החיים.",
-      "services_p_24": "טיפול בנקודות רפלקס בכפות הרגליים והידיים לאיזון האנרגיה בגוף ושיפור התפקוד של איברים פנימיים.",
-      "services_p_25": "ייעוץ והמלצות לשימוש בצמחי מרפא טבעיים לחיזוק הבריאות, הפחתת תסמינים ושיפור הרווחה הכללית.",
-      "services_p_26": "טיפול אנרגטי יפני המסייע באיזון האנרגיה, הפחתת מתח ועידוד תהליכי הריפוי הטבעיים של הגוף.",
-      "services_p_27": "סדנאות וטיפולים אישיים במדיטציה מודרכת להפחתת מתח, שיפור המיקוד וחיבור לשלווה פנימית.",
-      "services_p_28": "בפגישה הראשונה נכיר אתכם, נבין את הצרכים והמטרות שלכם, ונבנה תוכנית טיפול מותאמת אישית.",
-      "services_p_29": "נבצע אבחון מקיף של מצבכם הגופני והנפשי, תוך התחשבות בהיסטוריה הרפואית והרגלי החיים.",
-      "services_p_30": "נבנה עבורכם תוכנית טיפול מקיפה המשלבת את השירותים הרלוונטיים ביותר לצרכים שלכם.",
-      "services_p_31": "נלווה אתכם לאורך כל הדרך, נעקוב אחר ההתקדמות ונתאים את הטיפולים לפי הצורך.",
-      "services_p_32": "צרו איתנו קשר עוד היום לקביעת פגישת ייעוץ ראשונית. נשמח ללוות אתכם בדרך לבריאות ורווחה.",
-      "services_p_33": "© 2025 שלווה רוחנית. כל הזכויות שמורות.",
-      "services_p_34": "נוצר באמצעותZappy",
-      "services_link_35": "Zappy",
-      "services_link_36": "קבעו פגישה",
-      "services_link_37": "מדיניות פרטיות",
-      "services_link_38": "נגישות",
-      "services_link_39": "תנאי שימוש",
-      "services_link_40": "Zappy",
-      "services_li_41": "הקלה על כאבים כרוניים",
-      "services_li_42": "הפחתת מתח ולחץ",
-      "services_li_43": "שיפור תפקוד השרירים והמפרקים",
-      "services_li_44": "חיזוק המערכת החיסונית",
-      "services_li_45": "שיפור איכות השינה",
-      "services_li_46": "שחרור מתח שרירי עמוק",
-      "services_li_47": "הקלה על כאבי גב וצוואר",
-      "services_li_48": "שיפור גמישות ותנועתיות",
-      "services_li_49": "הפחתת דלקות ונפיחות",
-      "services_li_50": "שיפור זרימת הדם והאנרגיה",
-      "services_li_51": "תפריט תזונה מותאם אישית",
-      "services_li_52": "ליווי צמוד ותמיכה מתמשכת",
-      "services_li_53": "המלצות לתוספי תזונה טבעיים",
-      "services_li_54": "שיפור רמות האנרגיה",
-      "services_li_55": "חיזוק המערכת החיסונית",
-      "services_nav_56": "שירותים",
-      "services_nav_57": "אודות",
-      "services_nav_58": "צור קשר",
-      "services_nav_59": "צור קשר",
-      "services_alt_60": "שלווה רוחנית",
-      "services_alt_61": "דיקור סיני מקצועי",
-      "services_alt_62": "עיסוי רפואי טיפולי",
-      "services_alt_63": "תזונה הוליסטית",
-      "services_alt_64": "רפלקסולוגיה",
-      "services_alt_65": "צמחי מרפא",
-      "services_alt_66": "רייקי",
-      "services_alt_67": "מדיטציה",
-      "services_meta_description": "גלו את מגוון השירותים שלנו: דיקור סיני מקצועי, עיסוי רפואי ותזונה הוליסטית. כל הטיפולים מותאמים אישית לצרכים שלכם.",
-      "services_page_title": "שירותים - דיקור, עיסוי ותזונה הוליסטית | שלווה רוחנית"
-    }
-  },
-  "en": {
-    "translation": {
-      "about_h1_1": "About Spiritual Serenity",
-      "about_h2_2": "Our Story",
-      "about_h2_3": "Our Philosophy",
-      "about_h2_4": "Our Values",
-      "about_h2_5": "Our Therapeutic Approach",
-      "about_h2_6": "Our Training and Experience",
-      "about_h2_7": "Get to Know Us",
-      "about_h3_8": "Our story, our approach, and our commitment to your health",
-      "about_h3_9": "Holistic Balance",
-      "about_h3_10": "Natural Treatment",
-      "about_h3_11": "Professionalism and Empathy",
-      "about_h3_12": "Commitment to Results",
-      "about_h3_13": "Listening and Diagnosis",
-      "about_h3_14": "Customized Treatment Plan",
-      "about_h3_15": "Holistic Treatment",
-      "about_h3_16": "Follow-up and Adjustment",
-      "about_p_17": "Happily created by Zappy",
-      "about_p_18": "Spiritual Serenity was founded from a deep belief in the natural healing power of the body and the importance of balance between body, mind, and spirit. For many years, we have seen how alternative medicine for chronic pain can transform lives and restore hope to people who suffered from pain and distress.",
-      "about_p_19": "Our journey began with the desire to provide professional and personalized treatments that combine the ancient wisdom of Eastern medicine with the modern understanding of Western medicine. We believe that every person is unique, and therefore every treatment should be specially tailored to the individual needs of the patient.",
-      "about_p_20": "Today, Spiritual Serenity is a leading center for alternative medicine, offering a wide range of treatments including acupuncture, medical massage, and holistic nutrition. We are proud that we can help hundreds of people each year find relief from pain, improve their quality of life, and restore balance to their body and mind.",
-      "about_p_21": "We view the person as a complete and integrated system. True health begins with balance between the body, mind, and environment. Our treatments focus on treating the root of the problem, not just the symptoms.",
-      "about_p_22": "We prefer natural methods without side effects that stimulate the body's natural healing powers. Our approach is gentle yet effective, and respects the natural wisdom of the body.",
-      "about_p_23": "We combine deep professional knowledge with a warm and empathetic approach. Each patient receives the full attention and time they need, with genuine listening to their needs and feelings.",
-      "about_p_24": "We are committed to providing real and long-term results. We monitor the progress of each patient, adjust treatments as needed, and accompany you throughout the entire journey.",
-      "about_p_25": "At Spiritual Serenity, we are guided by clear values that direct our daily work:",
-      "about_p_26": "We begin with genuine listening to the patient. We understand the personal story, the pain and needs, and perform a comprehensive diagnosis that takes into account all aspects of life.",
-      "about_p_27": "After diagnosis, we build a personal treatment plan that combines the most suitable services. The plan takes into account the health condition, personal needs, and treatment goals.",
-      "about_p_28": "Our treatments combine several methods that complement each other: acupuncture, medical massage, holistic nutrition, and more. The integrated approach provides better and longer-lasting results.",
-      "about_p_29": "We monitor the progress of each patient, adjust treatments as needed, and provide ongoing support throughout the entire journey.",
-      "about_p_30": "Our therapists are certified and experienced professionals with comprehensive training in alternative medicine. We hold professional certifications from leading institutes in Israel and worldwide, and participate in ongoing continuing education courses to stay updated with the most advanced treatment methods.",
-      "about_p_31": "Our experience spans many years of working with hundreds of patients, treating a wide range of health issues, and proven success in improving the quality of life of our patients.",
-      "about_p_32": "We would be happy to meet you, hear your story, and help you find the path to health and wellness. Contact us today.",
-      "about_p_33": "© 2025 Spiritual Serenity. All rights reserved.",
-      "about_p_34": "Created with Zappy",
-      "about_link_35": "Zappy",
-      "about_link_36": "Contact Us",
-      "about_link_37": "Privacy Policy",
-      "about_link_38": "Accessibility",
-      "about_link_39": "Terms of Use",
-      "about_link_40": "Zappy",
-      "about_li_41": "Respect: We respect each patient as a unique individual with their own needs, feelings, and experiences.",
-      "about_li_42": "Reliability: We are committed to providing professional and research-based treatments with complete transparency.",
-      "about_li_43": "Compassion: We treat each patient with compassion and empathy, understanding the difficulty and pain they are experiencing.",
-      "about_li_44": "Excellence: We strive for excellence in everything we do and invest in continuous learning and development.",
-      "about_li_45": "Innovation: We combine traditional methods with modern techniques, constantly searching for new and more effective ways to help patients.",
-      "about_nav_46": "Services",
-      "about_nav_47": "About",
-      "about_nav_48": "Contact",
-      "about_nav_49": "Contact",
-      "about_alt_50": "Spiritual Serenity",
-      "about_meta_description": "Learn about us and our holistic approach to alternative medicine. Spiritual Serenity offers professional and personalized treatments for each patient.",
-      "about_page_title": "About - Our Story and Approach | Spiritual Serenity",
-      "contact_h1_1": "Contact Us",
-      "contact_h2_2": "Contact Information",
-      "contact_h2_3": "Send Us a Message",
-      "contact_h2_4": "Frequently Asked Questions",
-      "contact_h3_5": "We'd love to hear from you and help you begin your journey to health and wellness",
-      "contact_h3_6": "Phone",
-      "contact_h3_7": "Email",
-      "contact_h3_8": "Address",
-      "contact_h3_9": "Business Hours",
-      "contact_h3_10": "Are the treatments painful?",
-      "contact_h3_11": "How many treatments are required?",
-      "contact_h3_12": "Are there any side effects?",
-      "contact_h3_13": "Are the treatments covered by health insurance?",
-      "contact_p_14": "Happily created by Zappy",
-      "contact_p_15": "[business_phone]",
-      "contact_p_16": "[business_email]",
-      "contact_p_17": "[business_address]",
-      "contact_p_18": "Sunday - Thursday: 09:00 - 19:00",
-      "contact_p_19": "Friday: 09:00 - 14:00",
-      "contact_p_20": "Saturday: Closed",
-      "contact_p_21": "Most of our treatments are not painful. In acupuncture, for example, the needles are very thin and the sensation is very mild. In medical massage, we adjust the pressure intensity to your comfort level.",
-      "contact_p_22": "The number of treatments varies according to individual condition and treatment goals. In the first session, we'll build a personalized treatment plan and assess the recommended number of treatments.",
-      "contact_p_23": "Our treatments are natural and safe, and there are usually no side effects. In rare cases, there may be mild feelings of fatigue or sensitivity after treatment, which pass quickly.",
-      "contact_p_24": "Some of our treatments are covered by health insurance as part of complementary medicine. We recommend checking with your health insurance provider about coverage terms.",
-      "contact_p_25": "© 2025 Spiritual Serenity. All rights reserved.",
-      "contact_p_26": "Created with Zappy",
-      "contact_link_27": "Zappy",
-      "contact_link_28": "[business_phone]",
-      "contact_link_29": "[business_email]",
-      "contact_link_30": "Privacy Policy",
-      "contact_link_31": "Accessibility",
-      "contact_link_32": "Terms of Use",
-      "contact_link_33": "Zappy",
-      "contact_btn_34": "Send Message",
-      "contact_label_35": "Full Name*",
-      "contact_label_36": "Email*",
-      "contact_label_37": "Phone*",
-      "contact_label_38": "Type of Treatment Requested",
-      "contact_label_39": "Message",
-      "contact_nav_40": "Services",
-      "contact_nav_41": "About",
-      "contact_nav_42": "Contact",
-      "contact_nav_43": "Contact",
-      "contact_alt_44": "Spiritual Serenity",
-      "contact_meta_description": "Contact us to schedule an initial consultation. We'd be happy to answer your questions and help you begin your journey to health and wellness.",
-      "contact_page_title": "Contact - Schedule an Appointment | Spiritual Serenity",
-      "home_h1_1": "Spiritual Serenity - Acupuncture and Medical Massage",
-      "home_h2_2": "Welcome to Spiritual Serenity",
-      "home_h2_3": "Our Services",
-      "home_h2_4": "Why Choose Alternative Medicine for Chronic Pain?",
-      "home_h2_5": "What Our Clients Say",
-      "home_h2_6": "Ready to Begin Your Journey to Health and Wellness?",
-      "home_h3_7": "Alternative Medicine for Chronic Pain and Quality of Life Improvement",
-      "home_h3_8": "Acupuncture",
-      "home_h3_9": "Medical Massage",
-      "home_h3_10": "Holistic Nutrition",
-      "home_h3_11": "Natural and Safe Treatment",
-      "home_h3_12": "Personal Customization",
-      "home_h3_13": "Body and Mind Balance",
-      "home_h3_14": "Connection to Nature",
-      "home_p_15": "Happily created by&nbsp;Zappy",
-      "home_p_16": "We believe that body and mind are connected, and that true health begins with inner balance. At Spiritual Serenity Center, we offer professional alternative medicine treatments combining acupuncture, medical massage, and holistic nutrition. Each treatment is personally tailored to your needs, with emphasis on treating chronic pain and relieving daily stress.",
-      "home_p_17": "Our goal is to help you feel better, improve body function, and restore natural balance. With years of experience and a warm, professional approach, we are here to accompany you on your journey to complete health and wellness.",
-      "home_p_18": "Acupuncture is an ancient and proven treatment method for relieving chronic pain, stress, and various health issues. Treatment is performed by a certified and experienced therapist, with personal adaptation to your needs.",
-      "home_p_19": "Medical massage and holistic nutrition are tailored to improve muscle function, relieve pain, and reduce stress. The treatment combines advanced techniques for deep tension release and improved circulation.",
-      "home_p_20": "Holistic nutritional counseling that considers the body, mind, and environment. We examine your nutrition and offer a personally tailored menu to improve health, energy, and overall wellness.",
-      "home_p_21": "Alternative medicine offers a natural approach without side effects, focusing on treating the root of the problem and not just the symptoms.",
-      "home_p_22": "Each treatment is specially tailored for you, taking into account your health condition, needs, and personal goals.",
-      "home_p_23": "Our holistic approach combines treatment of body and mind, leading to long-term results and improved quality of life.",
-      "home_p_24": "Our treatments are based on natural principles and connection to the body's natural healing forces.",
-      "home_p_25": "\"I came to Spiritual Serenity with chronic back pain that had accompanied me for years. After several acupuncture and medical massage treatments, the pain decreased significantly and my function improved. Highly recommend!\"",
-      "home_p_26": "\"The holistic nutritional counseling I received here changed my life. I learned to listen to my body and give it what it needs. Thank you for the professional and warm guidance.\"",
-      "home_p_27": "Contact us today and schedule an initial consultation. We'll be happy to accompany you on the path to serenity and balance.",
-      "home_p_28": "© 2025 Spiritual Serenity. All rights reserved.",
-      "home_p_29": "Created with Zappy",
-      "home_span_30": "Satisfied Client",
-      "home_span_31": "Satisfied Client",
-      "home_link_32": "Zappy",
-      "home_link_33": "Schedule Appointment",
-      "home_link_34": "Discover All Services",
-      "home_link_35": "Contact Now",
-      "home_link_36": "Privacy Policy",
-      "home_link_37": "Accessibility",
-      "home_link_38": "Terms of Use",
-      "home_link_39": "Zappy",
-      "home_nav_40": "Services",
-      "home_nav_41": "About",
-      "home_nav_42": "Contact",
-      "home_nav_43": "Contact",
-      "home_alt_44": "Spiritual Serenity",
-      "home_alt_45": "Peaceful treatment space at Spiritual Serenity",
-      "home_alt_46": "Professional acupuncture",
-      "home_alt_47": "Therapeutic medical massage",
-      "home_alt_48": "Holistic nutrition",
-      "home_meta_description": "Spiritual Serenity offers acupuncture, medical massage, and holistic nutrition for chronic pain treatment. Professional alternative medicine for improving quality of life and overall health.",
-      "home_page_title": "Spiritual Serenity - Acupuncture & Medical Massage | Alternative Medicine for Chronic Pain",
-      "services_h1_1": "Our Services",
-      "services_h2_2": "Professional Acupuncture",
-      "services_h2_3": "Therapeutic Medical Massage",
-      "services_h2_4": "Holistic Nutrition and Healthy Lifestyle",
-      "services_h2_5": "Additional Services",
-      "services_h2_6": "Treatment Process",
-      "services_h2_7": "Ready to Begin Your Journey?",
-      "services_h3_8": "Professional alternative medicine treatments specially tailored for you",
-      "services_h3_9": "Reflexology",
-      "services_h3_10": "Herbal Medicine",
-      "services_h3_11": "Reiki",
-      "services_h3_12": "Guided Meditation",
-      "services_h3_13": "Initial Consultation Session",
-      "services_h3_14": "Comprehensive Assessment",
-      "services_h3_15": "Customized Treatment Plan",
-      "services_h3_16": "Ongoing Support",
-      "services_p_17": "Happily created by Zappy",
-      "services_p_18": "Chinese acupuncture is one of the most ancient and proven methods in alternative medicine. The treatment is based on inserting very thin needles into specific points in the body, with the aim of balancing energy flow (chi) and stimulating the body's natural healing powers.",
-      "services_p_19": "Acupuncture is particularly effective for treating chronic pain such as back, neck and shoulder pain, headaches and joint pain. It also helps reduce tension and stress, improve sleep and strengthen the immune system.",
-      "services_p_20": "Medical massage and holistic nutrition are a perfect combination for improving physical and mental health. Our medical massage focuses on treating muscle and joint problems, releasing deep tension and improving blood and lymph circulation.",
-      "services_p_21": "Our therapists use advanced techniques such as deep tissue massage, trigger point therapy and soft tissue manipulation. Each treatment is personally tailored to the patient's physical condition and specific needs.",
-      "services_p_22": "The holistic approach to nutrition views the body, mind and environment as one integrated system. We believe that proper nutrition is one of the important keys to health and wellness. Our nutritional counseling includes a comprehensive examination of eating habits, health status and personal needs.",
-      "services_p_23": "We build a personalized menu that takes into account body type, energy needs, allergies and sensitivities, and health goals. Our guidance also includes recommendations for natural nutritional supplements, herbal medicine and lifestyle changes.",
-      "services_p_24": "Treatment of reflex points on the feet and hands to balance energy in the body and improve the function of internal organs.",
-      "services_p_25": "Consultation and recommendations for using natural herbal medicines to strengthen health, reduce symptoms and improve overall wellness.",
-      "services_p_26": "Japanese energy therapy that helps balance energy, reduce tension and encourage the body's natural healing processes.",
-      "services_p_27": "Workshops and personal treatments in guided meditation to reduce stress, improve focus and connect to inner peace.",
-      "services_p_28": "In the first session we'll get to know you, understand your needs and goals, and build a personalized treatment plan.",
-      "services_p_29": "We'll perform a comprehensive assessment of your physical and mental condition, taking into account medical history and lifestyle habits.",
-      "services_p_30": "We'll build a comprehensive treatment plan for you that combines the most relevant services for your needs.",
-      "services_p_31": "We'll accompany you throughout the entire journey, monitor progress and adjust treatments as needed.",
-      "services_p_32": "Contact us today to schedule an initial consultation session. We'll be happy to accompany you on the path to health and wellness.",
-      "services_p_33": "© 2025 שלווה רוחנית. All rights reserved.",
-      "services_p_34": "Created with Zappy",
-      "services_link_35": "Zappy",
-      "services_link_36": "Book an Appointment",
-      "services_link_37": "Privacy Policy",
-      "services_link_38": "Accessibility",
-      "services_link_39": "Terms of Use",
-      "services_link_40": "Zappy",
-      "services_li_41": "Relief from chronic pain",
-      "services_li_42": "Reduction of tension and stress",
-      "services_li_43": "Improvement of muscle and joint function",
-      "services_li_44": "Strengthening the immune system",
-      "services_li_45": "Improvement of sleep quality",
-      "services_li_46": "Deep muscle tension release",
-      "services_li_47": "Relief from back and neck pain",
-      "services_li_48": "Improvement of flexibility and mobility",
-      "services_li_49": "Reduction of inflammation and swelling",
-      "services_li_50": "Improvement of blood and energy circulation",
-      "services_li_51": "Personalized nutrition menu",
-      "services_li_52": "Close guidance and ongoing support",
-      "services_li_53": "Natural nutritional supplement recommendations",
-      "services_li_54": "Energy level improvement",
-      "services_li_55": "Immune system strengthening",
-      "services_nav_56": "Services",
-      "services_nav_57": "About",
-      "services_nav_58": "Contact",
-      "services_nav_59": "Contact",
-      "services_alt_60": "Spiritual Serenity",
-      "services_alt_61": "Professional Chinese acupuncture",
-      "services_alt_62": "Therapeutic medical massage",
-      "services_alt_63": "Holistic nutrition",
-      "services_alt_64": "Reflexology",
-      "services_alt_65": "Herbal medicine",
-      "services_alt_66": "Reiki",
-      "services_alt_67": "Meditation",
-      "services_meta_description": "Discover our range of services: professional Chinese acupuncture, medical massage and holistic nutrition. All treatments are personally tailored to your needs.",
-      "services_page_title": "Services - Acupuncture, Massage & Holistic Nutrition | Spiritual Serenity"
-    }
-  }
-};
-  
-  // RTL languages
-  const rtlLanguages = ["he"];
-  
-  // Available languages
-  const availableLanguages = ["he","en"];
-  
-  // Language display info with SVG flag images for cross-platform compatibility
-  const languageInfo = {"he":{"name":"Hebrew","nativeName":"עברית","flag":"🇮🇱","flagIcon":"circle-flags:il","dir":"rtl","flagImg":"<img src=\"https://api.iconify.design/circle-flags/il.svg\" width=\"20\" height=\"20\" alt=\"\" style=\"display:inline-block;vertical-align:middle;border-radius:50%;\" />"},"en":{"name":"English","nativeName":"English","flag":"🇺🇸","flagIcon":"circle-flags:us","dir":"ltr","flagImg":"<img src=\"https://api.iconify.design/circle-flags/us.svg\" width=\"20\" height=\"20\" alt=\"\" style=\"display:inline-block;vertical-align:middle;border-radius:50%;\" />"}};
-  
-  // Detect stored language preference - only use stored value, not browser language
-  // This ensures the site respects its original design (e.g., RTL Hebrew site stays RTL by default)
-  function detectLanguage() {
-    const stored = localStorage.getItem('zappy_lang');
-    if (stored && availableLanguages.includes(stored)) return stored;
-    
-    // Always default to the site's default language, not browser language
-    // This prevents breaking the original site layout on first visit
-    return 'he';
-  }
-  
-  // Simple i18n implementation (no external dependency)
-  const zappyI18n = {
-    language: detectLanguage(),
-    resources: resources,
-    t: function(key) {
-      const langResources = this.resources[this.language];
-      if (langResources && langResources.translation && langResources.translation[key]) {
-        return langResources.translation[key];
-      }
-      // Fallback to default language
-      const fallbackResources = this.resources['he'];
-      if (fallbackResources && fallbackResources.translation && fallbackResources.translation[key]) {
-        return fallbackResources.translation[key];
-      }
-      return key;
-    },
-    changeLanguage: function(lang) {
-      if (!availableLanguages.includes(lang)) return Promise.resolve();
-      this.language = lang;
-      localStorage.setItem('zappy_lang', lang);
-      updateContent();
-      updateDirection();
-      return Promise.resolve();
-    },
-    getCurrentLanguage: function() { return this.language; },
-    getAvailableLanguages: function() { return availableLanguages; }
-  };
-  
-  // Update all translatable content
-  function updateContent() {
-    // Newline character for detection
-    var newlineChar = String.fromCharCode(10);
-    
-    // Update text content - use innerHTML only when text contains line breaks
-    document.querySelectorAll('[data-i18n]').forEach(function(el) {
-      var key = el.getAttribute('data-i18n');
-      var translation = zappyI18n.t(key);
-      if (translation && translation !== key) {
-        // Check if translation contains newlines that need to be rendered as <br>
-        if (translation.indexOf(newlineChar) !== -1) {
-          // Convert newlines to <br> and use innerHTML to preserve HTML formatting
-          el.innerHTML = translation.split(newlineChar).join('<br>');
-        } else {
-          // No newlines, use textContent for safety
-          el.textContent = translation;
-        }
-      }
-    });
-    
-    // Update placeholders
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
-      const key = el.getAttribute('data-i18n-placeholder');
-      const translation = zappyI18n.t(key);
-      if (translation && translation !== key) {
-        el.setAttribute('placeholder', translation);
-      }
-    });
-    
-    // Update alt attributes
-    document.querySelectorAll('[data-i18n-alt]').forEach(function(el) {
-      const key = el.getAttribute('data-i18n-alt');
-      const translation = zappyI18n.t(key);
-      if (translation && translation !== key) {
-        el.setAttribute('alt', translation);
-      }
-    });
-    
-    // Update title attributes
-    document.querySelectorAll('[data-i18n-title]').forEach(function(el) {
-      const key = el.getAttribute('data-i18n-title');
-      const translation = zappyI18n.t(key);
-      if (translation && translation !== key) {
-        el.setAttribute('title', translation);
-      }
-    });
-    
-    // Update meta description
-    document.querySelectorAll('[data-i18n-content]').forEach(function(el) {
-      const key = el.getAttribute('data-i18n-content');
-      const translation = zappyI18n.t(key);
-      if (translation && translation !== key) {
-        el.setAttribute('content', translation);
-      }
-    });
-    
-    // Update page title
-    const titleEl = document.querySelector('title[data-i18n]');
-    if (titleEl) {
-      const key = titleEl.getAttribute('data-i18n');
-      const translation = zappyI18n.t(key);
-      if (translation && translation !== key) {
-        document.title = translation;
-      }
-    }
-  }
-  
-  // Update document direction based on language
-  function updateDirection() {
-    const currentLang = zappyI18n.language;
-    const isRTL = rtlLanguages.includes(currentLang);
-    const html = document.documentElement;
-    const body = document.body;
-    const newDir = isRTL ? 'rtl' : 'ltr';
-    
-    // Update html element - only direction, NOT text-align (preserve centered elements)
-    html.setAttribute('lang', currentLang);
-    html.setAttribute('dir', newDir);
-    html.style.direction = newDir;
-    
-    // Update body element - only direction
-    if (body) {
-      body.setAttribute('dir', newDir);
-      body.style.direction = newDir;
-    }
-    
-    // Update major content containers - only direction, NOT text-align
-    // This preserves centered hero sections, titles, etc.
-    document.querySelectorAll('main, article, section, .content, .container, .wrapper').forEach(function(el) {
-      el.style.direction = newDir;
-      // Do NOT set text-align - preserve original alignment (center, left, right)
-    });
-    
-    // ONLY apply text-align to legal page content
-    document.querySelectorAll('.legal-content, .terms-content, .privacy-content').forEach(function(el) {
-      el.style.direction = newDir;
-      el.style.textAlign = isRTL ? 'right' : 'left';
-    });
-    
-    // Update navigation/header - set direction and justify-content
-    // Don't set flex-direction here - let CSS handle it with media queries to preserve mobile menu
-    document.querySelectorAll('header, nav, .navbar, .nav-container, .header-container').forEach(function(el) {
-      el.style.direction = newDir;
-      el.style.justifyContent = 'flex-start';
-      // Only set flex-direction on desktop (check viewport width)
-      if (window.innerWidth >= 768) {
-        el.style.flexDirection = 'row';
-      }
-    });
-    
-    // Update nav menus/links container - reset margins (include #navMenu id selector)
-    // Don't override flex-direction on mobile menus
-    document.querySelectorAll('.nav-menu, .nav-links, .menu, nav ul, header ul, #navMenu').forEach(function(el) {
-      el.style.direction = newDir;
-      el.style.marginLeft = '0';
-      el.style.marginRight = '0';
-      // Only set flex-direction on desktop
-      if (window.innerWidth >= 768) {
-        el.style.flexDirection = 'row';
-      }
-    });
-    
-    // Reset all nav link margins to keep them near logo
-    document.querySelectorAll('header > a, nav > a, .nav-menu > a, .nav-links > a, nav ul li, header ul li').forEach(function(el) {
-      // Skip CTA buttons - they need their auto margin
-      if (el.classList.contains('btn') || el.classList.contains('button') || el.classList.contains('cta') || 
-          el.className.includes('btn-') || el.className.includes('button-')) {
-        return;
-      }
-      el.style.marginLeft = '0';
-      el.style.marginRight = '0';
-    });
-    
-    // Reset logo margins (including nav-brand class)
-    document.querySelectorAll('.logo, .site-logo, .brand, .navbar-brand, .nav-brand').forEach(function(el) {
-      el.style.marginLeft = '0';
-      el.style.marginRight = '0';
-    });
-    
-    // Position language switcher next to CTA - it should have the auto margin to push both to the end
-    document.querySelectorAll('header .lang-switcher, nav .lang-switcher, .navbar .lang-switcher').forEach(function(el) {
-      if (isRTL) {
-        el.style.marginRight = 'auto';
-        el.style.marginLeft = '8px';
-      } else {
-        el.style.marginLeft = 'auto';
-        el.style.marginRight = '8px';
-      }
-    });
-    
-    // CTA buttons should be right after language switcher (no auto margin needed if lang-switcher has it)
-    document.querySelectorAll('header .btn, header .button, header .cta, nav .btn, nav .button, .navbar .btn, .nav-cta-container, .cta-container, .header-cta, .nav-cta').forEach(function(el) {
-      // Remove auto margins from CTA since lang-switcher handles positioning
-      el.style.marginLeft = '0';
-      el.style.marginRight = '0';
-    });
-    
-    // Globe icon SVG for language switcher button (minimal design, no chevron)
-    const globeIconSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421-6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"/></svg>';
-    
-    // Update language switcher display - just the globe icon, no arrow
-    const currentLangEl = document.querySelector('.lang-switcher-current');
-    if (currentLangEl) {
-      currentLangEl.innerHTML = globeIconSvg;
-    }
-    
-    // Update dropdown options (show all except current)
-    document.querySelectorAll('.lang-switcher-dropdown').forEach(function(dropdown) {
-      dropdown.innerHTML = availableLanguages
-        .filter(function(lang) { return lang !== currentLang; })
-        .map(function(lang) {
-          const info = languageInfo[lang] || { flag: '🌐', flagImg: '🌐', nativeName: lang };
-          // Use flagImg (SVG) for cross-platform compatibility, fallback to emoji flag
-          return '<button class="lang-option" data-lang="' + lang + '" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 14px;background:none;border:none;text-align:left;cursor:pointer;font-size:14px;color:#333;">' + (info.flagImg || info.flag) + ' ' + info.nativeName + '</button>';
-        })
-        .join('');
-      
-      // Re-attach event listeners
-      dropdown.querySelectorAll('.lang-option').forEach(function(option) {
-        option.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          const lang = this.getAttribute('data-lang');
-          zappyI18n.changeLanguage(lang);
-          dropdown.style.opacity = '0';
-          dropdown.style.visibility = 'hidden';
-          dropdown.style.transform = 'translateY(-8px)';
-        });
-      });
-    });
-  }
-  
-  // Initialize language switcher dropdown
-  function initLanguageSwitcher() {
-    const switchers = document.querySelectorAll('.lang-switcher');
-    if (!switchers.length) return;
-    
-    switchers.forEach(function(switcher) {
-      const dropdown = switcher.querySelector('.lang-switcher-dropdown');
-      const current = switcher.querySelector('.lang-switcher-current');
-      
-      if (!current || !dropdown) return;
-      
-      // Ensure dropdown is hidden initially (inline style fallback)
-      dropdown.style.opacity = '0';
-      dropdown.style.visibility = 'hidden';
-      dropdown.style.transform = 'translateY(-8px)';
-      
-      // Toggle dropdown with inline styles
-      current.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        const isOpen = dropdown.style.opacity === '1';
-        if (isOpen) {
-          dropdown.style.opacity = '0';
-          dropdown.style.visibility = 'hidden';
-          dropdown.style.transform = 'translateY(-8px)';
-        } else {
-          dropdown.style.opacity = '1';
-          dropdown.style.visibility = 'visible';
-          dropdown.style.transform = 'translateY(0)';
-        }
-      });
-      
-      // Handle language selection
-      dropdown.querySelectorAll('.lang-option').forEach(function(option) {
-        option.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          const lang = this.getAttribute('data-lang');
-          zappyI18n.changeLanguage(lang);
-          dropdown.style.opacity = '0';
-          dropdown.style.visibility = 'hidden';
-          dropdown.style.transform = 'translateY(-8px)';
-        });
-      });
-    });
-    
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function() {
-      document.querySelectorAll('.lang-switcher-dropdown').forEach(function(dropdown) {
-        dropdown.style.opacity = '0';
-        dropdown.style.visibility = 'hidden';
-        dropdown.style.transform = 'translateY(-8px)';
-      });
-    });
-  }
-  
-  // Initialize on DOM ready
-  function init() {
-    updateContent();
-    updateDirection();
-    initLanguageSwitcher();
-  }
-  
-  // Expose to global scope
-  window.zappyI18n = zappyI18n;
-  
-  // Run initialization
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-})();
-</script>
-
+<!doctype html><html dir="rtl" lang="he"><head><meta charset="UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport"><title>Services</title><meta content="גלו את מגוון השירותים שלנו: דיקור סיני מקצועי, עיסוי רפואי ותזונה הוליסטית. כל הטיפולים מותאמים אישית לצרכים שלכם." name="description"><meta content="דיקור סיני, עיסוי רפואי, תזונה הוליסטית, רפואה אלטרנטיבית, טיפול בכאבים כרוניים, עיסוי טיפולי" name="keywords"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"><link href="/assets/favicon.ico" rel="icon" type="image/x-icon"><link href="/assets/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16"><link href="/assets/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32"><link href="/assets/favicon-48x48.png" rel="icon" type="image/png" sizes="48x48"><link href="/assets/favicon-192x192.png" rel="icon" type="image/png" sizes="192x192"><link href="/assets/favicon-512x512.png" rel="icon" type="image/png" sizes="512x512"><link href="/assets/apple-touch-icon.png" rel="apple-touch-icon"><style>.zappy-header{position:static;width:100%;background:#fff;box-shadow:0 4px 19px 0 rgba(0,0,0,.04);padding:16px 10px;text-align:center;font-family:Nunito,sans-serif;font-size:16px;color:#4a4a4a;line-height:21px;display:flex;align-items:center;justify-content:center;min-height:21px}.zappy-header p{margin:0;padding:0;font-weight:400;font-size:16px;line-height:21px;white-space:nowrap;display:inline-block;vertical-align:baseline;margin-bottom:0!important}.zappy-header .zappy-link{font-weight:700;color:#4a4a4a;text-decoration:none;transition:opacity .2s}.zappy-header .zappy-link:hover{opacity:.7}</style><link href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script><script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script><script>!function(){"use strict";var t="86c88721-ad60-4792-8456-81e7acfcfdf7",e="http://localhost:5001/api/analytics/track",n=18e5,a=!0,o=!0,i=!0;var s=function(){var e="zappy_session_"+t,a=null;try{if(a=sessionStorage.getItem(e)){var o=JSON.parse(a),i=Date.now();if(i-o.timestamp<n)return o.timestamp=i,sessionStorage.setItem(e,JSON.stringify(o)),o.id}}catch(t){console.warn("Zappy Analytics: SessionStorage not available")}var s="zs_"+Date.now()+"_"+Math.random().toString(36).substr(2,9);try{sessionStorage.setItem(e,JSON.stringify({id:s,timestamp:Date.now()}))}catch(t){}return s}();function r(n,a){a=a||{};var o={website_id:t,event_type:n,page_path:window.location.pathname,referrer:document.referrer||"direct",session_id:s,metadata:a};if(navigator.sendBeacon){var i=new Blob([JSON.stringify(o)],{type:"application/json"});navigator.sendBeacon(e,i)}else fetch(e,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(o),keepalive:!0}).catch(function(t){console.warn("Zappy Analytics: Failed to track event",t)})}a&&r("pageview",{title:document.title,url:window.location.href}),o&&document.addEventListener("click",function(t){var e=t.target;if("BUTTON"===e.tagName||e.closest("button")){var n="BUTTON"===e.tagName?e:e.closest("button");r("click",{element:"button",text:n.textContent.trim().substring(0,100),id:n.id||null,class:n.className||null})}else if("A"===e.tagName||e.closest("a")){var a="A"===e.tagName?e:e.closest("a");r("click",{element:"link",text:a.textContent.trim().substring(0,100),href:a.href,external:a.hostname!==window.location.hostname})}},!0),i&&document.addEventListener("submit",function(t){var e=t.target;r("form_submit",{form_id:e.id||null,form_name:e.name||null,form_action:e.action||null,form_method:e.method||"GET"})},!0);var c=Date.now();window.addEventListener("beforeunload",function(){r("page_unload",{time_on_page:Math.floor((Date.now()-c)/1e3),page_path:window.location.pathname})}),window.zappyAnalytics={track:r,getSessionId:function(){return s}}}()</script><link href="/styles.css" rel="stylesheet">
+          <style id="zappy-cta-mobile-style">
+            /* Hide CTA list item on desktop (tablets and up) */
+            @media (min-width: 769px) {
+              .nav-cta-item-mobile {
+                display: none !important;
+              }
+            }
+            /* Show CTA list item on mobile */
+            @media (max-width: 768px) {
+              .nav-cta-item-mobile {
+                display: list-item !important;
+              }
+            }
+          </style>
+        
+          <style id="zappy-nested-menu-style">
+            /* Desktop only: vertically center nav items */
+            @media (min-width: 769px) {
+              .nav-menu,
+              #navMenu {
+                align-items: center !important;
+              }
+            }
+            
+            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
+              display: inline-block !important;
+              padding: 0.5rem 1rem !important;
+              color: var(--nav-color) !important;
+              font-weight: 500 !important;
+              line-height: 1.7 !important;
+              cursor: default !important;
+              user-select: none !important;
+              vertical-align: middle !important;
+              text-decoration: none !important;
+              margin: 0 !important;
+              transition: color 0.3s ease !important;
+            }
+            
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
+              color: var(--nav-hover-color) !important;
+            }
+            
+            /* Desktop: show submenu on Menu Group hover */
+            li:has(.menu-group-title):hover > .sub-menu {
+              opacity: 1 !important;
+              visibility: visible !important;
+              transform: translateY(0) !important;
+              pointer-events: auto !important; /* Enable interaction when hovering */
+            }
+            
+            /* Hide menu items marked as hidden (overrides hover states) */
+            .zappy-hidden-menu-item,
+            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
+              display: none !important;
+              opacity: 0 !important;
+              visibility: hidden !important;
+              pointer-events: none !important;
+            }
+            
+            /* Keep submenu visible when hovering over the submenu itself */
+            .sub-menu:hover {
+              opacity: 1 !important;
+              visibility: visible !important;
+              pointer-events: auto !important;
+            }
+            
+            /* Nested dropdown menu styles - using more specific selectors */
+            .nav-menu .sub-menu,
+            nav .sub-menu,
+            .navbar .sub-menu {
+              display: block !important; /* Ensure submenu is in the DOM */
+              position: absolute !important;
+              top: 100%;
+              left: 0;
+              right: auto;
+              min-width: 200px;
+              background: white;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+              border-radius: 8px;
+              padding: 8px 0;
+              margin-top: 0px; /* Remove gap to prevent hover loss */
+              opacity: 0 !important;
+              visibility: hidden !important;
+              transform: translateY(-10px);
+              transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+              z-index: 1000;
+              list-style: none;
+              pointer-events: none; /* Prevent interaction when hidden */
+            }
+            
+            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
+            [dir="rtl"] .nav-menu .sub-menu,
+            [dir="rtl"] nav .sub-menu,
+            [dir="rtl"] .navbar .sub-menu,
+            html[lang="he"] .nav-menu .sub-menu,
+            html[lang="he"] nav .sub-menu,
+            html[lang="he"] .navbar .sub-menu,
+            html[lang="ar"] .nav-menu .sub-menu,
+            html[lang="ar"] nav .sub-menu,
+            html[lang="ar"] .navbar .sub-menu {
+              left: auto;
+              right: 0;
+            }
+            
+            /* Show submenu on parent hover - more specific selectors */
+            .nav-menu li:hover > .sub-menu,
+            nav li:hover > .sub-menu,
+            .navbar li:hover > .sub-menu {
+              opacity: 1 !important;
+              visibility: visible !important;
+              transform: translateY(0) !important;
+              pointer-events: auto !important; /* Enable interaction when visible */
+            }
+            
+            /* Parent item must be relatively positioned */
+            .nav-menu li:has(.sub-menu),
+            nav li:has(.sub-menu),
+            .navbar li:has(.sub-menu) {
+              position: relative;
+            }
+            
+            /* Style for submenu items */
+            .sub-menu li {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            }
+            
+            .sub-menu a,
+            .sub-menu .menu-group-title {
+              display: block !important;
+              padding: 10px 12px !important;
+              color: #333 !important;
+              font-weight: 600 !important;
+              text-decoration: none;
+              transition: background-color 0.2s;
+              white-space: nowrap;
+              cursor: default;
+            }
+            
+            .sub-menu a:hover {
+              background-color: #f5f5f5;
+            }
+            
+            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
+              display: inline-block !important;
+              padding: 0.5rem 1rem !important;
+              color: var(--nav-color) !important;
+              font-weight: 500 !important;
+              line-height: 1.7 !important;
+              cursor: default !important;
+              user-select: none !important;
+              vertical-align: middle !important;
+              text-decoration: none !important;
+              margin: 0 !important;
+              transition: color 0.3s ease !important;
+            }
+            
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
+              color: var(--nav-hover-color) !important;
+              background-color: transparent !important;
+            }
+            
+            /* On mobile, show nested menus as expandable accordion */
+            @media (max-width: 768px) {
+              /* Mobile submenu styling */
+              .nav-menu .sub-menu,
+              nav .sub-menu,
+              .navbar .sub-menu {
+                position: static !important;
+                transform: none !important;
+                box-shadow: none !important;
+                background: transparent !important;
+                margin-top: 0 !important;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                visibility: hidden;
+                transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+                padding: 0 !important;
+                border-radius: 0 !important;
+              }
+              
+              /* Expanded state */
+              .sub-menu.mobile-expanded {
+                max-height: 500px !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                padding: 8px 0 8px 16px !important;
+              }
+              
+              /* RTL padding adjustment */
+              [dir="rtl"] .sub-menu.mobile-expanded,
+              html[lang="he"] .sub-menu.mobile-expanded,
+              html[lang="ar"] .sub-menu.mobile-expanded {
+                padding: 8px 16px 8px 0 !important;
+              }
+              
+              /* Disable hover behavior on mobile */
+              .nav-menu li:hover > .sub-menu,
+              nav li:hover > .sub-menu,
+              .navbar li:hover > .sub-menu {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+              }
+              
+              /* Enable visibility for expanded submenus */
+              .nav-menu li > .sub-menu.mobile-expanded,
+              nav li > .sub-menu.mobile-expanded,
+              .navbar li > .sub-menu.mobile-expanded {
+                opacity: 1 !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
+              }
+              
+              .sub-menu a {
+                padding: 10px 0 !important;
+                display: block !important;
+                font-size: 14px !important;
+              }
+              
+              .sub-menu a:hover {
+                background-color: transparent !important;
+              }
+              
+              /* Parent item wrapper - flex layout for link + toggle */
+              .nav-menu li:has(.sub-menu),
+              nav li:has(.sub-menu),
+              .navbar li:has(.sub-menu) {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                align-items: center !important;
+              }
+              
+              /* Parent link - takes most space, allows navigation */
+              .nav-menu li:has(.sub-menu) > a,
+              nav li:has(.sub-menu) > a,
+              .navbar li:has(.sub-menu) > a,
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
+                flex: 1 !important;
+              }
+              
+              /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
+              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
+              nav li:has(.sub-menu) > a [class*="chevron"],
+              nav li:has(.sub-menu) > a [class*="arrow"],
+              #navMenu li:has(.sub-menu) > a [class*="chevron"],
+              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
+                display: none !important;
+                visibility: hidden !important;
+              }
+              
+              /* Toggle arrow button - separate clickable area */
+              .mobile-submenu-toggle {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 44px !important;
+                height: 44px !important;
+                background: transparent !important;
+                border: none !important;
+                cursor: pointer !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                flex-shrink: 0 !important;
+                -webkit-tap-highlight-color: transparent;
+              }
+              
+              .mobile-submenu-toggle::after {
+                content: '' !important;
+                display: block !important;
+                width: 0 !important;
+                height: 0 !important;
+                border-left: 6px solid transparent !important;
+                border-right: 6px solid transparent !important;
+                border-top: 7px solid currentColor !important;
+                transition: transform 0.3s ease !important;
+              }
+              
+              /* Rotate arrow when expanded */
+              .mobile-submenu-toggle.expanded::after {
+                transform: rotate(180deg) !important;
+              }
+              
+              /* Submenu takes full width below parent */
+              .nav-menu li:has(.sub-menu) > .sub-menu,
+              nav li:has(.sub-menu) > .sub-menu,
+              .navbar li:has(.sub-menu) > .sub-menu {
+                flex-basis: 100% !important;
+                width: 100% !important;
+              }
+            }
+            
+            /* Hide toggle button on desktop */
+            @media (min-width: 769px) {
+              .mobile-submenu-toggle {
+                display: none !important;
+              }
+            }
+          </style>
+          
+          <script id="zappy-mobile-menu-script">
+            // Mobile menu toggle for nested submenus (including Menu Groups)
+            // Uses separate toggle button - link navigates, arrow toggles submenu
+            (function() {
+              function initMobileMenuToggles() {
+                // Only run on mobile
+                if (window.innerWidth > 768) {
+                  // Remove any toggle buttons on desktop
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
+                    menu.classList.remove('mobile-expanded');
+                  });
+                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
+                  return;
+                }
+                
+                console.log('[MOBILE MENU] Initializing mobile menu toggles...');
+                
+                // Find all parent menu items (items with .sub-menu)
+                const menuItemsWithSubmenus = document.querySelectorAll(
+                  '.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)'
+                );
+                
+                console.log('[MOBILE MENU] Found', menuItemsWithSubmenus.length, 'items with submenus');
+                
+                menuItemsWithSubmenus.forEach(function(li) {
+                  // Skip if already has toggle button
+                  if (li.querySelector('.mobile-submenu-toggle')) {
+                    return;
+                  }
+                  
+                  const submenu = li.querySelector('.sub-menu');
+                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
+                  
+                  if (!submenu || !parentLink) return;
+                  
+                  // Create toggle button
+                  const toggleBtn = document.createElement('button');
+                  toggleBtn.className = 'mobile-submenu-toggle';
+                  toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+                  toggleBtn.setAttribute('type', 'button');
+                  
+                  // Insert toggle button after the link
+                  parentLink.insertAdjacentElement('afterend', toggleBtn);
+                  
+                  console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
+                  
+                  // Handle toggle button click - only toggles submenu
+                  toggleBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const isExpanded = submenu.classList.contains('mobile-expanded');
+                    
+                    // Close all other submenus first
+                    document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+                      if (menu !== submenu) {
+                        menu.classList.remove('mobile-expanded');
+                        const otherToggle = menu.parentElement.querySelector('.mobile-submenu-toggle');
+                        if (otherToggle) otherToggle.classList.remove('expanded');
+                      }
+                    });
+                    
+                    // Toggle this submenu
+                    submenu.classList.toggle('mobile-expanded');
+                    toggleBtn.classList.toggle('expanded');
+                    
+                    console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
+                  });
+                  
+                  // Parent link navigates normally - no preventDefault
+                });
+              }
+              
+              // Initialize on DOM load
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initMobileMenuToggles);
+              } else {
+                initMobileMenuToggles();
+              }
+              
+              // Re-initialize on window resize (but use debounce to avoid too many calls)
+              let resizeTimer;
+              window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(initMobileMenuToggles, 250);
+              });
+              
+              // Also initialize when mobile menu becomes visible
+              // This handles cases where the mobile menu is hidden initially
+              const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    const target = mutation.target;
+                    if (target.classList.contains('active') || target.style.display !== 'none') {
+                      console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
+                      setTimeout(initMobileMenuToggles, 100);
+                    }
+                  }
+                });
+              });
+              
+              // Observe mobile menu containers
+              const mobileMenus = document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu');
+              mobileMenus.forEach(function(menu) {
+                observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+              });
+            })();
+          </script>
+        </head><body><div class="zappy-header" id="zappy-attribution-header" style="display:none"><p>Happily created by <a href="https://zappy5.com" rel="noopener noreferrer" target="_blank" class="zappy-link">Zappy</a></p></div><nav class="navbar" id="navbar"><div class="container nav-container"><div class="nav-brand"><a href="/" class="logo-link"><img alt="שלווה רוחנית" class="logo" src="/assets/logo.webp"></a></div><button aria-label="תפריט" class="mobile-toggle" id="mobileToggle"><svg fill="none" height="24" viewBox="0 0 24 24" width="24" class="hamburger-icon"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg><svg fill="none" height="24" viewBox="0 0 24 24" width="24" class="close-icon" style="display:none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></button><button aria-label="התקשרו אלינו" class="phone-header-btn"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button><ul class="nav-menu" id="navMenu"><li><a href="/about">אודות</a></li><li><a href="/services">שירותים</a></li><li><a href="/contact">צור קשר</a></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li></ul><div class="nav-cta-container"><li class="nav-cta-item"><a href="/contact" class="nav-cta-btn">צור קשר</a></li></div></div></nav><section class="page-header"><div class="container"><h1>השירותים שלנו</h1><h3>טיפולים מקצועיים ברפואה אלטרנטיבית המותאמים במיוחד עבורכם</h3></div></section><section class="services-detailed"><div class="container"><div class="service-detail"><div class="service-detail-content"><h2>דיקור סיני מקצועי</h2><p>דיקור סיני הוא אחת מהשיטות העתיקות והמוכחות ביותר ברפואה האלטרנטיבית. הטיפול מבוסס על הכנסת מחטים דקות מאוד לנקודות ספציפיות בגוף, במטרה לאזן את זרימת האנרגיה (צ'י) ולעורר את כוחות הריפוי הטבעיים של הגוף.</p><p>דיקור יעיל במיוחד לטיפול בכאבים כרוניים כגון כאבי גב, צוואר וכתפיים, כאבי ראש וכאבי מפרקים. הוא גם מסייע בהפחתת מתח ולחץ, שיפור השינה וחיזוק המערכת החיסונית.</p><ul class="service-benefits"><li><i class="fa-check fas"></i>הקלה על כאבים כרוניים</li><li><i class="fa-check fas"></i>הפחתת מתח ולחץ</li><li><i class="fa-check fas"></i>שיפור תפקוד השרירים והמפרקים</li><li><i class="fa-check fas"></i>חיזוק המערכת החיסונית</li><li><i class="fa-check fas"></i>שיפור איכות השינה</li></ul></div><div class="service-detail-image"><img alt="דיקור סיני מקצועי" class="service-img" src="/assets/service-service-4.webp" data-context="טיפול דיקור סיני מקצועי בפעולה, מטפל מוסמך מכניס מחטות דקות בנקודות אקופונקטורה, אווירה רגועה ומרכזת" data-placeholder="service-4"></div></div><div class="service-detail reverse"><div class="service-detail-content"><h2>עיסוי רפואי טיפולי</h2><p>עיסוי רפואי ותזונה הוליסטית הם שילוב מושלם לשיפור הבריאות הגופנית והנפשית. העיסוי הרפואי שלנו מתמקד בטיפול בבעיות שרירים ומפרקים, שחרור מתח עמוק ושיפור זרימת הדם והלימפה.</p><p>המטפלים שלנו משתמשים בטכניקות מתקדמות כמו עיסוי רקמות עמוק, טריגר פוינט ומניפולציות רקמות רכות. כל טיפול מותאם אישית למצב הגופני והצרכים הספציפיים של המטופל.</p><ul class="service-benefits"><li><i class="fa-check fas"></i>שחרור מתח שרירי עמוק</li><li><i class="fa-check fas"></i>הקלה על כאבי גב וצוואר</li><li><i class="fa-check fas"></i>שיפור גמישות ותנועתיות</li><li><i class="fa-check fas"></i>הפחתת דלקות ונפיחות</li><li><i class="fa-check fas"></i>שיפור זרימת הדם והאנרגיה</li></ul></div><div class="service-detail-image"><img alt="עיסוי רפואי טיפולי" class="service-img" src="/assets/service-service-5.webp" data-context="עיסוי רפואי טיפולי מקצועי, מטפל מבצע עיסוי רקמות עמוק על שרירי הגב, אווירה מרגיעה עם אור טבעי" data-placeholder="service-5"></div></div><div class="service-detail"><div class="service-detail-content"><h2>תזונה הוליסטית ואורח חיים בריא</h2><p>הגישה ההוליסטית לתזונה רואה בגוף, הנפש והסביבה מערכת אחת משולבת. אנו מאמינים שתזונה נכונה היא אחד המפתחות החשובים לבריאות ולרווחה. הייעוץ התזונתי שלנו כולל בדיקה מקיפה של הרגלי האכילה, מצב הבריאות והצרכים האישיים.</p><p>אנו בונים תפריט מותאם אישית המתחשב בסוג הגוף, הצרכים האנרגטיים, אלרגיות ורגישויות, ומטרות בריאותיות. הליווי שלנו כולל גם המלצות לתוספי תזונה טבעיים, צמחי מרפא ושינויים באורח החיים.</p><ul class="service-benefits"><li><i class="fa-check fas"></i>תפריט תזונה מותאם אישית</li><li><i class="fa-check fas"></i>ליווי צמוד ותמיכה מתמשכת</li><li><i class="fa-check fas"></i>המלצות לתוספי תזונה טבעיים</li><li><i class="fa-check fas"></i>שיפור רמות האנרגיה</li><li><i class="fa-check fas"></i>חיזוק המערכת החיסונית</li></ul></div><div class="service-detail-image"><img alt="תזונה הוליסטית" class="service-img" src="/assets/service-service-6.webp" data-context="ייעוץ תזונה הוליסטית, שולחן עם מגוון פירות וירקות טריים צבעוניים, מחברת תכנון תפריט, אווירה טבעית ומזמינה" data-placeholder="service-6"></div></div></div></section><section class="additional-services"><div class="container"><h2>שירותים נוספים</h2><div class="services-grid"><div class="service-card"><img alt="רפלקסולוגיה" class="service-img" src="/assets/service-service-7.webp" data-context="טיפול רפלקסולוגיה לכפות הרגליים, ידיים מקצועיות לוחצות על נקודות רפלקס, אווירה רגועה ומרגיעה" data-placeholder="service-7"><h3>רפלקסולוגיה</h3><p>טיפול בנקודות רפלקס בכפות הרגליים והידיים לאיזון האנרגיה בגוף ושיפור התפקוד של איברים פנימיים.</p></div><div class="service-card"><img alt="צמחי מרפא" class="service-img" src="/assets/service-service-8.webp" data-context="טיפול צמחי מרפא, כלים מסורתיים עם צמחים טבעיים, בקבוקי תמציות צמחים, אווירה טבעית ומקצועית" data-placeholder="service-8"><h3>צמחי מרפא</h3><p>ייעוץ והמלצות לשימוש בצמחי מרפא טבעיים לחיזוק הבריאות, הפחתת תסמינים ושיפור הרווחה הכללית.</p></div><div class="service-card"><img alt="רייקי" class="service-img" src="/assets/service-service-9.webp" data-context="טיפול רייקי, ידי מטפל מרחפות מעל גוף המטופל, אור רך ואווירה רוחנית שלווה" data-placeholder="service-9"><h3>רייקי</h3><p>טיפול אנרגטי יפני המסייע באיזון האנרגיה, הפחתת מתח ועידוד תהליכי הריפוי הטבעיים של הגוף.</p></div><div class="service-card"><img alt="מדיטציה" class="service-img" src="/assets/service-service-10.webp" data-context="סדנת מדיטציה קבוצתית, אנשים יושבים בעמדת מדיטציה במעגל, אווירה שלווה עם אור טבעי רך" data-placeholder="service-10"><h3>מדיטציה מודרכת</h3><p>סדנאות וטיפולים אישיים במדיטציה מודרכת להפחתת מתח, שיפור המיקוד וחיבור לשלווה פנימית.</p></div></div></div></section><section class="process-section"><div class="container"><h2>תהליך הטיפול</h2><div class="process-steps"><div class="process-step"><div class="step-number">1</div><h3>פגישת ייעוץ ראשונית</h3><p>בפגישה הראשונה נכיר אתכם, נבין את הצרכים והמטרות שלכם, ונבנה תוכנית טיפול מותאמת אישית.</p></div><div class="process-step"><div class="step-number">2</div><h3>אבחון מקיף</h3><p>נבצע אבחון מקיף של מצבכם הגופני והנפשי, תוך התחשבות בהיסטוריה הרפואית והרגלי החיים.</p></div><div class="process-step"><div class="step-number">3</div><h3>תוכנית טיפול מותאמת</h3><p>נבנה עבורכם תוכנית טיפול מקיפה המשלבת את השירותים הרלוונטיים ביותר לצרכים שלכם.</p></div><div class="process-step"><div class="step-number">4</div><h3>ליווי מתמשך</h3><p>נלווה אתכם לאורך כל הדרך, נעקוב אחר ההתקדמות ונתאים את הטיפולים לפי הצורך.</p></div></div></div></section><section class="cta-section"><div class="container"><div class="cta-content"><h2>מוכנים להתחיל את המסע שלכם?</h2><p>צרו איתנו קשר עוד היום לקביעת פגישת ייעוץ ראשונית. נשמח ללוות אתכם בדרך לבריאות ורווחה.</p><a href="/contact" class="btn-primary">קבעו פגישה</a></div></div></section><a href="https://wa.me/[whatsapp_handle]" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a><footer class="legal-footer"><div class="container"><div class="footer-main"><div class="all-rights-reserved"><p>© 2025 שלווה רוחנית. כל הזכויות שמורות.</p></div><div class="footer-social"><a href="https://facebook.com/[facebook_handle]" aria-label="Facebook" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://instagram.com/[instagram_handle]" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://wa.me/[whatsapp_handle]" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fab fa-whatsapp"></i></a></div><div class="footer-legal"><a href="privacy.html" aria-label="מדיניות פרטיות">מדיניות פרטיות</a><span class="separator">|</span><a href="accessibility.html" aria-label="נגישות">נגישות</a><span class="separator">|</span><a href="terms.html" aria-label="תנאי שימוש">תנאי שימוש</a></div></div><div class="zappy-attribution"><p>נוצר באמצעות<a href="https://zappy5.com" rel="noopener noreferrer" target="_blank" style="color:inherit;text-decoration:underline">Zappy</a></p></div></div></footer><script>!function(){var e=window.location.href;e.includes("/preview/")||e.includes("/preview-fullscreen/")||e.includes("localhost:5001")||e.includes("localhost:3000")||fetch("http://localhost:5001/api/website/86c88721-ad60-4792-8456-81e7acfcfdf7/tier").then(function(e){return e.json()}).then(function(e){if(e.showAttribution){var t=document.getElementById("zappy-attribution-header");t&&(t.style.display="block")}}).catch(function(e){console.error("Failed to check tier:",e)})}()</script><div data-integration="accessibility:toolbar"></div><script src="/script.js"></script>
     <script id="zappy-mobile-submenu-script">
     (function() {
       function initMobileSubmenuToggles() {
