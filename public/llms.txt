@@ -1,25 +1,20 @@
-# שלווה רוחנית — Generative Engine Optimization Map
-
-> A בריאות ורווחה business.
+# Business — Generative Engine Optimization Map
 
 ---
 
 ## Pages
 
-### שלווה רוחנית
-https://shalvah-ruchanit.zappy5.app
-
 ### About
 https://shalvah-ruchanit.zappy5.app/about
 
-### Services
-https://shalvah-ruchanit.zappy5.app/services
-
-### Page
-https://shalvah-ruchanit.zappy5.app/menu-group-1768410573796
-
 ### Contact
 https://shalvah-ruchanit.zappy5.app/contact
+
+### Home
+https://shalvah-ruchanit.zappy5.app
+
+### Services
+https://shalvah-ruchanit.zappy5.app/services
 
 ## Legal & Policy
 
@@ -39,15 +34,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About שלווה רוחנית
-שלווה רוחנית is a business in the בריאות ורווחה industry.
-
-## Target Audience
-כל הקהלים שמרגישים כאב וצריכים טיפול
-
-## Industry
-בריאות ורווחה
-
+## About Business
 ---
 
 # Additional Resources

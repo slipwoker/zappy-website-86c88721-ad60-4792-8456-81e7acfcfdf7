@@ -1,441 +1,142 @@
 <!DOCTYPE html><html dir="rtl" lang="he"><head><meta charset="UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport"><title>About</title><meta content="למדו עלינו ועל הגישה ההוליסטית שלנו לרפואה אלטרנטיבית. שלווה רוחנית מציעה טיפולים מקצועיים ומותאמים אישית לכל מטופל." name="description"><meta content="רפואה אלטרנטיבית, גישה הוליסטית, דיקור סיני, עיסוי רפואי, תזונה הוליסטית, טיפול טבעי" name="keywords"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"><link href="/assets/favicon.ico" rel="icon" type="image/x-icon"><link href="/assets/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16"><link href="/assets/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32"><link href="/assets/favicon-48x48.png" rel="icon" type="image/png" sizes="48x48"><link href="/assets/favicon-192x192.png" rel="icon" type="image/png" sizes="192x192"><link href="/assets/favicon-512x512.png" rel="icon" type="image/png" sizes="512x512"><link href="/assets/apple-touch-icon.png" rel="apple-touch-icon"><style>.zappy-header{position:static;width:100%;background:#fff;box-shadow:0 4px 19px 0 rgba(0,0,0,.04);padding:16px 10px;text-align:center;font-family:Nunito,sans-serif;font-size:16px;color:#4a4a4a;line-height:21px;display:flex;align-items:center;justify-content:center;min-height:21px}.zappy-header p{margin:0;padding:0;font-weight:400;font-size:16px;line-height:21px;white-space:nowrap;display:inline-block;vertical-align:baseline;margin-bottom:0!important}.zappy-header .zappy-link{font-weight:700;color:#4a4a4a;text-decoration:none;transition:opacity .2s}.zappy-header .zappy-link:hover{opacity:.7}</style><link href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script><script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script><script>!function(){"use strict";var t="86c88721-ad60-4792-8456-81e7acfcfdf7",e="http://localhost:5001/api/analytics/track",n=18e5,a=!0,o=!0,i=!0;var s=function(){var e="zappy_session_"+t,a=null;try{if(a=sessionStorage.getItem(e)){var o=JSON.parse(a),i=Date.now();if(i-o.timestamp<n)return o.timestamp=i,sessionStorage.setItem(e,JSON.stringify(o)),o.id}}catch(t){console.warn("Zappy Analytics: SessionStorage not available")}var s="zs_"+Date.now()+"_"+Math.random().toString(36).substr(2,9);try{sessionStorage.setItem(e,JSON.stringify({id:s,timestamp:Date.now()}))}catch(t){}return s}();function r(n,a){a=a||{};var o={website_id:t,event_type:n,page_path:window.location.pathname,referrer:document.referrer||"direct",session_id:s,metadata:a};if(navigator.sendBeacon){var i=new Blob([JSON.stringify(o)],{type:"application/json"});navigator.sendBeacon(e,i)}else fetch(e,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(o),keepalive:!0}).catch(function(t){console.warn("Zappy Analytics: Failed to track event",t)})}a&&r("pageview",{title:document.title,url:window.location.href}),o&&document.addEventListener("click",function(t){var e=t.target;if("BUTTON"===e.tagName||e.closest("button")){var n="BUTTON"===e.tagName?e:e.closest("button");r("click",{element:"button",text:n.textContent.trim().substring(0,100),id:n.id||null,class:n.className||null})}else if("A"===e.tagName||e.closest("a")){var a="A"===e.tagName?e:e.closest("a");r("click",{element:"link",text:a.textContent.trim().substring(0,100),href:a.href,external:a.hostname!==window.location.hostname})}},!0),i&&document.addEventListener("submit",function(t){var e=t.target;r("form_submit",{form_id:e.id||null,form_name:e.name||null,form_action:e.action||null,form_method:e.method||"GET"})},!0);var c=Date.now();window.addEventListener("beforeunload",function(){r("page_unload",{time_on_page:Math.floor((Date.now()-c)/1e3),page_path:window.location.pathname})}),window.zappyAnalytics={track:r,getSessionId:function(){return s}}}()</script><link href="/styles.css" rel="stylesheet">
-          <style id="zappy-cta-mobile-style">
-            /* Hide CTA list item on desktop (tablets and up) */
-            @media (min-width: 769px) {
-              .nav-cta-item-mobile {
-                display: none !important;
-              }
-            }
-            /* Show CTA list item on mobile */
-            @media (max-width: 768px) {
-              .nav-cta-item-mobile {
-                display: list-item !important;
-              }
-            }
-          </style>
-        
-          <style id="zappy-nested-menu-style">
-            /* Desktop only: vertically center nav items */
-            @media (min-width: 769px) {
-              .nav-menu,
-              #navMenu {
-                align-items: center !important;
-              }
-            }
-            
-            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu > li > .menu-group-title,
-            #navMenu > li > .menu-group-title {
-              display: inline-block !important;
-              padding: 0.5rem 1rem !important;
-              color: var(--nav-color) !important;
-              font-weight: 500 !important;
-              line-height: 1.7 !important;
-              cursor: default !important;
-              user-select: none !important;
-              vertical-align: middle !important;
-              text-decoration: none !important;
-              margin: 0 !important;
-              transition: color 0.3s ease !important;
-            }
-            
-            .nav-menu > li > .menu-group-title:hover,
-            #navMenu > li > .menu-group-title:hover {
-              color: var(--nav-hover-color) !important;
-            }
-            
-            /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover > .sub-menu {
-              opacity: 1 !important;
-              visibility: visible !important;
-              transform: translateY(0) !important;
-              pointer-events: auto !important; /* Enable interaction when hovering */
-            }
-            
-            /* Hide menu items marked as hidden (overrides hover states) */
-            .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
-              display: none !important;
-              opacity: 0 !important;
-              visibility: hidden !important;
-              pointer-events: none !important;
-            }
-            
-            /* Keep submenu visible when hovering over the submenu itself */
-            .sub-menu:hover {
-              opacity: 1 !important;
-              visibility: visible !important;
-              pointer-events: auto !important;
-            }
-            
-            /* Nested dropdown menu styles - using more specific selectors */
-            .nav-menu .sub-menu,
-            nav .sub-menu,
-            .navbar .sub-menu {
-              display: block !important; /* Ensure submenu is in the DOM */
-              position: absolute !important;
-              top: 100%;
-              left: 0;
-              right: auto;
-              min-width: 200px;
-              background: white;
-              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-              border-radius: 8px;
-              padding: 8px 0;
-              margin-top: 0px; /* Remove gap to prevent hover loss */
-              opacity: 0 !important;
-              visibility: hidden !important;
-              transform: translateY(-10px);
-              transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-              z-index: 1000;
-              list-style: none;
-              pointer-events: none; /* Prevent interaction when hidden */
-            }
-            
-            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
-            [dir="rtl"] .nav-menu .sub-menu,
-            [dir="rtl"] nav .sub-menu,
-            [dir="rtl"] .navbar .sub-menu,
-            html[lang="he"] .nav-menu .sub-menu,
-            html[lang="he"] nav .sub-menu,
-            html[lang="he"] .navbar .sub-menu,
-            html[lang="ar"] .nav-menu .sub-menu,
-            html[lang="ar"] nav .sub-menu,
-            html[lang="ar"] .navbar .sub-menu {
-              left: auto;
-              right: 0;
-            }
-            
-            /* Show submenu on parent hover - more specific selectors */
-            .nav-menu li:hover > .sub-menu,
-            nav li:hover > .sub-menu,
-            .navbar li:hover > .sub-menu {
-              opacity: 1 !important;
-              visibility: visible !important;
-              transform: translateY(0) !important;
-              pointer-events: auto !important; /* Enable interaction when visible */
-            }
-            
-            /* Parent item must be relatively positioned */
-            .nav-menu li:has(.sub-menu),
-            nav li:has(.sub-menu),
-            .navbar li:has(.sub-menu) {
-              position: relative;
-            }
-            
-            /* Style for submenu items */
-            .sub-menu li {
-              list-style: none;
-              margin: 0;
-              padding: 0;
-            }
-            
-            .sub-menu a,
-            .sub-menu .menu-group-title {
-              display: block !important;
-              padding: 10px 12px !important;
-              color: #333 !important;
-              font-weight: 600 !important;
-              text-decoration: none;
-              transition: background-color 0.2s;
-              white-space: nowrap;
-              cursor: default;
-            }
-            
-            .sub-menu a:hover {
-              background-color: #f5f5f5;
-            }
-            
-            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
-            .nav-menu > li > .menu-group-title,
-            #navMenu > li > .menu-group-title {
-              display: inline-block !important;
-              padding: 0.5rem 1rem !important;
-              color: var(--nav-color) !important;
-              font-weight: 500 !important;
-              line-height: 1.7 !important;
-              cursor: default !important;
-              user-select: none !important;
-              vertical-align: middle !important;
-              text-decoration: none !important;
-              margin: 0 !important;
-              transition: color 0.3s ease !important;
-            }
-            
-            .nav-menu > li > .menu-group-title:hover,
-            #navMenu > li > .menu-group-title:hover {
-              color: var(--nav-hover-color) !important;
-              background-color: transparent !important;
-            }
-            
-            /* On mobile, show nested menus as expandable accordion */
-            @media (max-width: 768px) {
-              /* Mobile submenu styling */
-              .nav-menu .sub-menu,
-              nav .sub-menu,
-              .navbar .sub-menu {
-                position: static !important;
-                transform: none !important;
-                box-shadow: none !important;
-                background: transparent !important;
-                margin-top: 0 !important;
-                max-height: 0;
-                overflow: hidden;
-                opacity: 0;
-                visibility: hidden;
-                transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
-                padding: 0 !important;
-                border-radius: 0 !important;
-              }
-              
-              /* Expanded state */
-              .sub-menu.mobile-expanded {
-                max-height: 500px !important;
-                opacity: 1 !important;
-                visibility: visible !important;
-                padding: 8px 0 8px 16px !important;
-              }
-              
-              /* RTL padding adjustment */
-              [dir="rtl"] .sub-menu.mobile-expanded,
-              html[lang="he"] .sub-menu.mobile-expanded,
-              html[lang="ar"] .sub-menu.mobile-expanded {
-                padding: 8px 16px 8px 0 !important;
-              }
-              
-              /* Disable hover behavior on mobile */
-              .nav-menu li:hover > .sub-menu,
-              nav li:hover > .sub-menu,
-              .navbar li:hover > .sub-menu {
-                opacity: 0;
-                visibility: hidden;
-                pointer-events: none;
-              }
-              
-              /* Enable visibility for expanded submenus */
-              .nav-menu li > .sub-menu.mobile-expanded,
-              nav li > .sub-menu.mobile-expanded,
-              .navbar li > .sub-menu.mobile-expanded {
-                opacity: 1 !important;
-                visibility: visible !important;
-                pointer-events: auto !important;
-              }
-              
-              .sub-menu a {
-                padding: 10px 0 !important;
-                display: block !important;
-                font-size: 14px !important;
-              }
-              
-              .sub-menu a:hover {
-                background-color: transparent !important;
-              }
-              
-              /* Parent item wrapper - flex layout for link + toggle */
-              .nav-menu li:has(.sub-menu),
-              nav li:has(.sub-menu),
-              .navbar li:has(.sub-menu) {
-                display: flex !important;
-                flex-wrap: wrap !important;
-                align-items: center !important;
-              }
-              
-              /* Parent link - takes most space, allows navigation */
-              .nav-menu li:has(.sub-menu) > a,
-              nav li:has(.sub-menu) > a,
-              .navbar li:has(.sub-menu) > a,
-              .nav-menu > li > .menu-group-title,
-              #navMenu > li > .menu-group-title {
-                flex: 1 !important;
-              }
-              
-              /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
-              nav li:has(.sub-menu) > a [class*="chevron"],
-              nav li:has(.sub-menu) > a [class*="arrow"],
-              #navMenu li:has(.sub-menu) > a [class*="chevron"],
-              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
-                display: none !important;
-                visibility: hidden !important;
-              }
-              
-              /* Toggle arrow button - separate clickable area */
-              .mobile-submenu-toggle {
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                width: 44px !important;
-                height: 44px !important;
-                background: transparent !important;
-                border: none !important;
-                cursor: pointer !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                flex-shrink: 0 !important;
-                -webkit-tap-highlight-color: transparent;
-              }
-              
-              .mobile-submenu-toggle::after {
-                content: '' !important;
-                display: block !important;
-                width: 0 !important;
-                height: 0 !important;
-                border-left: 6px solid transparent !important;
-                border-right: 6px solid transparent !important;
-                border-top: 7px solid currentColor !important;
-                transition: transform 0.3s ease !important;
-              }
-              
-              /* Rotate arrow when expanded */
-              .mobile-submenu-toggle.expanded::after {
-                transform: rotate(180deg) !important;
-              }
-              
-              /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) > .sub-menu,
-              nav li:has(.sub-menu) > .sub-menu,
-              .navbar li:has(.sub-menu) > .sub-menu {
-                flex-basis: 100% !important;
-                width: 100% !important;
-              }
-            }
-            
-            /* Hide toggle button on desktop */
-            @media (min-width: 769px) {
-              .mobile-submenu-toggle {
-                display: none !important;
-              }
-            }
-          </style>
-          
-          <script id="zappy-mobile-menu-script">
-            // Mobile menu toggle for nested submenus (including Menu Groups)
-            // Uses separate toggle button - link navigates, arrow toggles submenu
-            (function() {
-              function initMobileMenuToggles() {
-                // Only run on mobile
-                if (window.innerWidth > 768) {
-                  // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
-                    menu.classList.remove('mobile-expanded');
-                  });
-                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
-                  return;
-                }
-                
-                console.log('[MOBILE MENU] Initializing mobile menu toggles...');
-                
-                // Find all parent menu items (items with .sub-menu)
-                const menuItemsWithSubmenus = document.querySelectorAll(
-                  '.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)'
-                );
-                
-                console.log('[MOBILE MENU] Found', menuItemsWithSubmenus.length, 'items with submenus');
-                
-                menuItemsWithSubmenus.forEach(function(li) {
-                  // Skip if already has toggle button
-                  if (li.querySelector('.mobile-submenu-toggle')) {
-                    return;
-                  }
-                  
-                  const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
-                  
-                  if (!submenu || !parentLink) return;
-                  
-                  // Create toggle button
-                  const toggleBtn = document.createElement('button');
-                  toggleBtn.className = 'mobile-submenu-toggle';
-                  toggleBtn.setAttribute('aria-label', 'Toggle submenu');
-                  toggleBtn.setAttribute('type', 'button');
-                  
-                  // Insert toggle button after the link
-                  parentLink.insertAdjacentElement('afterend', toggleBtn);
-                  
-                  console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
-                  
-                  // Handle toggle button click - only toggles submenu
-                  toggleBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    const isExpanded = submenu.classList.contains('mobile-expanded');
-                    
-                    // Close all other submenus first
-                    document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
-                      if (menu !== submenu) {
-                        menu.classList.remove('mobile-expanded');
-                        const otherToggle = menu.parentElement.querySelector('.mobile-submenu-toggle');
-                        if (otherToggle) otherToggle.classList.remove('expanded');
-                      }
-                    });
-                    
-                    // Toggle this submenu
-                    submenu.classList.toggle('mobile-expanded');
-                    toggleBtn.classList.toggle('expanded');
-                    
-                    console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
-                  });
-                  
-                  // Parent link navigates normally - no preventDefault
-                });
-              }
-              
-              // Initialize on DOM load
-              if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initMobileMenuToggles);
-              } else {
-                initMobileMenuToggles();
-              }
-              
-              // Re-initialize on window resize (but use debounce to avoid too many calls)
-              let resizeTimer;
-              window.addEventListener('resize', function() {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(initMobileMenuToggles, 250);
-              });
-              
-              // Also initialize when mobile menu becomes visible
-              // This handles cases where the mobile menu is hidden initially
-              const observer = new MutationObserver(function(mutations) {
-                mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                    const target = mutation.target;
-                    if (target.classList.contains('active') || target.style.display !== 'none') {
-                      console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
-                      setTimeout(initMobileMenuToggles, 100);
-                    }
-                  }
-                });
-              });
-              
-              // Observe mobile menu containers
-              const mobileMenus = document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu');
-              mobileMenus.forEach(function(menu) {
-                observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
-              });
-            })();
-          </script>
-        </head><body><div class="zappy-header" id="zappy-attribution-header" style="display:none"><p>Happily created by&nbsp;<a href="https://zappy5.com" rel="noopener noreferrer" target="_blank" class="zappy-link">Zappy</a></p></div><nav class="navbar" id="navbar"><div class="container nav-container"><div class="nav-brand"><a href="/" class="logo-link"><img alt="שלווה רוחנית" class="logo" src="/assets/logo.webp"></a></div><button aria-label="תפריט" class="mobile-toggle" id="mobileToggle"><svg fill="none" height="24" viewBox="0 0 24 24" width="24" class="hamburger-icon"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg><svg fill="none" height="24" viewBox="0 0 24 24" width="24" class="close-icon" style="display:none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg></button><button aria-label="התקשרו אלינו" class="phone-header-btn"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></button><ul class="nav-menu" id="navMenu"><li><a href="/about">אודות</a></li><li><a href="/services">שירותים</a></li><li><a href="/contact">צור קשר</a></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li></ul><div class="nav-cta-container"><li class="nav-cta-item"><a href="/contact" class="nav-cta-btn">צור קשר</a></li></div></div></nav><a href="https://wa.me/[whatsapp_handle]" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <style id="zappy-dropdown-submenu-styles">
+      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
+      /* Base styles for dropdown submenus - parent must be positioned */
+      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
+      /* Submenu base - hidden by default */
+      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
+      /* CRITICAL: Desktop hover styles to show dropdown */
+      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Submenu item styling */
+      .sub-menu li { list-style: none; margin: 0; padding: 0; }
+      .sub-menu a { display: block !important; padding: 10px 16px !important; color: #333 !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
+      .sub-menu a:hover { background-color: #f5f5f5; }
+      /* RTL (Hebrew/Arabic) dropdown positioning */
+      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
+      /* Hide empty dropdown menus */
+      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))), .sub-menu:not(:has(li)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+      /* Desktop: show submenu on Menu Group hover */
+      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Menu Group title styling */
+      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
+      
+      /* ========== MOBILE SUBMENU STYLES ========== */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
+        .sub-menu.mobile-expanded { max-height: 500px !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
+        /* Disable hover behavior on mobile */
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; }
+        .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; }
+        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: 44px !important; background: transparent !important; border: none !important; cursor: pointer !important; }
+        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; }
+        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
+</head><body><div class="zappy-header" id="zappy-attribution-header" style="display:none"><p>Happily created by&nbsp;<a href="https://zappy5.com" rel="noopener noreferrer" target="_blank" class="zappy-link">Zappy</a></p></div><nav class="navbar" id="navbar"><div class="container nav-container"><div class="nav-brand"><a href="/" class="logo-link"><img alt="שלווה רוחנית" class="logo" src="/assets/logo.webp"></a></div><button aria-label="תפריט" class="mobile-toggle" id="mobileToggle"><svg fill="none" height="24" viewBox="0 0 24 24" width="24" class="hamburger-icon"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg><svg fill="none" height="24" viewBox="0 0 24 24" width="24" class="close-icon" style="display:none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg></button><button aria-label="התקשרו אלינו" class="phone-header-btn"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></button><ul class="nav-menu" id="navMenu"><li><a href="/services">שירותים</a></li><li><a href="/about">אודות</a></li><li><a href="/contact">צור קשר</a></li></ul><div class="nav-cta-container"><li class="nav-cta-item"><a href="/contact" class="nav-cta-btn">צור קשר</a></li></div></div></nav><section class="page-header"><div class="container"><h1>אודות שלווה רוחנית</h1><h3>הסיפור שלנו, הגישה שלנו והמחויבות שלנו לבריאות שלכם</h3></div></section><section class="story-section"><div class="container"><div class="text-container"><h2>הסיפור שלנו</h2><p>שלווה רוחנית נוסדה מתוך אמונה עמוקה בכוח הריפוי הטבעי של הגוף ובחשיבות של איזון בין גוף, נפש ורוח. במשך שנים רבות, ראינו כיצד רפואה אלטרנטיבית לכאבים כרוניים יכולה לשנות חיים ולהחזיר תקווה לאנשים שסבלו מכאבים ומצוקה.</p><p>המסע שלנו התחיל מהרצון לספק טיפולים מקצועיים ומותאמים אישית, המשלבים את החוכמה העתיקה של הרפואה המזרחית עם הבינה המודרנית של הרפואה המערבית. אנו מאמינים שכל אדם הוא ייחודי, ולכן כל טיפול צריך להיות מותאם במיוחד לצרכים האישיים של המטופל.</p><p>היום, שלווה רוחנית היא מרכז מוביל לרפואה אלטרנטיבית, המציע מגוון רחב של טיפולים כולל דיקור סיני, עיסוי רפואי ותזונה הוליסטית. אנו גאים בכך שאנו יכולים לעזור למאות אנשים מדי שנה למצוא הקלה מכאב, לשפר את איכות החיים ולהחזיר את האיזון לגופם ולנפשם.</p></div></div></section><section class="philosophy-section"><div class="container"><h2>הפילוסופיה שלנו</h2><div class="philosophy-grid"><div class="philosophy-card"><div class="philosophy-icon"><i class="fas fa-balance-scale"></i></div><h3>איזון הוליסטי</h3><p>אנו רואים את האדם כמערכת שלמה ומשולבת. בריאות אמיתית מתחילה מאיזון בין הגוף, הנפש והסביבה. הטיפולים שלנו מתמקדים בטיפול בשורש הבעיה, לא רק בסימפטומים.</p></div><div class="philosophy-card"><div class="philosophy-icon"><i class="fas fa-leaf"></i></div><h3>טיפול טבעי</h3><p>אנו מעדיפים שיטות טבעיות וללא תופעות לוואי, המעוררות את כוחות הריפוי הטבעיים של הגוף. הגישה שלנו היא עדינה אך יעילה, ומכבדת את החוכמה הטבעית של הגוף.</p></div><div class="philosophy-card"><div class="philosophy-icon"><i class="fas fa-user-md"></i></div><h3>מקצועיות ואמפתיה</h3><p>אנו משלבים ידע מקצועי מעמיק עם גישה חמה ואמפתית. כל מטופל מקבל את מלוא תשומת הלב והזמן שהוא צריך, תוך הקשבה אמיתית לצרכים ולרגשות.</p></div><div class="philosophy-card"><div class="philosophy-icon"><i class="fas fa-heart"></i></div><h3>מחויבות לתוצאות</h3><p>אנו מחויבים לספק תוצאות אמיתיות וארוכות טווח. אנו עוקבים אחר ההתקדמות של כל מטופל, מתאימים את הטיפולים לפי הצורך, ומלווים אתכם לאורך כל הדרך.</p></div></div></div></section>
 
-
-<section id="layout-1768410625918" class="layout-section" data-zappy-component="true" style="width: 100%; padding: 60px 0; direction: rtl;" data-component-id="image-text-left">
-  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
-  <div class="image-text-left-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: center;">
-    <div>
-      <h2 style="font-size: 32px; font-weight: 700; color: #2c3e50; margin-bottom: 20px; font-family: system-ui, -apple-system, sans-serif;"><font color="#cccc5c">שלום שלום</font></h2>
-      <p style="font-size: 18px; line-height: 1.6; color: #2c3e50; opacity: 0.8; font-family: system-ui, -apple-system, sans-serif;"><font color="#995817">"סיסם עבודות עץ ייחודיות" הוא הרבה יותר מעסק נגרות, זוהי טסט פילוסופיית חיים של אהבה עמוקה לחומר, שהחלה בשנת&nbsp;2006&nbsp;ונולדה מתוך שושלת של תשוקה משפחתית לעץ.<br>ניצן גרא מביא עמו עשרות שנים של ניסיון עשיר, אשר נצבר לא רק בישראל אלא גם במהלך מסעות לימוד והתנסות מעמיקים ברחבי העולם, שם נלמדו סגנונות וצורות עבודה מגוונות מתרבויות עץ שונות.<br>פילוסופיית העבודה הייחודית:<br>מה שמייחד את "סיסם" בשוק הנגרות הוא השילוב הנדיר בין&nbsp;הבנת עץ אינטואיטיבית ועמוקה&nbsp;לבין&nbsp;יכולת יצירתית בלתי מתפשרת.&nbsp;ב"סיסם" לא רק מבצעים פרויקטים, אלא חיים ונושמים את החומר. כל פרויקט הוא הזדמנות לשלב בין שיטות מסורתיות עתיקות יומין לבין פתרונות הנדסיים ועכשוויים ברמה הגבוהה ביותר. התוצאה היא מוצרים שאינם רק שימושיים, אלא יצירות אמנות של ממש, המביאות את החום, היופי והאופי הבלתי מתפשר של הטבע ישירות לבית הלקוח.<br>התמחות בעץ גושני ובניית "טימבר פריים":<br>ליבת ההתמחות של "סיסם" היא בעבודה עם&nbsp;עץ גושני&nbsp;(Solid Wood),&nbsp;תוך התמחות בשיטת בנייה יוקרתית ועמידה במיוחד הנקראת&nbsp;"טימבר פריים" (Timber Frame).&nbsp;שיטה זו מאפשרת בנייה מסורתית של מבנים חזקים ואלגנטיים, אשר נבנים כמעט לחלוטין&nbsp;ללא שימוש בפרזולים או ברגים גלויים,&nbsp;אלא בחיבורי עץ מורכבים ומדויקים. גישה זו מבטיחה עמידות יוצאת דופן לאורך שנים רבות, לצד אסתטיקה כפרית-יוקרתית שאין שנייה לה.<br>מעבר לנגרות: אמנות שימושית וסדנאות חוויה<br>ב"סיסם" הנגרות פוגשת את האמנות:<br>יצירות עץ ייחודיות:&nbsp;מגוון המוצרים רחב וכולל יצירות מעץ מלא בעבודת יד מוקפדת. בין המוצרים ניתן למצוא קרשי חיתוך (בוצ'רים) מרהיבים מעץ זית, אלון או סיסם הודי, לעיתים בשילוב אמנותי של חומרי אפוקסי צבעוניים היוצרים מראה מודרני וקלאסי כאחד. כלים אלו נועדו להכניס את היופי והשימושיות של הטבע ישירות למטבח ולשולחן האוכל.<br>סדנאות העשרה:&nbsp;העסק פותח את שעריו גם לקהל הרחב ומציע סדנאות נגרות חווייתיות לזוגות ויחידים. במפגש אחד או שניים, המשתתפים זוכים לחוות את הקסם של עבודת הכפיים בעץ, ללמוד את יסודות החומר ולקחת הביתה בגאווה את פרי יצירתם האישית.שירותים משלימים ומקצועיים:<br>נגרות חוץ מקיפה:&nbsp;בניית פרגולות, דקים, ריהוט גן ומבני עץ נוספים בהתאמה אישית מלאה לתנאי האקלים הישראלי, תוך שימוש בעצים העמידים ביותר.<br>פריסת גזעים וחריטה:&nbsp;שירותי פריסת גזעים מקצועיים ללקוחות פרטיים ועסקיים, המאפשרים בחירה ממגוון רחב של פלטות&nbsp; מוצעים שירותי חריטה אומנותית בעץ להתאמה אישית של כל מוצר.סיסם - כתובת לאיכות וייחודיות<br>הסדנא של "סיסם" ממוקמת בכפר אוריה</font><font color="#995817">ב"סיסם", כל פיסת עץ מספרת סיפור, ואתם מוזמנים להיות חלק ממנו</font></p>
+<section class="clients-section-v1" dir="rtl" data-zappy-component="true" id="ai-section-1768814748491-9hmbpvw">
+  <div class="clients-container">
+    <h2 class="clients-title">הלקוחות שלנו</h2>
+    <p class="clients-subtitle">אנחנו גאים לעבוד עם מותגים מובילים בתעשייה</p>
+    <div class="clients-grid zappy-preserve-css-grid" data-original-item-width="183" data-original-gap="20px" style="grid-template-columns: 183.328px 183.336px 183.328px 183.336px 183.336px 183.328px;" id="zappy-auto-grid-1768814873514-vlq6jv" data-zappy-auto-grid="true">
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s; height: 183.336px !important; overflow: hidden !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: stretch !important;" data-grid-item-index="0" data-zappy-original-height="183.3359375">
+        <img data-placeholder="client-logo-1" data-context="Professional tech company logo on white background, modern minimalist design" data-zappy-editable-image="true" src="http://localhost:5001/api/website/preview/86c88721-ad60-4792-8456-81e7acfcfdf7/assets/business-general-service-upload-1768814817605.webp?t=1768814817739" alt="לוגו לקוח 1" class="client-logo zappy-editable-image" data-element-type="image" data-element-id="img-1768814757636-9lgmzi0q3" data-original-position="static" style="position: relative; object-fit: contain; object-position: 50% 50%; width: auto; height: auto; max-width: 600px; display: block; margin: 20px; border-radius: 8px;" data-resize-handler-attached="true">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s 0.1s, transform 0.6s 0.1s; height: 183.336px !important; overflow: hidden !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: stretch !important;" data-grid-item-index="1" data-zappy-original-height="183.3359375">
+        <img data-placeholder="client-logo-2" data-context="Financial services company logo on white background, professional corporate design" data-zappy-editable-image="true" src="http://localhost:5001/api/website/preview/86c88721-ad60-4792-8456-81e7acfcfdf7/assets/business-general-service-upload-1768814842328.webp?t=1768814842445" alt="לוגו לקוח 2" class="client-logo zappy-editable-image" data-element-type="image" data-element-id="img-1768814757636-msqk702v5" data-original-position="static" style="position: relative; object-fit: contain; object-position: 50% 50%; width: auto; height: auto; max-width: 600px; display: block; margin: 20px; border-radius: 8px;" data-resize-handler-attached="true">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s 0.2s, transform 0.6s 0.2s; height: 183.336px !important; overflow: hidden !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: stretch !important;" data-grid-item-index="2" data-zappy-original-height="183.3359375">
+        <img data-placeholder="client-logo-3" data-context="Healthcare company logo on white background, clean medical design" data-zappy-editable-image="true" src="http://localhost:5001/api/website/preview/86c88721-ad60-4792-8456-81e7acfcfdf7/assets/business-general-service-upload-1768814913924.webp?t=1768814914084" alt="לוגו לקוח 3" class="client-logo zappy-editable-image" data-element-type="image" data-element-id="img-1768814757636-2yumdk1d5" data-original-position="static" style="position: relative; object-fit: contain; object-position: 50% 50%; width: auto; height: auto; max-width: 600px; display: block; margin: 20px; border-radius: 8px;" data-resize-handler-attached="true">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s 0.3s, transform 0.6s 0.3s; height: 183.336px !important; overflow: hidden !important;" data-grid-item-index="3" data-zappy-original-height="183.3359375">
+        <img data-placeholder="client-logo-4" data-context="E-commerce company logo on white background, modern retail design" data-zappy-editable-image="true" src="http://localhost:5001/api/website/preview/86c88721-ad60-4792-8456-81e7acfcfdf7/assets/business-general-service-upload-1768814946838.webp?t=1768814947007" alt="לוגו לקוח 4" class="client-logo zappy-editable-image" data-element-type="image" data-element-id="img-1768814757636-brf5i6hj5" data-original-position="static" style="position: relative; object-fit: contain; object-position: 50% 50%; width: auto; height: auto; max-width: 600px; display: block; margin: 20px; border-radius: 8px;" data-resize-handler-attached="true">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s 0.4s, transform 0.6s 0.4s;" data-grid-item-index="4">
+        <img data-placeholder="client-logo-5" data-context="Education company logo on white background, academic professional design" data-zappy-editable-image="true" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3EClick%20to%20add%20image%3C/text%3E%3C/svg%3E" alt="לוגו לקוח 5" class="client-logo zappy-editable-image" data-element-type="image" data-element-id="img-1768814757636-pal1thsmd" data-original-position="static" style="position: relative;" data-resize-handler-attached="true">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s 0.5s, transform 0.6s 0.5s;" data-grid-item-index="5">
+        <img data-placeholder="client-logo-6" data-context="Manufacturing company logo on white background, industrial professional design" data-zappy-editable-image="true" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3EClick%20to%20add%20image%3C/text%3E%3C/svg%3E" alt="לוגו לקוח 6" class="client-logo zappy-editable-image" data-element-type="image" data-element-id="img-1768814757636-mcne2tf6l" data-original-position="static" style="position: relative;" data-resize-handler-attached="true">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s 0.6s, transform 0.6s 0.6s;" data-grid-item-index="6">
+        <img data-placeholder="client-logo-7" data-context="Real estate company logo on white background, property business design" data-zappy-editable-image="true" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3EClick%20to%20add%20image%3C/text%3E%3C/svg%3E" alt="לוגו לקוח 7" class="client-logo zappy-editable-image" data-element-type="image" data-element-id="img-1768814757636-241lzejqt" data-original-position="static" style="position: relative;" data-resize-handler-attached="true">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s 0.7s, transform 0.6s 0.7s;" data-grid-item-index="7">
+        <img data-placeholder="client-logo-8" data-context="Consulting firm logo on white background, professional business design" data-zappy-editable-image="true" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3EClick%20to%20add%20image%3C/text%3E%3C/svg%3E" alt="לוגו לקוח 8" class="client-logo zappy-editable-image" data-element-type="image" data-element-id="img-1768814757636-ynzdw58ve" data-original-position="static" style="position: relative;" data-resize-handler-attached="true">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s 0.8s, transform 0.6s 0.8s;" data-grid-item-index="8">
+        <img data-placeholder="client-logo-9" data-context="Media company logo on white background, creative industry design" data-zappy-editable-image="true" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3EClick%20to%20add%20image%3C/text%3E%3C/svg%3E" alt="לוגו לקוח 9" class="client-logo zappy-editable-image" data-element-type="image" data-element-id="img-1768814757636-ykdc53336" data-original-position="static" style="position: relative;" data-resize-handler-attached="true">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s 0.9s, transform 0.6s 0.9s;" data-grid-item-index="9">
+        <img data-placeholder="client-logo-10" data-context="Transportation company logo on white background, logistics design" data-zappy-editable-image="true" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3EClick%20to%20add%20image%3C/text%3E%3C/svg%3E" alt="לוגו לקוח 10" class="client-logo zappy-editable-image" data-element-type="image" data-element-id="img-1768814757636-3l9h62ls9" data-original-position="static" style="position: relative;" data-resize-handler-attached="true">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s 1s, transform 0.6s 1s;" data-grid-item-index="10">
+        <img data-placeholder="client-logo-11" data-context="Energy company logo on white background, sustainable industry design" data-zappy-editable-image="true" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3EClick%20to%20add%20image%3C/text%3E%3C/svg%3E" alt="לוגו לקוח 11" class="client-logo zappy-editable-image" data-element-type="image" data-element-id="img-1768814757637-g8oa5qzre" data-original-position="static" style="position: relative;" data-resize-handler-attached="true">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s 1.1s, transform 0.6s 1.1s;" data-grid-item-index="11">
+        <img data-placeholder="client-logo-12" data-context="Hospitality company logo on white background, hotel restaurant design" data-zappy-editable-image="true" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3EClick%20to%20add%20image%3C/text%3E%3C/svg%3E" alt="לוגו לקוח 12" class="client-logo zappy-editable-image" data-element-type="image" data-element-id="img-1768814757637-za2qf2jir" data-original-position="static" style="position: relative;" data-resize-handler-attached="true">
+      </div>
     </div>
-    <img data-placeholder="layout-image-1768410625918-xanh1vxjv" data-context="תיאור תמונה" data-zappy-editable-image="true" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234a9d7f;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%234a9d7f20;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3E%D7%AA%D7%99%D7%90%D7%95%D7%A8%20%D7%AA%D7%9E%D7%95%D7%A0%D7%94%3C/text%3E%3C/svg%3E" alt="תיאור תמונה" style="width: 100%; height: auto; display: block; border-radius: 8px; object-fit: cover;" class="layout-placeholder-image">
-  </div>
   </div>
 </section>
 
-<footer class="legal-footer"><div class="container"><div class="footer-main"><div class="all-rights-reserved"><p>© 2025 שלווה רוחנית. כל הזכויות שמורות.</p></div><div class="footer-social"><a href="https://facebook.com/[facebook_handle]" aria-label="Facebook" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://instagram.com/[instagram_handle]" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://wa.me/[whatsapp_handle]" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fab fa-whatsapp"></i></a></div><div class="footer-legal"><a href="privacy.html" aria-label="מדיניות פרטיות">מדיניות פרטיות</a><span class="separator">|</span><a href="accessibility.html" aria-label="נגישות">נגישות</a><span class="separator">|</span><a href="terms.html" aria-label="תנאי שימוש">תנאי שימוש</a></div></div><div class="zappy-attribution"><p>נוצר באמצעות<a href="https://zappy5.com" rel="noopener noreferrer" target="_blank" style="color:inherit;text-decoration:underline">Zappy</a></p></div></div></footer><script>!function(){var e=window.location.href;e.includes("/preview/")||e.includes("/preview-fullscreen/")||e.includes("localhost:5001")||e.includes("localhost:3000")||fetch("http://localhost:5001/api/website/86c88721-ad60-4792-8456-81e7acfcfdf7/tier").then(function(e){return e.json()}).then(function(e){if(e.showAttribution){var t=document.getElementById("zappy-attribution-header");t&&(t.style.display="block")}}).catch(function(e){console.error("Failed to check tier:",e)})}()</script><div data-integration="accessibility:toolbar"></div><script src="/script.js"></script>
+<section id="layout-1768816748764" class="layout-section clients-section" data-zappy-component="true" style="width: 100%; padding: 50px 0; background: #FFFFFF; direction: rtl;" data-component-id="logos-grid-6">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+    <h2 style="font-size: 26px; font-weight: 700; color: #2c3e50; margin-bottom: 30px; text-align: center; font-family: system-ui, -apple-system, sans-serif;">הלקוחות שלנו</h2>
+    <div class="clients-grid zappy-preserve-css-grid" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px;" data-original-item-width="179" data-original-gap="16px" id="zappy-auto-grid-1768817470053-vpau1m" data-zappy-auto-grid="true">
+
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="background: white; border-radius: 8px; padding: 20px; display: flex; align-items: center; justify-content: center; min-height: 100px; box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 3px; border: 1px solid rgb(229, 231, 235); height: 178.672px !important; overflow: hidden !important;" data-grid-item-index="0" data-zappy-original-height="178.671875">
+        <img data-placeholder="client-logo-1" data-context="Company logo, professional business branding" src="http://localhost:5001/api/website/preview/86c88721-ad60-4792-8456-81e7acfcfdf7/assets/business-general-service-upload-1768817491552.webp?t=1768817491682" alt="לוגו לקוח 1" class="client-logo zappy-editable-image" data-zappy-editable-image="true" style="max-width: 600px; width: auto; height: auto; object-fit: contain; display: block; margin: 20px; border-radius: 8px; position: relative; object-position: 50% 50%;" data-element-type="image" data-element-id="img-1768817470040-ky4klrzfz" data-resize-handler-attached="true" data-original-position="static">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="background: white; border-radius: 8px; padding: 20px; display: flex; align-items: center; justify-content: center; min-height: 100px; box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 3px; border: 1px solid rgb(229, 231, 235); height: 178.672px !important; overflow: hidden !important;" data-grid-item-index="1" data-zappy-original-height="178.671875">
+        <img data-placeholder="client-logo-2" data-context="Company logo, professional business branding" src="http://localhost:5001/api/website/preview/86c88721-ad60-4792-8456-81e7acfcfdf7/assets/business-general-service-upload-1768817507591.webp?t=1768817507715" alt="לוגו לקוח 2" class="client-logo zappy-editable-image" data-zappy-editable-image="true" style="max-width: 600px; width: auto; height: auto; object-fit: contain; display: block; margin: 20px; border-radius: 8px; position: relative; object-position: 50% 50%;" data-element-type="image" data-element-id="img-1768817470040-sscvn76q2" data-resize-handler-attached="true" data-original-position="static">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="background: white; border-radius: 8px; padding: 20px; display: flex; align-items: center; justify-content: center; min-height: 100px; box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 3px; border: 1px solid rgb(229, 231, 235); height: 178.672px !important; overflow: hidden !important;" data-grid-item-index="2" data-zappy-original-height="178.671875">
+        <img data-placeholder="client-logo-3" data-context="Company logo, professional business branding" src="http://localhost:5001/api/website/preview/86c88721-ad60-4792-8456-81e7acfcfdf7/assets/business-general-service-upload-1768817522817.webp?t=1768817522990" alt="לוגו לקוח 3" class="client-logo zappy-editable-image" data-zappy-editable-image="true" style="max-width: 600px; width: auto; height: auto; object-fit: contain; display: block; margin: 20px; border-radius: 8px; position: relative; object-position: 50% 50%;" data-element-type="image" data-element-id="img-1768817470040-yaw8tdtrj" data-resize-handler-attached="true" data-original-position="static">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="background: white; border-radius: 8px; padding: 20px; display: flex; align-items: center; justify-content: center; min-height: 100px; box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 3px; border: 1px solid rgb(229, 231, 235); height: 178.672px !important; overflow: hidden !important;" data-grid-item-index="3" data-zappy-original-height="178.671875">
+        <img data-placeholder="client-logo-4" data-context="Company logo, professional business branding" src="http://localhost:5001/api/website/preview/86c88721-ad60-4792-8456-81e7acfcfdf7/assets/business-general-service-upload-1768817538697.webp?t=1768817538813" alt="לוגו לקוח 4" class="client-logo zappy-editable-image" data-zappy-editable-image="true" style="max-width: 600px; width: auto; height: auto; object-fit: contain; display: block; margin: 20px; border-radius: 8px; position: relative; object-position: 50% 50%;" data-element-type="image" data-element-id="img-1768817470040-qsfqg2ny8" data-resize-handler-attached="true" data-original-position="static">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="background: white; border-radius: 8px; padding: 20px; display: flex; align-items: center; justify-content: center; min-height: 100px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #E5E7EB;" data-grid-item-index="4">
+        <img data-placeholder="client-logo-5" data-context="Company logo, professional business branding" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23F3F4F6'/%3E%3Crect x='40' y='70' width='120' height='60' rx='4' fill='%23E5E7EB'/%3E%3Ctext x='100' y='105' font-family='Arial, sans-serif' font-size='12' fill='%239CA3AF' text-anchor='middle' font-weight='500'%3EAdd Logo%3C/text%3E%3C/svg%3E" alt="לוגו לקוח 5" class="client-logo zappy-editable-image" data-zappy-editable-image="true" style="max-width: 100%; max-height: 80px; width: auto; height: auto; object-fit: contain; display: block; margin: 0px auto; border-radius: 0px !important; position: relative;" data-element-type="image" data-element-id="img-1768817470040-eo622fnku" data-resize-handler-attached="true" data-original-position="static">
+      </div>
+      <div class="client-logo-wrapper zappy-grid-item-media-only" style="background: white; border-radius: 8px; padding: 20px; display: flex; align-items: center; justify-content: center; min-height: 100px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #E5E7EB;" data-grid-item-index="5">
+        <img data-placeholder="client-logo-6" data-context="Company logo, professional business branding" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23F3F4F6'/%3E%3Crect x='40' y='70' width='120' height='60' rx='4' fill='%23E5E7EB'/%3E%3Ctext x='100' y='105' font-family='Arial, sans-serif' font-size='12' fill='%239CA3AF' text-anchor='middle' font-weight='500'%3EAdd Logo%3C/text%3E%3C/svg%3E" alt="לוגו לקוח 6" class="client-logo zappy-editable-image" data-zappy-editable-image="true" style="max-width: 100%; max-height: 80px; width: auto; height: auto; object-fit: contain; display: block; margin: 0px auto; border-radius: 0px !important; position: relative;" data-element-type="image" data-element-id="img-1768817470040-bw1j6m8lr" data-resize-handler-attached="true" data-original-position="static">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="values-section"><div class="container"><div class="text-container"><h2>הערכים שלנו</h2><p>בשלווה רוחנית, אנו מונחים על ידי ערכים ברורים המנחים את עבודתנו היומיומית:</p><ul class="values-list"><li><strong>כבוד:</strong>אנו מכבדים כל מטופל כאדם ייחודי עם צרכים, רגשות וחוויות משלו.</li><li><strong>אמינות:</strong>אנו מחויבים לספק טיפולים מקצועיים ומבוססי מחקר, תוך שקיפות מלאה.</li><li><strong>חמלה:</strong>אנו מתייחסים לכל מטופל בחמלה ובאמפטיה, ומבינים את הקושי והכאב שהוא עובר.</li><li><strong>מצוינות:</strong>אנו שואפים למצוינות בכל מה שאנו עושים, ומשקיעים בלמידה והתפתחות מתמשכת.</li><li><strong>חדשנות:</strong>אנו משלבים שיטות מסורתיות עם טכניקות מודרניות, תוך חיפוש מתמיד אחר דרכים חדשות ויעילות יותר לעזור למטופלים.</li></ul></div></div></section><section class="approach-section"><div class="container"><h2>הגישה הטיפולית שלנו</h2><div class="approach-steps"><div class="approach-step"><h3>הקשבה ואבחון</h3><p>אנו מתחילים בהקשבה אמיתית למטופל. אנו מבינים את הסיפור האישי, את הכאב והצרכים, ומבצעים אבחון מקיף המתחשב בכל ההיבטים של החיים.</p></div><div class="approach-step"><h3>תוכנית טיפול מותאמת</h3><p>לאחר האבחון, אנו בונים תוכנית טיפול אישית המשלבת את השירותים המתאימים ביותר. התוכנית לוקחת בחשבון את המצב הבריאותי, הצרכים האישיים ומטרות הטיפול.</p></div><div class="approach-step"><h3>טיפול הוליסטי</h3><p>הטיפולים שלנו משלבים מספר שיטות המשלימות זו את זו: דיקור סיני, עיסוי רפואי, תזונה הוליסטית ועוד. הגישה המשולבת מספקת תוצאות טובות יותר וארוכות טווח.</p></div><div class="approach-step"><h3>מעקב והתאמה</h3><p>אנו עוקבים אחר ההתקדמות של כל מטופל, מתאימים את הטיפולים לפי הצורך, ומספקים תמיכה מתמשכת לאורך כל הדרך.</p></div></div></div></section><section class="qualifications-section"><div class="container"><div class="text-container"><h2>ההכשרה והניסיון שלנו</h2><p>המטפלים שלנו הם אנשי מקצוע מוסמכים ומנוסים, בעלי הכשרה מקיפה ברפואה אלטרנטיבית. אנו מחזיקים בהסמכות מקצועיות מהמכונים המובילים בארץ ובעולם, ומשתתפים בקורסי השתלמות שוטפים כדי להישאר מעודכנים בשיטות הטיפול החדישות ביותר.</p><p>הניסיון שלנו משתרע על פני שנים רבות של עבודה עם מאות מטופלים, טיפול במגוון רחב של בעיות בריאותיות, והצלחה מוכחת בשיפור איכות החיים של המטופלים שלנו.</p></div></div></section><section class="cta-section"><div class="container"><div class="cta-content"><h2>בואו להכיר אותנו</h2><p>נשמח לפגוש אתכם, לשמוע את הסיפור שלכם ולעזור לכם למצוא את הדרך לבריאות ורווחה. צרו איתנו קשר עוד היום.</p><a href="/contact" class="btn-primary">צור קשר</a></div></div></section><a href="https://wa.me/[whatsapp_handle]" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a><footer class="legal-footer"><div class="container"><div class="footer-main"><div class="all-rights-reserved"><p>© 2025 שלווה רוחנית. כל הזכויות שמורות.</p></div><div class="footer-social"><a href="https://facebook.com/[facebook_handle]" aria-label="Facebook" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://instagram.com/[instagram_handle]" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://wa.me/[whatsapp_handle]" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fab fa-whatsapp"></i></a></div><div class="footer-legal"><a href="privacy.html" aria-label="מדיניות פרטיות">מדיניות פרטיות</a><span class="separator">|</span><a href="accessibility.html" aria-label="נגישות">נגישות</a><span class="separator">|</span><a href="terms.html" aria-label="תנאי שימוש">תנאי שימוש</a></div></div><div class="zappy-attribution"><p>נוצר באמצעות<a href="https://zappy5.com" rel="noopener noreferrer" target="_blank" style="color:inherit;text-decoration:underline">Zappy</a></p></div></div></footer><script>!function(){var e=window.location.href;e.includes("/preview/")||e.includes("/preview-fullscreen/")||e.includes("localhost:5001")||e.includes("localhost:3000")||fetch("http://localhost:5001/api/website/86c88721-ad60-4792-8456-81e7acfcfdf7/tier").then(function(e){return e.json()}).then(function(e){if(e.showAttribution){var t=document.getElementById("zappy-attribution-header");t&&(t.style.display="block")}}).catch(function(e){console.error("Failed to check tier:",e)})}()</script><div data-integration="accessibility:toolbar"></div><script src="/script.js"></script>
     <script id="zappy-mobile-submenu-script">
     (function() {
       function initMobileSubmenuToggles() {
