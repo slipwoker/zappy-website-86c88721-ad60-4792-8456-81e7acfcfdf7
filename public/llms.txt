@@ -1,6 +1,4 @@
-# שלווה רוחנית — Generative Engine Optimization Map
-
-> A בריאות ורווחה business.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -36,15 +34,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About שלווה רוחנית
-שלווה רוחנית is a business in the בריאות ורווחה industry.
-
-## Target Audience
-כל הקהלים שמרגישים כאב וצריכים טיפול
-
-## Industry
-בריאות ורווחה
-
+## About Business
 ---
 
 # Additional Resources
