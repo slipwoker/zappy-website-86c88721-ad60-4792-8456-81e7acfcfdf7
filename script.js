@@ -159,3 +159,236 @@ function hasConsentFor(e){return void 0!==window.CookieConsent&&window.CookieCon
   } catch (eOuter) {}
 })();
 /* END ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
+
+
+/* ZAPPY_MOBILE_MENU_TOGGLE */
+(function(){
+  try {
+    if (window.__zappyMobileMenuToggleInit) return;
+    window.__zappyMobileMenuToggleInit = true;
+
+    function initMobileToggle() {
+      var toggle = document.querySelector('.mobile-toggle, #mobileToggle');
+      var navMenu = document.querySelector('#navMenu, .nav-menu, .navbar-menu');
+      if (!toggle || !navMenu) return;
+
+      // Skip if this toggle already has a click handler from the site's own JS
+      if (toggle.__zappyMobileToggleBound) return;
+      toggle.__zappyMobileToggleBound = true;
+
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var hamburgerIcon = toggle.querySelector('.hamburger-icon');
+        var closeIcon = toggle.querySelector('.close-icon');
+        var isOpen = navMenu.classList.contains('active') || navMenu.style.display === 'block';
+
+        if (isOpen) {
+          navMenu.classList.remove('active');
+          navMenu.style.display = '';
+          if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'block', 'important');
+          if (closeIcon) closeIcon.style.setProperty('display', 'none', 'important');
+          document.body.style.overflow = '';
+        } else {
+          navMenu.classList.add('active');
+          navMenu.style.display = 'block';
+          if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'none', 'important');
+          if (closeIcon) closeIcon.style.setProperty('display', 'block', 'important');
+          document.body.style.overflow = 'hidden';
+        }
+      }, true);
+
+      // Close on clicking outside
+      document.addEventListener('click', function(e) {
+        if (!navMenu.classList.contains('active')) return;
+        if (toggle.contains(e.target) || navMenu.contains(e.target)) return;
+        navMenu.classList.remove('active');
+        navMenu.style.display = '';
+        var hi = toggle.querySelector('.hamburger-icon');
+        var ci = toggle.querySelector('.close-icon');
+        if (hi) hi.style.setProperty('display', 'block', 'important');
+        if (ci) ci.style.setProperty('display', 'none', 'important');
+        document.body.style.overflow = '';
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+          navMenu.classList.remove('active');
+          navMenu.style.display = '';
+          var hi = toggle.querySelector('.hamburger-icon');
+          var ci = toggle.querySelector('.close-icon');
+          if (hi) hi.style.setProperty('display', 'block', 'important');
+          if (ci) ci.style.setProperty('display', 'none', 'important');
+          document.body.style.overflow = '';
+        }
+      });
+
+      // Close when clicking a nav link (navigating)
+      navMenu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          navMenu.classList.remove('active');
+          navMenu.style.display = '';
+          var hi = toggle.querySelector('.hamburger-icon');
+          var ci = toggle.querySelector('.close-icon');
+          if (hi) hi.style.setProperty('display', 'block', 'important');
+          if (ci) ci.style.setProperty('display', 'none', 'important');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initMobileToggle, { once: true });
+    } else {
+      initMobileToggle();
+    }
+  } catch (e) {}
+})();
+/* END ZAPPY_MOBILE_MENU_TOGGLE */
+
+
+/* ZAPPY_FAQ_ACCORDION_TOGGLE */
+(function(){
+  try {
+    if (window.__zappyFaqToggleInit) return;
+    window.__zappyFaqToggleInit = true;
+
+    function initFaqToggle() {
+      // Match both exact (.faq-item) and page-prefixed (e.g. .home-faq-item) classes
+      var items = document.querySelectorAll('[class*="faq-item"], .accordion-item');
+      if (!items.length) return;
+
+      items.forEach(function(item) {
+        var question = item.querySelector(
+          '[class*="faq-question"], [class*="faq-header"], .accordion-header, .accordion-toggle'
+        );
+        if (!question) return;
+        if (question.__zappyFaqBound) return;
+        question.__zappyFaqBound = true;
+
+        question.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          // Close sibling items in the same accordion group
+          var parent = item.parentElement;
+          if (parent) {
+            var siblings = parent.querySelectorAll('[class*="faq-item"], .accordion-item');
+            siblings.forEach(function(sib) {
+              if (sib !== item && sib.classList.contains('active')) {
+                sib.classList.remove('active');
+                var sibQ = sib.querySelector('[class*="faq-question"], [class*="faq-header"], .accordion-header');
+                if (sibQ) sibQ.setAttribute('aria-expanded', 'false');
+              }
+            });
+          }
+
+          // Toggle current item
+          var isActive = item.classList.toggle('active');
+          question.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFaqToggle, { once: true });
+    } else {
+      initFaqToggle();
+    }
+  } catch (e) {}
+})();
+/* END ZAPPY_FAQ_ACCORDION_TOGGLE */
+
+
+/* ZAPPY_PUBLISHED_GRID_CENTERING */
+(function(){
+  try {
+    if (window.__zappyGridCenteringInit) return;
+    window.__zappyGridCenteringInit = true;
+
+    function centerPartialGridRows() {
+      var grids = document.querySelectorAll('[data-zappy-explicit-columns="true"], [data-zappy-auto-grid="true"]');
+      for (var g = 0; g < grids.length; g++) {
+        try {
+          var container = grids[g];
+          // Skip if already processed
+          if (container.getAttribute('data-zappy-grid-centered') === 'true') continue;
+
+          var items = [];
+          for (var c = 0; c < container.children.length; c++) {
+            var ch = container.children[c];
+            if (!ch || !ch.tagName) continue;
+            var tag = ch.tagName.toLowerCase();
+            if (tag === 'script' || tag === 'style') continue;
+            items.push(ch);
+          }
+          var totalItems = items.length;
+          if (totalItems === 0) continue;
+
+          var cs = window.getComputedStyle(container);
+          if (cs.display !== 'grid') continue;
+          var gtc = (cs.gridTemplateColumns || '').trim();
+          if (!gtc || gtc === 'none') continue;
+          var colWidths = gtc.split(' ').filter(function(v) { return v && parseFloat(v) > 0; });
+          var colCount = colWidths.length;
+          if (colCount <= 1) continue;
+
+          var itemsInLastRow = totalItems % colCount;
+          if (itemsInLastRow === 0) continue;
+
+          var colWidth = parseFloat(colWidths[0]) || 0;
+          var gap = parseFloat(cs.columnGap);
+          if (isNaN(gap)) gap = parseFloat(cs.gap) || 0;
+
+          var missingCols = colCount - itemsInLastRow;
+          var offset = missingCols * (colWidth + gap) / 2;
+
+          // Detect RTL
+          var dir = cs.direction || 'ltr';
+          var el = container;
+          while (el && dir === 'ltr') {
+            if (el.getAttribute && el.getAttribute('dir')) { dir = el.getAttribute('dir'); break; }
+            if (el.style && el.style.direction) { dir = el.style.direction; break; }
+            el = el.parentElement;
+          }
+          var translateValue = dir === 'rtl' ? -offset : offset;
+
+          // Apply transform to last-row items
+          // Temporarily disable CSS transitions to prevent visible animation
+          // Preserve any existing transforms (e.g., scale, rotate) by composing
+          var startIndex = totalItems - itemsInLastRow;
+          var savedTransitions = [];
+          for (var i = startIndex; i < totalItems; i++) {
+            var item = items[i];
+            savedTransitions.push(item.style.transition);
+            item.style.transition = 'none';
+            var existingTransform = item.style.transform || '';
+            var newTransform = existingTransform
+              ? existingTransform + ' translateX(' + translateValue + 'px)'
+              : 'translateX(' + translateValue + 'px)';
+            item.style.transform = newTransform;
+          }
+
+          // Force synchronous reflow so the transform is applied instantly
+          void container.offsetHeight;
+
+          // Restore original transitions
+          for (var j = startIndex; j < totalItems; j++) {
+            items[j].style.transition = savedTransitions[j - startIndex];
+          }
+
+          // Mark grid as processed so we don't double-apply
+          container.setAttribute('data-zappy-grid-centered', 'true');
+        } catch(e) {}
+      }
+    }
+
+    // Run once after DOM is fully loaded (fonts, images, layout complete)
+    if (document.readyState === 'complete') {
+      centerPartialGridRows();
+    } else {
+      window.addEventListener('load', centerPartialGridRows);
+    }
+  } catch(e) {}
+})();
